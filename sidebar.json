@@ -1,0 +1,131 @@
+{
+    "items": [{
+            "title": "General",
+            "children": [{
+                    "title": "How Amethyst compares to other options",
+                    "url": "/en/comparison"
+                },
+                {
+                    "title": "Getting a Kinect and adapter",
+                    "url": "/en/buying-kinect"
+                },
+                {
+                    "title": "About Amethyst and K2VR",
+                    "url": "/en/about"
+                }
+            ]
+        },
+        {
+            "title": "Using Amethyst",
+            "children": [{
+                    "title": "Installing Amethyst",
+                    "url": "/en/app/installation"
+                },
+                {
+                    "title": "App Overview",
+                    "url": "/en/app/overview"
+                },
+                {
+                    "title": "How to use overrides",
+                    "url": "/en/app/overrides"
+                },
+                {
+                    "title": "General Troubleshooting",
+                    "url": "/en/app/help"
+                },
+                {
+                    "title": "SteamVR Driver Troubleshooting",
+                    "url": "/en/app/steamvr-driver-codes"
+                }
+            ]
+        },
+        {
+            "title": "Xbox 360 Kinect",
+            "children": [{
+                "title": "Setting up your Xbox 360 Kinect",
+                "url": "/en/360/setup"
+            },
+            {
+                "title": "Xbox 360 Kinect Troubleshooting",
+                "url": "/en/360/troubleshooting"
+            },
+            {
+                "title": "How to fix E_NUI_NOTPOWERED",
+                "url": "/en/360/troubleshooting/notpowered"
+            },
+            {
+                "title": "How to fix E_NUI_NOTREADY",
+                "url": "/en/360/troubleshooting/notready"
+            },
+            {
+                "title": "How to fix E_NUI_NOTGENUINE",
+                "url": "/en/360/troubleshooting/notgenuine"
+            },
+            {
+                "title": "How to fix E_NUI_INSUFFICIENTBANDWIDTH",
+                "url": "/en/360/troubleshooting/insufficientbandwidth"
+            }
+        ]
+        },
+        {
+            "title": "Xbox One Kinect",
+            "children": [{
+                "title": "Common issues with Xbox One Kinect",
+                "url": "/en/one/common-issues"
+            },
+            {
+                "title": "Setting up your Xbox One Kinect",
+                "url": "/en/one/setup"
+            },
+            {
+                "title": "Xbox One Kinect Troubleshooting",
+                "url": "/en/one/troubleshooting"
+            }
+        ]
+        },
+        {
+            "title": "PlayStation Move",
+            "children": [{
+                "title": "Prerequisites",
+                "url": "/en/psmove/what-to-buy"
+            },
+            {
+                "title": "Setting up PSMoveServiceEx",
+                "url": "/en/psmove/setup"
+            },
+            {
+                "title": "Using PS Move with Amethyst",
+                "url": "/en/psmove/usage"
+            },
+            {
+                "title": "PlayStation Move Troubleshooting",
+                "url": "/en/psmove/troubleshooting"
+            }
+        ]
+        },
+        {
+            "title": "owoTrack",
+            "children": [{
+                "title": "What is owoTrack",
+                "url": "/en/owo/about"
+            },
+            {
+                "title": "How to configure and use owoTrack",
+                "url": "/en/owo/setup"
+            }
+        ]
+        },
+        {
+            "title": "Augmented Hip",
+            "children": [{
+                "title": "What is Augmented Hip",
+                "url": "/en/aughip/about"
+            },
+            {
+                "title": "How to use Augmented Hip",
+                "url": "/en/aughip/setup"
+            }
+        ]
+        }
+    ]
+}
