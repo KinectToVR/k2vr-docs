@@ -1,0 +1,20 @@
+---
+import { Markdown } from 'astro/components';
+import Download from '~/icons/Download.astro';
+
+const { href, title } = Astro.props;
+---
+
+<a class="card-download" href={href}>
+	<div class="card-download-wrapper">
+		<div class="heading-container">
+			<Download />
+			<h3 class="card-title">Download</h3>
+		</div>
+		<div class="card-container">
+			<div class="card-content">
+				{ title }
+			</div>
+		</div>
+	</div>
+</a>

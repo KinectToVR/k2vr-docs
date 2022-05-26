@@ -1,0 +1,37 @@
+---
+import { SITE } from '~/constants.js'
+const currUrl = Astro.canonicalURL.pathname;
+const { items } = Astro.props;
+
+// This is very NOT clean
+// But I barely understand JSX anyway soooooo ¯\_(ツ)_/¯
+
+---
+<ul>
+	{items.map((item) => (
+		<>
+			<li class="sidebar-section-title">
+				<span class="sidebar-title-text">{item.title}</span>
+				{
+					
+					(<ul class="sidebar-section-children">
+						{item.children.map((itemA) => (
+							<>
+								
+								<a class={
+									currUrl.includes(new URL('https://a.c'+itemA.url).pathname) ? "sidebar-section-link sidebar-link-selected" : "sidebar-section-link"
+									} href={itemA.url}>
+									<li class="sidebar-link-text">
+										{itemA.title}
+									</li>
+									{itemA.children}
+								</a>
+							</>
+						))}
+					</ul>)
+
+				}
+			</li>
+		</>
+	))}
+</ul>

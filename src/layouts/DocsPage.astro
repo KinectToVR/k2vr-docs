@@ -1,0 +1,48 @@
+---
+import { Debug, Markdown } from 'astro/components';
+import SocialEmbed from '@components/SocialEmbed.astro';
+import Sidebar from '@components/Sidebar/Sidebar.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import SearchPopup from '@components/SearchPopup.astro';
+import { SITE } from '~/constants.js';
+import "~/css/main.scss";
+
+const { content } = Astro.props;
+let title = Astro.props.title ?? content.title;
+let description = Astro.props.description ?? content.description;
+let locale = Astro.props.locale ?? content.locale;
+title = title.trim().length > 0 ? `${title.trim()} | ${SITE.title}` : SITE.title;
+---
+<html lang={locale ?? "en"} class="no-js light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+        <SocialEmbed
+            title={ title }
+            description={ description }
+            color="#168CDD"
+        ></SocialEmbed>
+
+        <link rel="icon" href="/content/shared/favicon.ico">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"> 
+        <script type="module" src='/shared/js/fuse.mjs'></script>
+        <script is:inline src='/shared/js/mobile.js'></script>
+        <script is:inline src='/shared/js/main.js'></script>
+    </head>
+    <body>
+        <Header />
+        <div class="main-wrapper">
+            <Sidebar/>
+            <article class="content">
+                    <slot/>
+            </article>
+            <Footer />
+        </div>
+        <SearchPopup />
+    </body>
+</html>

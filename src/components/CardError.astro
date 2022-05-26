@@ -1,0 +1,9 @@
+---
+import CardBase from './CardBase.astro'
+import ErrorIcon from '~/icons/error_black_24dp.astro';
+const { title } = Astro.props;
+---
+<CardBase title={title} specialClass="card-error">
+	<ErrorIcon slot="icon"/>
+	<slot slot="default"/>
+</CardBase>

@@ -1,0 +1,17 @@
+---
+import { SITE, SOCIALS } from '~/constants.js';
+import SearchIcon from '~/icons/search_black_24dp.astro';
+import HambuirgerIcon from '~/icons/hamburger_black_24dp.astro';
+
+---
+<header>
+	<button class="mobile sidebar">
+		<HambuirgerIcon />
+	</button>
+	<h1 class="site-title"><a href={ SITE.docsRoot }>{ SITE.title }</a></h1>
+	<div class="dock-right">
+		<button class="search"><SearchIcon/></button>
+		<a class="link-external" href={ SOCIALS.discord} target="_blank">Discord</a>
+		<a class="link-external" href={ SOCIALS.github} target="_blank">GitHub</a>
+	</div>
+</header>

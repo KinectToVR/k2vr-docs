@@ -2,12 +2,7 @@
 layout: '@layouts/DocsPage.astro'
 title: Getting a Kinect and adapter
 setup: | 
-#   import CardInfo from '@components/CardInfo.astro'
   import CardTip from '@components/CardTip.astro'
-#   import CardHelp from '@components/CardHelp.astro'
-#   import CardWarning from '@components/CardWarning.astro'
-#   import CardError from '@components/CardError.astro'
-#   import ComparisionCard from '@components/ComparisionCard.astro'
   import Accordion from '@components/Accordion.astro'
 ---
 # Getting a Kinect and adapter
@@ -51,7 +46,7 @@ If you search for common mispellings of Kinect like "xbox connect", "konect", "k
 </CardTip>
 
 ### Where do I get the adapter?
-**Get it on Ebay,. please.** We have it on good authority, that every user who got shipped a dead adapter, had purchased it on Amazon. I know that some people may be reticent to use Ebay because of past experiences. But **we've had only good feedback from people using Ebay on our Discord.**
+**Get it on Ebay, please.** We have it on good authority, that every user who got shipped a dead adapter, had purchased it on Amazon. I know that some people may be reticent to use Ebay because of past experiences. But **we've had only good feedback from people using Ebay on our Discord.**
 
 Depending on where you live, the link for Ebay will change, but just **open the homepage and search "kinect 360 adapter"** and pick the first or second listing. Whichever has cheaper shipping, or if you wanna get it faster, buy it from a seller in your country.
 

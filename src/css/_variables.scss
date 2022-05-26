@@ -1,0 +1,102 @@
+:root {
+	--fonts-header: 'Poppins', 'Josefin Sans', sans-serif;
+	--fonts-normal: 'Josefin Sans', sans-serif;
+	--fonts-code: 'JetBrains Mono', monospace;
+
+	--sidebar-width: 18rem;
+	--sidebar-padding: 1rem;
+	--sidebar-header-spacing: 0.8rem;
+
+	--card-padding: 1rem;
+
+	--header-height: 4rem;
+	--header-padding: 4rem;
+	--header-title-size: 1.6rem;
+
+	--search-container-width:  120ex;
+	--search-container-height: 75vh;
+	--search-popup-padding: 1.75rem;
+	--search-input-height: 3rem;
+	--search-input-font-size: 1.2rem;
+
+	--heading-icon-size: 1rem;
+}
+.light {
+	--accent: #168CDD;
+	--link: #168CDD;
+
+	--footer-bg: #dedede;
+	--footer-text: #434343;
+	--footer-border: #434343aa;
+	--footer-link: #525252;
+	--footer-link-hover: #181818;
+
+	--header-bg: #3c3c3c;
+	--header-text: #ededed;
+
+	--codeblock-bg: #e6e6e6;
+
+	--table-bg: #dfdfdf;
+	--table-bg2: #f5f5f5;
+	--table-heading-bg: #6d6d6d;
+	--table-heading-text: #fff;
+	--table-text: #131313;
+	--table-border: #131313;
+
+	--sidebar-default: #181818;
+	--sidebar-hover: #000000;
+	--sidebar-selected: #000000;
+	--sidebar-bg-default: #e1e1e1;
+	--sidebar-bg-hover: #eaeaea;
+	--sidebar-bg-selected: #cdcdcd;
+	--sidebar-border: #939393;
+	--sidebar-selected-accent: #168CDD;
+
+	--search-container-bg: #bababa;
+	--search-input-bg: #dedede;
+	--search-input-text: #242424;
+	--search-result-bg: var(--search-container-bg);
+	--search-result-hover-bg: #a7a7a7;
+	--search-result-text: #191919;
+
+	--accordion-bg: #d1d1d1;
+	--accordion-hover-bg: #e4e4e4;
+	--accordion-text: #212121;
+	--accordion-collapse: #b9b9b9;
+
+	.card-error {
+		--card-bg: #fab4b4;
+		--card-contrast: #790000;
+		--codeblock-bg: #ffd4d4;
+	}
+	.card-help {
+		--card-bg: #b7fab4;
+		--card-contrast: #103b0e;
+		--codeblock-bg: #e2ffe0;
+	}
+	.card-info {
+		--card-bg: #b4cbfa;
+		--card-contrast: #001132;
+		--codeblock-bg: #d0defb;
+		// more contrast
+		--link: #126197;
+	}
+	.card-tip {
+		--card-bg: #f5b4fa;
+		--card-contrast: #3d0d41;
+		--codeblock-bg: #f8c6fb;
+	}
+	.card-warning {
+		--card-bg: #faf6b4;
+		--card-contrast: #312f00;
+		--codeblock-bg: #faf8cb;
+	}
+	.card-download {
+		--card-bg: #168CDD;
+		--card-contrast: #FFF;
+		--codeblock-bg: #3F9EDD;
+	}
+}
+.dark {
+
+}

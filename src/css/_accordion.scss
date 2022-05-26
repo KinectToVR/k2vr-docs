@@ -1,0 +1,37 @@
+.accordion {
+	background-color: var(--accordion-bg);
+	color: var(--accordion-text);
+
+	&:hover {
+		background: var(--accordion-hover-bg);
+	}
+}
+
+.accordion-header {
+	padding: 1rem;
+	cursor: pointer;
+	.no-js & {
+		cursor: default;
+	}
+}
+
+.accordion-content {
+	background-color: var(--accordion-collapse);
+	color: var(--accordion-text);
+
+	padding: 1rem;
+
+	.no-js &.collapsed {
+		display: block;
+	}
+	&.collapsed {
+		display: none;
+	}
+
+	& *:first-child {
+		margin-top: 0;
+	}
+	& *:last-child {
+		margin-bottom: 0;
+	}
+}

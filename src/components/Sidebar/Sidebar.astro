@@ -1,0 +1,11 @@
+---
+import SidebarSection from './SidebarSection.astro';
+import SidebarEntries from '~/sidebar.json';
+---
+<div class="docs-sidebar collapse">
+	
+	<SidebarSection items={SidebarEntries.items}/>
+	
+</div>
+<div class="sidebar-overlay">
+</div>

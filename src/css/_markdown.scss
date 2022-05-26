@@ -1,0 +1,149 @@
+body {
+	font-family: var(--fonts-normal);
+}
+.heading-wrapper, h1, h2, h3, h4, h5, h6 {
+	font-family: var(--fonts-header);
+	font-weight: 800;
+}
+code, pre {
+	font-family: var(--fonts-code);
+}
+.comparision-card, .accordion, .card, blockquote, pre, h1, h2, h3, h4, h5, h6 {
+	margin: 0.75rem 0;
+}
+blockquote {
+	border-left: 0.25rem solid #949494;
+	background: #d2d2d2;
+	color: #151515;
+	padding: 1rem;
+
+	& p {
+		margin: .8rem 0;
+	}
+
+	& * {
+		margin-left: 0.5rem;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	& strong {
+		margin-left: 0;
+	}
+}
+code {
+	background-color: var(--codeblock-bg);
+	padding: 0 0.5rem;
+	font-size: 0.9rem;
+	pre & {
+		// Remove padding in codeblocks
+		padding: 0;
+	}
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2.6rem;
+	line-height: 3rem;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.8rem;
+}
+h5 {
+	font-size: 1.6rem;
+}
+h6 {
+	font-size: 1.2rem;
+}
+.heading-wrapper {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: baseline;
+	margin-inline-start: calc(-1 * var(--heading-icon-size));
+	& * {
+		display: inline;
+	}
+	& .anchor-link {
+		color: inherit;
+		position: relative;
+		inset-inline-start: -0.75rem;
+		width: var(--heading-icon-size);
+		height: var(--heading-icon-size);
+		opacity: 0;
+		transition: ease-in-out 250ms opacity;
+	}
+	&:hover .anchor-link {
+		opacity: 1;
+	}
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+article {
+	& ul, & li, & ol, & p, & strong, & em {
+		line-height: 1.2rem;
+	}
+}
+p {
+	margin: 1rem 0;
+}
+a {
+	color: var(--link);
+}
+article > p > img {
+	margin: auto;
+	display: block;
+	// Fix oversized images
+	max-width: 100%;
+}
+article ul {
+	list-style: disc;
+	margin-left: 1rem;
+	margin-top: 1rem;
+}
+article ol {
+	list-style: decimal;
+	margin-left: 1rem;
+	margin-top: 1rem;
+}
+table {
+	background-color: var(--table-bg);
+	color: var(--table-text);
+	width: 100%;
+
+	$padding: 0.5rem;
+	$border-width: 1px;
+
+	& thead {
+		background-color: var(--table-heading-bg);
+		color: var(--table-heading-text);
+	}
+
+	& th {	
+		border: $border-width solid var(--table-border);
+		text-align: left;
+		font-weight: 700;
+		font-size: 1.2rem;
+		padding: $padding;
+	}
+	& td {	
+		border: $border-width solid var(--table-border);
+		text-align: left;
+		padding: $padding;
+	}
+	& tbody tr:nth-child(2n - 1) {
+		background: var(--table-bg2);
+	}
+}

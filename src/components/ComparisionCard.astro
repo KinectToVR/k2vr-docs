@@ -1,0 +1,21 @@
+---
+const { beforeSrc, afterSrc } = Astro.props;
+const beforeTxt = Astro.props.beforeTxt ?? "";
+const afterTxt = Astro.props.afterTxt ?? "";
+// All the drag shit is so that we dont get "image drag" when youre simply just trying to use the slider to compare and contrast
+---
+<div class="comparision-card" style="--compare-width: 50%" draggable="false" ondragstart="return false">
+	<div class="before" draggable="false" ondragstart="return false">
+		<img src={beforeSrc}  draggable="false" ondragstart="return false"/>
+	</div>
+	<div class="after" draggable="false" ondragstart="return false">
+		<img src={afterSrc}  draggable="false" ondragstart="return false"/>
+	</div>
+	<div class="slider" draggable="false" ondragstart="return false">
+		<div class="grip" draggable="false" ondragstart="return false"></div>
+	</div>
+	<div class="text-overlay">
+		<span class="before">{beforeTxt}</span>
+		<span class="after">{afterTxt}</span>
+	</div>
+</div>

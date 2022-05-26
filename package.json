@@ -1,0 +1,35 @@
+{
+  "name": "hekky-shader-docs",
+  "version": "1.0.0",
+  "scripts": {
+    "gensearch": "node scripts/search-gen.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/preact": "^0.0.2",
+    "@astrojs/react": "^0.1.0",
+    "@astrojs/sitemap": "^0.1.0",
+    "@babel/core": "^7.17.9",
+    "@types/react": "^17.0.43",
+    "astro": "^1.0.0-beta.12",
+    "hastscript": "^7.0.2",
+    "preact": "^10.7.1",
+    "prettier": "^2.6.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rehype-autolink-headings": "^6.1.1",
+    "remark": "^14.0.2",
+    "sass": "^1.50.0",
+    "serialize-javascript": "^6.0.0",
+    "shiki": "^0.10.1",
+    "shorthash": "^0.0.2",
+    "strip-markdown": "^5.0.0"
+  },
+  "engines": {
+    "node": "^14.15.0 || >=16.0.0",
+    "pnpm": ">=6.0.0"
+  },
+  "packageManager": "pnpm@6.32.3"
+}

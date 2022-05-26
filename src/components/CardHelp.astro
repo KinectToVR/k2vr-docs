@@ -1,0 +1,9 @@
+---
+import CardBase from './CardBase.astro'
+import HelpIcon from '~/icons/help_black_24dp.astro';
+const { title } = Astro.props;
+---
+<CardBase title={title} specialClass="card-help">
+	<HelpIcon slot="icon"/>
+	<slot slot="default"/>
+</CardBase>
