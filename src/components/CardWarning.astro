@@ -1,0 +1,9 @@
+---
+import CardBase from './CardBase.astro'
+import WarningIcon from '~/icons/warning_black_24dp.astro';
+const { title } = Astro.props;
+---
+<CardBase title={title} specialClass="card-warning">
+	<WarningIcon slot="icon"/>
+	<slot slot="default"/>
+</CardBase>

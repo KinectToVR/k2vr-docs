@@ -1,0 +1,83 @@
+.docs-sidebar {
+	position: fixed;
+	overflow: hidden scroll;
+	width: calc(var(--sidebar-width) + 2 * var(--sidebar-padding));
+	height: calc(100% - 2 * var(--sidebar-padding) - var(--header-height));
+	padding: var(--sidebar-padding) 0;
+	background: var(--sidebar-bg-default);
+	z-index: 50;
+}
+.sidebar-section-title {
+	&:not(:first-child)::before {
+		content: '';
+		background: var(--sidebar-border);
+		width: calc(100% - 2 * var(--sidebar-padding));
+		height: 2px;
+		display: block;
+		margin-left: var(--sidebar-padding);
+		margin-bottom: var(--sidebar-header-spacing);
+	}
+}
+.sidebar-section-children {
+	margin-top: var(--sidebar-header-spacing);
+}
+.sidebar-title-text {
+	font-family: var(--fonts-header);
+	font-size: 1.5rem;
+	font-weight: 700;
+	padding: 0 0 0 var(--sidebar-padding);
+	margin-bottom: var(--sidebar-padding);
+}
+.sidebar-section-link {
+	display: block;
+	padding: var(--sidebar-header-spacing) 0 var(--sidebar-header-spacing) calc(2 * var(--sidebar-padding));
+	color: var(--sidebar-default);
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--sidebar-bg-hover);
+		color: var(--sidebar-hover);
+	}
+	&.sidebar-link-selected {
+		background-color: var(--sidebar-bg-selected);
+		color: var(--sidebar-selected);
+		padding-left: calc(2.2 * var(--sidebar-padding));
+		border-left: 4px solid var(--sidebar-selected-accent);
+	}
+	
+	& .sidebar-link-text {
+		color: currentColor;
+	}
+}
+// mobile
+@media only screen and (max-width: 1111px) {
+	.docs-sidebar {
+		position: fixed;
+		transition: left ease-in-out 150ms;
+	}
+	.docs-sidebar.expand {
+		left: 0;
+	}
+	.docs-sidebar.collapse {
+		left: calc(-1 * var(--sidebar-width) - 2 * var(--sidebar-padding));
+	}
+	
+	.docs-sidebar + .sidebar-overlay {
+		background-color: #000000;
+		opacity: 0%;
+		transition: opacity linear 150ms;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 2;
+		pointer-events: none;
+	}
+	.docs-sidebar.expand + .sidebar-overlay {
+		opacity: 80%;
+		pointer-events: all;
+	}
+}

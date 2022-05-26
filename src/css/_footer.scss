@@ -1,0 +1,41 @@
+footer {
+	background: var(--footer-bg);
+	color: var(--footer-text);
+	margin-left: calc(var(--sidebar-width) + 2 * var(--sidebar-padding));
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1rem 0;
+	
+	& .prominent {
+		font-size: 1.5rem;
+	}
+	& .socials {
+		margin-top: 0.7rem;
+	}
+	& .social-link {
+		display: inline-block;
+		& a {
+			text-decoration: none;
+			color: var(--footer-link);
+			vertical-align: middle;
+			&:hover {
+				color: var(--footer-link-hover);
+			}
+		}
+		padding-right: 0.34rem;
+		border-right: 0.13rem solid var(--footer-border);
+
+		&:last-child {
+			padding: 0;
+			border: none;
+		}
+	}
+	
+	// mobile
+	@media only screen and (max-width: 1111px) {
+		margin-left: 0;
+	}
+}

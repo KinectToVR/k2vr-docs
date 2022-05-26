@@ -1,0 +1,16 @@
+---
+import { Markdown, Debug } from 'astro/components';
+
+/* Accordions
+	See: Bootstrap tabs
+	Tab => Accordion :D
+*/ 
+
+const { title } = Astro.props;
+---
+<div class="accordion-tab container">
+	<div class="accordion-header">
+		<span class="accordion-title">{ title }</span>
+	</div>
+	<slot/>
+</div>

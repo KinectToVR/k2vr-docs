@@ -1,0 +1,26 @@
+---
+import SearchIcon from '~/icons/search_black_24dp.astro';
+import CloseIcon from '~/icons/close_black_24dp.astro';
+---
+<div class="search-container-root">
+    <div class="search-container">
+        <div class="search-wrapper">
+            <div class="search-input">
+                <SearchIcon />
+                <input class="search-input-textbox" aria-autocomplete="both"
+                    aria-labelledby="earch-label" id="search-input"
+                    autocomplete="off" autocorrect="off" autocapitalize="none"
+                    enterkeyhint="search" spellcheck="false"
+                    placeholder="Search docs" maxlength="64" type="search">
+                <button id="close">
+                    <CloseIcon />
+                </button>
+            </div>
+            <ul class="search-results-container">
+                <li class="search-result">
+                    <a class="search-result-link">Sus</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

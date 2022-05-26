@@ -1,0 +1,17 @@
+---
+import { Markdown } from 'astro/components';
+
+const { title, specialClass } = Astro.props;
+---
+
+<div class={`card ${specialClass}`}>
+	<div class="heading-container">
+		<slot name="icon" />
+		<h3 class="card-title">{title}</h3>
+	</div>
+	<div class="card-content">
+		<Markdown>
+			<slot/>
+		</Markdown>
+	</div>
+</div>

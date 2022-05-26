@@ -1,0 +1,11 @@
+---
+import { Markdown } from 'astro/components';
+
+const { tabName } = Astro.props;
+const tabId = tabName.replace(/\W/g,'-').toLowerCase();
+---
+<div class="accordion-tab-content collapsed" aria-label={tabName} id={`accordion-tab-${tabId}`}>
+	<Markdown>
+		<slot slot="default"/>
+	</Markdown>
+</div>
