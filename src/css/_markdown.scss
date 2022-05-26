@@ -3,7 +3,7 @@ body {
 }
 .heading-wrapper, h1, h2, h3, h4, h5, h6 {
 	font-family: var(--fonts-header);
-	font-weight: 800;
+	font-weight: var(--fonts-header-weight);
 }
 code, pre {
 	font-family: var(--fonts-code);
