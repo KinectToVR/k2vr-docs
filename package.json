@@ -1,5 +1,5 @@
 {
-  "name": "hekky-shader-docs",
+  "name": "k2vr-docs",
   "version": "1.0.0",
   "scripts": {
     "gensearch": "node scripts/search-gen.mjs",
