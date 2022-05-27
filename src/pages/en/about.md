@@ -32,7 +32,7 @@ Now, **the app is called Amethyst, it's created by K2VR Team.** And support for 
 
 So, TL;DR  
 When you talk about the app: Amethyst  
-When you talk aboutt he project: K2VR
+When you talk about the project: K2VR
 
 ## Who is that girl?
 That's Violet, the mascot for K2VR and Amethyst. Because Amethyst is a body tracking application, it made sense for us to have a mascot to help us create tracking demos in a way that's consistent with the rest of branding.

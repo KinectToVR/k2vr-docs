@@ -12,9 +12,9 @@ If you came here, it's because you don't already have a Kinect, and want to know
 
 ## Should you even get a Kinect?
 There's other options out there, SlimeVR, Apriltag, Vive trackers obviously, PS Move too. **Kinect is cheap, but it has limitations that might make you want to reconsider.**
-- Sideways tracking is almost inexistent
-- Any poses that involve your head being lower than your waist, e.g. handstands, breakdancing, carthweels, backflips, can't be done.
-- Joint rotation is far from perfect nuless you provide external data from comaptible devices.
+- Sideways tracking is almost inexistent.
+- Any poses that involve your head being lower than your waist, e.g. handstands, breakdancing, cartwheels, backflips, can't be done.
+- Joint rotation is far from perfect unless you provide external data from compatible devices.
 - And most of all, you need a really large room.
 
 With Xbox 360 Kinect, **you need to stand at least 1.5 meters away** from it for tracking to work, and preferably 2 meters for the best tracking.
@@ -39,16 +39,16 @@ If you have a smaller room, and can only stand about 1.5 meters away, and you've
 ## Where do I buy the Kinect?
 If you're in the UK: [Go here](https://uk.webuy.com/product-detail/?id=s360kinsoxb&categoryName=xbox-360-accessories&superCatName=gaming&title=x360-official-kinect-with-psu-(no-game)) don't even ask any questions. **Kinects sold at CEX always work**, the adapters are tested, and there's a warranty. It's price is also unbeatable. It also means you get to ignore the entire part about adapters further down this page.
 
-Elsewhere, check either Ebay or local classified ads websites. **Any Kinect you'll find on Amazon is probably overpriced.**
+Elsewhere, check either eBay or local classified ads websites. **Any Kinect you'll find on Amazon is probably overpriced.**
 
 <CardTip title="Finding cheap Kinects">
 If you search for common mispellings of Kinect like "xbox connect", "konect", "kinnect" or similar, you'll often find listings from people that lack education on both spelling and money. :)
 </CardTip>
 
 ## Where do I get the adapter?
-**Get it on Ebay,. please.** We have it on good authority, that every user who got shipped a dead adapter, had purchased it on Amazon. I know that some people may be reticent to use Ebay because of past experiences. But **we've had only good feedback from people using Ebay on our Discord.**
+**Get it on eBay,. please.** We have it on good authority, that every user who got shipped a dead adapter, had purchased it on Amazon. I know that some people may be reticent to use eBay because of past experiences. But **we've had only good feedback from people using eBay on our Discord.**
 
-Depending on where you live, the link for Ebay will change, but just **open the homepage and search "kinect 360 adapter"** and pick the first or second listing. Whichever has cheaper shipping, or if you wanna get it faster, buy it from a seller in your country.
+Depending on where you live, the link for eBay will change, but just **open the homepage and search "kinect 360 adapter"** and pick the first or second listing. Whichever has cheaper shipping, or if you wanna get it faster, buy it from a seller in your country.
 
 Once the stuff arrives, go to either  
 [Setting up your Xbox 360 Kinect](360/setup)  

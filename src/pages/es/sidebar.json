@@ -1,0 +1,131 @@
+{
+    "items": [{
+            "title": "General",
+            "children": [{
+                    "title": "Cómo Amethyst se compara con otras opciones",
+                    "url": "/es/comparison"
+                },
+                {
+                    "title": "Obteniendo un Kinect y su adaptador",
+                    "url": "/es/buying-kinect"
+                },
+                {
+                    "title": "Acerca de Amethyst y K2VR",
+                    "url": "/es/about"
+                }
+            ]
+        },
+        {
+            "title": "Usando Amethyst",
+            "children": [{
+                    "title": "Instalando Amethyst",
+                    "url": "/es/app/installation"
+                },
+                {
+                    "title": "Descripción general de la aplicación",
+                    "url": "/es/app/overview"
+                },
+                {
+                    "title": "Cómo usar excepciones",
+                    "url": "/es/app/overrides"
+                },
+                {
+                    "title": "Resolución de problemas generales",
+                    "url": "/es/app/help"
+                },
+                {
+                    "title": "Resolución de problemas de el controlador SteamVR",
+                    "url": "/es/app/steamvr-driver-codes"
+                }
+            ]
+        },
+        {
+            "title": "Kinect de Xbox 360",
+            "children": [{
+                "title": "Configurando tu Kinect de Xbox 360",
+                "url": "/es/360/setup"
+            },
+            {
+                "title": "Resolución de problemas de tu Kinect de Xbox 360",
+                "url": "/es/360/troubleshooting"
+            },
+            {
+                "title": "Cómo solucionar E_NUI_NOTPOWERED",
+                "url": "/es/360/troubleshooting/notpowered"
+            },
+            {
+                "title": "Cómo solucionar E_NUI_NOTREADY",
+                "url": "/es/360/troubleshooting/notready"
+            },
+            {
+                "title": "Cómo solucionar E_NUI_NOTGENUINE",
+                "url": "/es/360/troubleshooting/notgenuine"
+            },
+            {
+                "title": "Cómo solucionar E_NUI_INSUFFICIENTBANDWIDTH",
+                "url": "/es/360/troubleshooting/insufficientbandwidth"
+            }
+        ]
+        },
+        {
+            "title": "Kinect de Xbox One",
+            "children": [{
+                "title": "Problemas comúnes con Kinect de Xbox One",
+                "url": "/es/one/common-issues"
+            },
+            {
+                "title": "Configurando tu Kinect de Xbox 360",
+                "url": "/es/one/setup"
+            },
+            {
+                "title": "Resolución de problemas de tu Kinect de Xbox One",
+                "url": "/es/one/troubleshooting"
+            }
+        ]
+        },
+        {
+            "title": "PlayStation Move",
+            "children": [{
+                "title": "Requisitos",
+                "url": "/es/psmove/what-to-buy"
+            },
+            {
+                "title": "Configurando PSMoveServiceEX",
+                "url": "/es/psmove/setup"
+            },
+            {
+                "title": "Usando PS Move con Amethyst",
+                "url": "/es/psmove/usage"
+            },
+            {
+                "title": "Resolución de problemas de PlayStation Move",
+                "url": "/es/psmove/troubleshooting"
+            }
+        ]
+        },
+        {
+            "title": "owoTrack",
+            "children": [{
+                "title": "Qué es owoTrack?",
+                "url": "/es/owo/about"
+            },
+            {
+                "title": "Cómo configurar y usar owoTrack",
+                "url": "/es/owo/setup"
+            }
+        ]
+        },
+        {
+            "title": "Augmented Hip",
+            "children": [{
+                "title": "Qué es Augmented Hip?",
+                "url": "/es/aughip/about"
+            },
+            {
+                "title": "Cómo usar Augmented Hip",
+                "url": "/es/aughip/setup"
+            }
+        ]
+        }
+    ]
+}
