@@ -9,7 +9,8 @@ import { SITE } from '~/constants.js';
 import "~/css/main.scss";
 
 const { content } = Astro.props;
-let title = Astro.props.title ?? content.title;
+let title = (Astro.props.title ?? content.title) ?? "";
+let image = Astro.props.image ?? content.image;
 let description = Astro.props.description ?? content.description;
 let locale = Astro.props.locale ?? content.locale;
 title = title.trim().length > 0 ? `${title.trim()} | ${SITE.title}` : SITE.title;
@@ -22,7 +23,9 @@ title = title.trim().length > 0 ? `${title.trim()} | ${SITE.title}` : SITE.title
         <SocialEmbed
             title={ title }
             description={ description }
-            color="#168CDD"
+            image={ image }
+            color={ SITE.embedColor }
+            canonicalURL={ Astro.canonicalURL }
         ></SocialEmbed>
 
         <link rel="icon" href="/shared/favicon.ico">
