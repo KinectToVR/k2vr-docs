@@ -31,93 +31,90 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: .5em 0;
+	margin: 0.5em 0;
 	overflow: auto;
+  }
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+	color: white;
+	background: #1c1b19;
+  }
+  :not(pre) > code[class*="language-"] {
+	padding: 0.1em;
 	border-radius: 0.3em;
-}
- 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #282a36;
-}
- 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
 	white-space: normal;
-}
- 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #6272a4;
-}
- 
-.token.punctuation {
-	color: #f8f8f2;
-}
- 
-.namespace {
-	opacity: .7;
-}
- 
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #ff79c6;
-}
- 
-.token.boolean,
-.token.number {
-	color: #bd93f9;
-}
- 
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	color: #50fa7b;
-}
- 
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	color: #f8f8f2;
-}
- 
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-	color: #f1fa8c;
-}
- 
-.token.keyword {
-	color: #8be9fd;
-}
- 
-.token.regex,
-.token.important {
-	color: #ffb86c;
-}
- 
-.token.important,
-.token.bold {
+  }
+  .token.comment {
+	color: #75715E;
+	
+  }
+  .token.string {
+	color: #FBB829;
+	
+  }
+  .token.number {
+	color: #0AAEB3;
+	
+  }
+  .token.builtin {
+	color: #0AAEB3;
+	
+  }
+  .token.char {
+	color: #0AAEB3;
+	
+  }
+  .token.constant {
+	color: #0AAEB3;
+	
+  }
+  .token.variable {
+	color: #9EBAC2;
+	
+  }
+  .token.class-name {
+	color: #519F50;
+	
+  }
+  .token.function {
+	color: #519F50;
+	
+  }
+  .token.attr-name {
+	color: #519F50;
+	
+  }
+  .token.selector {
+	color: #519F50;
+	
+  }
+  .token.inserted {
+	color: #519F50;
+	
+  }
+  .token.tag {
+	color: #EF2F27;
+	
+  }
+  .token.punctuation {
+	color: #EF2F27;
+	
+  }
+  .token.deleted {
+	color: #EF2F27;
+	
+  }
+  .token.changed {
+	color: #F75341;
+	
+  }
+  .token.important,
+  .token.bold {
 	font-weight: bold;
-}
- 
-.token.italic {
+  }
+  .token.italic {
 	font-style: italic;
-}
+  }
  
 .token.entity {
 	cursor: help;
