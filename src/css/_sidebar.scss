@@ -49,6 +49,10 @@
 		color: currentColor;
 	}
 }
+.docs-sidebar + .sidebar-overlay {
+	opacity: 0%;
+	transition: opacity linear 150ms;
+}
 // mobile
 @media only screen and (max-width: 1111px) {
 	.docs-sidebar {
@@ -64,8 +68,6 @@
 	
 	.docs-sidebar + .sidebar-overlay {
 		background-color: #000000;
-		opacity: 0%;
-		transition: opacity linear 150ms;
 		position: fixed;
 		width: 100%;
 		height: 100%;
