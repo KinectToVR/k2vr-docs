@@ -10,7 +10,7 @@ If you see any issues, typos, missing information or want to add entire new page
 Do this in the folder of your local repo
 - Install NPM
 - Install pnpm `npm install pnpm --global`
-- Initialize dev environment through pnpm `pnpm i`
+- Initialize dev environment through pnpm `pnpm i --frozen-lockfile`
 
 You can now start a dev server locally with `pnpm astro dev`  
 Pages will update automatically in the browser on file save.

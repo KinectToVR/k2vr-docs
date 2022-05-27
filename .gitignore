@@ -19,4 +19,3 @@ yarn-error.log*
 
 # Webstorm
 .idea/
-*.yaml
