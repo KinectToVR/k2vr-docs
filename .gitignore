@@ -20,3 +20,4 @@ yarn-error.log*
 # Webstorm
 .idea/
 pnpm-lock.yaml
+pnpm-lock.yaml
