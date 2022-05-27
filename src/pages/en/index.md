@@ -18,6 +18,7 @@ Here's a full list of pages sorted by categories
 ## Using Amethyst
 - [Installing Amethyst](app/installation)
 - [App Overview](app/overview)
+- [How to calibrate](app/calibration)
 - [How to use overrides](app/overrides)
 - [General Troubleshooting](app/help)
 - [SteamVR Driver Troubleshooting](app/steamvr-driver-codes)

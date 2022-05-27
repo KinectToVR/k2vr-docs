@@ -26,6 +26,10 @@
                     "url": "/en/app/overview"
                 },
                 {
+                    "title": "How to calibrate",
+                    "url": "/en/app/calibration"
+                },
+                {
                     "title": "How to use overrides",
                     "url": "/en/app/overrides"
                 },
