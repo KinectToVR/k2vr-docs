@@ -17,7 +17,7 @@ const AnchorLinkIcon = h('svg', {
 }));
 
 export default defineConfig({
-  site: 'https://docs.hyblocker.dev',
+  site: 'https://docs.k2vr.tech',
   integrations: [preact(), react(), sitemap()],
   markdown: {
     mode: 'mdx',
