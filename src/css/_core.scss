@@ -8,7 +8,7 @@ html {
 .content {
 	margin: 0 auto;
 	padding: 2rem;
-	padding-left: calc(var(--sidebar-width) + 2 * var(--sidebar-padding));
+	padding-left: calc(var(--sidebar-width) + 2 * var(--sidebar-padding) + 2rem);
 	max-width: 120ex;
 	
 	@media only screen and (max-width: 1111px) {
