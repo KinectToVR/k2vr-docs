@@ -1,5 +1,5 @@
 export const SITE = {
-    title: "Documentation",
+    title: "Amethyst Docs",
     domain: "k2vr.tech",
     docsRoot: "/en/", // TODO: Localisation support
 };
