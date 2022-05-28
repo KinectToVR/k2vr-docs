@@ -29,15 +29,20 @@
 .accordion-header {
 	padding: 1rem;
 	cursor: pointer;
-	& svg,
+	display: flex;
+	justify-content: space-between;
 	& span {
 		pointer-events: none;
+		height: min-content;
 	}
 	.no-js & {
 		cursor: default;
 	}
 	& svg {
 		transform: rotateX(180deg);
+		vertical-align: middle;
+		height:16px;
+		scale: 1.5;
 	}
 }
 
