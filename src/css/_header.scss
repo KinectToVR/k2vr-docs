@@ -1,8 +1,8 @@
 header {
 	position: sticky;
 	top: 0;
-	height: var(--header-height);
 	width: 100%;
+	height: var(--header-height);
 	background-color: var(--header-bg);
 	color: var(--header-text);
 	z-index: 1000;
@@ -11,22 +11,33 @@ header {
 	align-items: center;
 	flex: 1 1;
 	flex-direction: row;
-	grid-gap: .5rem;
-	gap: .5rem;
+	padding-top: -.5rem;
+
+	// Uncomment alongside sidebar to make sidebar full height
+	// width: calc(100% - (var(--sidebar-width) + 2 * var(--sidebar-padding)));
+	// left: calc(var(--sidebar-width) + 2 * var(--sidebar-padding));
+	// @media only screen and (max-width: 1111px) {
+	// 	left: 0;
+	// 	width: 100%;
+	// }
 
 	& .site-title {
 		display: inline-block;
 		font-size: var(--header-title-size);
 		// text-transform: uppercase;
 		margin: 0;
-		margin-left: var(--header-padding);
+		margin-left: calc(var(--header-padding) / 2 - 6px);
 		
 		@media only screen and (max-width: 1111px) {
 			margin-left: calc(var(--header-padding) / 2 - 4px);
 		}
 
 		a {
-			color: currentColor;
+			color: transparent;
+			// background-color: red;
+			background-image: url(/public/shared/k2vr.svg);
+			background-repeat: no-repeat;
+			background-size:contain;
 			text-decoration: none;
 		}
 	}

@@ -6,6 +6,11 @@
 	padding: var(--sidebar-padding) 0;
 	background: var(--sidebar-bg-default);
 	z-index: 50;
+	// uncomment alongside header to make the sidebar full-height
+	// @media only screen and (min-width: 1110px) {
+	// 	margin-top: calc(var(--header-height) * -1);
+	// 	height: calc(100% - 2 * var(--sidebar-padding));
+	// }
 }
 .sidebar-section-title {
 	&:not(:first-child)::before {
@@ -34,18 +39,18 @@
 	color: var(--sidebar-default);
 	text-decoration: none;
 	margin: .5em;
-	border-radius: 6px;
+	border-radius: 4px;
 
 	&:hover {
 		background-color: var(--sidebar-bg-hover);
 		color: var(--sidebar-hover);
-		border-radius: 6px;
+		border-radius: 4px;
 	}
 	&.sidebar-link-selected {
 		background: linear-gradient(90deg, transparent 3%, var(--sidebar-bg-selected) 3%), linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-midtone) 50%, var(--brand-pink) 100%);
 		color: var(--sidebar-selected);
 		padding-left: calc(2.2 * var(--sidebar-padding));
-		border-radius: 6px;
+		border-radius: 4px;
 	}
 	
 	& .sidebar-link-text {

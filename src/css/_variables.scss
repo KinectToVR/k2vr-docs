@@ -15,7 +15,7 @@
 	--card-padding: 1rem;
 
 	--header-height: 4rem;
-	--header-padding: 4rem;
+	--header-padding: 3rem;
 	--header-title-size: 1.6rem;
 
 	--search-container-width:  120ex;
@@ -112,7 +112,98 @@
 	}
 }
 @mixin darkMode {
+	--background-color: #1B1B27;
+	--text-color: #E3DFE9;
 	
+	--accent: #9B81FF;
+	--link: #9B81FF;
+
+	--footer-bg: #2B2B43;
+	--footer-text: #E3DFE9;
+	--footer-border: #E3DFE9AA;
+	--footer-link: #E3DFE9;
+	--footer-link-hover: #FFFFFF;
+
+	--header-bg: #2B2B43;
+	--header-text: #FFFFFF;
+
+	--codeblock-bg: #293652;
+	--codeblock-text: #FFFFFF;
+
+	--kbd-primary: #494968;
+	--kbd-secondary: #6A6A89;
+	--kbd-text: #B9B3D1;
+
+	--table-bg: #dfdfdf;
+	--table-bg2: #f5f5f5;
+	--table-heading-bg: #6d6d6d;
+	--table-heading-text: #fff;
+	--table-text: #131313;
+	--table-border: #131313;
+
+	--sidebar-default: #B9B3D1;
+	--sidebar-hover: #FFFFFF;
+	--sidebar-selected: #FFFFFF;
+	--sidebar-bg-default: #363652;
+	--sidebar-bg-hover: #494968;
+	--sidebar-bg-selected: #6A6A89;
+	--sidebar-border: #536081;
+
+	--search-container-bg: #bababa;
+	--search-input-bg: #dedede;
+	--search-input-text: #242424;
+	--search-result-bg: var(--search-container-bg);
+	--search-result-hover-bg: #a7a7a7;
+	--search-result-text: #191919;
+
+	--accordion-bg: #363652;
+	--accordion-hover-bg: #494968;
+	--accordion-border: #383855;
+	--accordion-text: #B9B3D1;
+	--accordion-collapse: #2B2B43;
+
+	.card-error {
+		--card-bg: #5A2C30;
+		--card-contrast: #fb7e87;
+		--card-border: #FC6570;
+		--codeblock-bg: #ffd4d4;
+	}
+	.card-help {
+		--card-bg: #295a38;
+		--card-contrast: #62D470;
+		--card-border: #62D470;
+		--codeblock-bg: #e2ffe0;
+	}
+	.card-info {
+		--card-bg: #294b56;
+		--card-contrast: #37ACCE;
+		--card-border: #37ACCE;
+		--codeblock-bg: #d0defb;
+		// more contrast
+		--link: #126197;
+	}
+	.card-tip {
+		--card-bg: #412a46;
+		--card-contrast: #ee99fa;
+		--codeblock-bg: #f8c6fb;
+		--card-border: #D97DE8;
+	}
+	.card-warning {
+		--card-bg: #6A4C26;
+		--card-contrast: #D5C153;
+		--card-border: #D5C153;
+		--codeblock-bg: #faf8cb;
+	}
+	.card-download {
+		--card-bg: #168CDD;
+		--card-contrast: #FFF;
+		--codeblock-bg: #3F9EDD;
+	}
+	.card-noicon {
+		--card-bg: #363652;
+		--card-contrast: #B9B3D1;
+		--card-border: #454565;
+	}
 }
 
 // automatic/manual light mode

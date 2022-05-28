@@ -37,6 +37,7 @@ blockquote {
 }
 code {
 	background-color: var(--codeblock-bg);
+	color: var(--codeblock-text);
 	padding: 0 0.5rem;
 	font-size: 0.9rem;
 	pre & {
@@ -93,7 +94,7 @@ strong {
 }
 article {
 	& ul, & li, & ol, & p, & strong, & em {
-		line-height: 1.2rem;
+		line-height: 1.4rem;
 	}
 }
 p {
@@ -104,9 +105,11 @@ a {
 }
 article > p > img {
 	margin: auto;
+	margin: 1em auto;
 	display: block;
 	// Fix oversized images
 	max-width: 100%;
+	border-radius: 4px;
 }
 article ul {
 	list-style: disc;
@@ -152,7 +155,7 @@ kbd{
 	padding-left: .2rem;
 	padding-right: 0;
 	margin-right: .3rem;
-	color: var(--kbd-secondary);
+	color: var(--kbd-text);
 	border: 1px var(--kbd-secondary) solid;
 	font-size: smaller;
 	box-sizing: content-box;

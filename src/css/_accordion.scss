@@ -1,7 +1,7 @@
 .accordion {
 	background-color: var(--accordion-bg);
 	color: var(--accordion-text);
-	border: 2px solid var(--accordion-text);
+	border: 2px solid var(--accordion-border);
 	border-radius: 6px;
 	&:hover {
 		background: var(--accordion-hover-bg);
