@@ -4,7 +4,7 @@ import { Markdown } from 'astro/components';
 import fs from 'node:fs/promises';
 
 // TODO: fetch locale? idk localisation is an r has fuk
-let { locale } = Astro.props;
+let { locale, ignoreItem } = Astro.props;
 
 locale = locale ?? "en";
 
@@ -17,7 +17,12 @@ const SidebarEntries = JSON.parse(json);
 ---
 <div class="table-of-contents">
 	<ul>
-		{SidebarEntries.items.map((item) => (
+		{SidebarEntries.items.filter( function(item) {
+			if (item.title === ignoreItem) {
+				return false; // skip
+			}
+			return true;
+		}).map((item) => (
 			<>
 				<li class="table-of-contents-section-title">
 					<Markdown>## {item.title}</Markdown>

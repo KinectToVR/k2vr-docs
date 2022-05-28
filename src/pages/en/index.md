@@ -19,4 +19,4 @@ A comprehensive comparison of using various devices in Amethyst compared to othe
 <CardNoIcon title="Getting a Kinect and adapter" href="buying-kinect">
 Where and which Kinect and USB and power adapter should you purchase?
 </CardNoIcon>
-<TableOfContents locale="en"/>
+<TableOfContents locale="en" ignoreItem="General"/>

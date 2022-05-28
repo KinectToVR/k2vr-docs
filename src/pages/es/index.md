@@ -14,4 +14,4 @@ Esta es la página inicial para la documentación de Amethyst. Está hecho a bas
 ---
 Aquí hay una lista completa de páginas ordenadas por categorías
 
-<TableOfContents locale="es"/>
+<TableOfContents locale="es" ignoreItem="General"/>
