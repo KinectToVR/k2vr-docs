@@ -1,9 +1,15 @@
 ---
 import CardBase from './CardBase.astro'
 const { href, title } = Astro.props;
+
+// locale resolution to ensure the final path includes the locale
+const { canonicalURL } = Astro;
+const locale = canonicalURL.pathname.split('/')[1];
+
+const patchedHref = href.startsWith(`/${locale}/`) ? href : `/${locale}/${href.replace(/^\/+/, '')}`;
 ---
-<a href={href} style="text-decoration:none">
-<CardBase title={title} specialClass="card-noicon">
-	<slot slot="default"/>
-</CardBase>
+<a href={ patchedHref } class="card-noicon">
+	<CardBase title={title} specialClass="card-noicon">
+		<slot slot="default"/>
+	</CardBase>
 </a>
