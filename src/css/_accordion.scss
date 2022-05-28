@@ -1,7 +1,8 @@
 .accordion {
 	background-color: var(--accordion-bg);
 	color: var(--accordion-text);
-
+	border: 2px solid var(--accordion-text);
+	border-radius: 6px;
 	&:hover {
 		background: var(--accordion-hover-bg);
 	}
@@ -10,6 +11,9 @@
 .accordion-header {
 	padding: 1rem;
 	cursor: pointer;
+	& span{
+		pointer-events: none;
+	}
 	.no-js & {
 		cursor: default;
 	}
@@ -18,7 +22,8 @@
 .accordion-content {
 	background-color: var(--accordion-collapse);
 	color: var(--accordion-text);
-
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
 	padding: 1rem;
 
 	.no-js &.collapsed {
