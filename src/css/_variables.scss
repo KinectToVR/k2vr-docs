@@ -4,9 +4,13 @@
 	--fonts-code: 'Source Code Pro', monospace;
 	--fonts-header-weight: 800;
 
+	--brand-blue: #52BFFF;
+	--brand-midtone: #AA6AF1;
+	--brand-pink: #F038B4;
+
 	--sidebar-width: 18rem;
 	--sidebar-padding: 1rem;
-	--sidebar-header-spacing: 0.8rem;
+	--sidebar-header-spacing: 0.6rem;
 
 	--card-padding: 1rem;
 
@@ -50,14 +54,13 @@
 	--table-text: #131313;
 	--table-border: #131313;
 
-	--sidebar-default: #181818;
+	--sidebar-default: #2f344b;
 	--sidebar-hover: #000000;
 	--sidebar-selected: #000000;
-	--sidebar-bg-default: #e1e1e1;
-	--sidebar-bg-hover: #eaeaea;
-	--sidebar-bg-selected: #cdcdcd;
-	--sidebar-border: #939393;
-	--sidebar-selected-accent: #168CDD;
+	--sidebar-bg-default: #dfe5e9;
+	--sidebar-bg-hover: #e1eef6;
+	--sidebar-bg-selected: #b5d1e2;
+	--sidebar-border: #a6adcf;
 
 	--search-container-bg: #bababa;
 	--search-input-bg: #dedede;
@@ -66,10 +69,10 @@
 	--search-result-hover-bg: #a7a7a7;
 	--search-result-text: #191919;
 
-	--accordion-bg: #d1d1d1;
-	--accordion-hover-bg: #e4e4e4;
-	--accordion-text: #212121;
-	--accordion-collapse: #b9b9b9;
+	--accordion-bg: #e5ecf0;
+	--accordion-hover-bg: #d9e8f2;
+	--accordion-text: #2f344b;
+	--accordion-collapse: #d5e0e7;
 
 	.card-error {
 		--card-bg: #fab4b4;
@@ -105,7 +108,7 @@
 	}
 	.card-noicon {
 		--card-bg: #dfe5e9;
-		--card-contrast: rgb(40, 40, 40);
+		--card-contrast: #2f344b;
 	}
 }
 .dark {

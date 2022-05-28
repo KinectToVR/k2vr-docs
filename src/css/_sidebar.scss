@@ -33,16 +33,19 @@
 	padding: var(--sidebar-header-spacing) 0 var(--sidebar-header-spacing) calc(2 * var(--sidebar-padding));
 	color: var(--sidebar-default);
 	text-decoration: none;
+	margin: .5em;
+	border-radius: 6px;
 
 	&:hover {
 		background-color: var(--sidebar-bg-hover);
 		color: var(--sidebar-hover);
+		border-radius: 6px;
 	}
 	&.sidebar-link-selected {
-		background-color: var(--sidebar-bg-selected);
+		background: linear-gradient(90deg, transparent 3%, var(--sidebar-bg-selected) 3%), linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-midtone) 50%, var(--brand-pink) 100%);
 		color: var(--sidebar-selected);
 		padding-left: calc(2.2 * var(--sidebar-padding));
-		border-left: 4px solid var(--sidebar-selected-accent);
+		border-radius: 6px;
 	}
 	
 	& .sidebar-link-text {
