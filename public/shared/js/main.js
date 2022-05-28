@@ -1,5 +1,5 @@
 function AccordionClick (e) {
-    const accordionContent = e.srcElement.parentElement.querySelector( '.accordion-content' );
+    const accordionContent = e.srcElement.parentElement;
 
     if (accordionContent.classList.contains( 'collapsed' )) {
         accordionContent.classList.remove( 'collapsed' );
