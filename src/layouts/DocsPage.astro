@@ -15,7 +15,7 @@ let description = Astro.props.description ?? content.description;
 let locale = Astro.props.locale ?? content.locale;
 title = title.trim().length > 0 ? `${title.trim()} | ${SITE.title}` : SITE.title;
 ---
-<html lang={locale ?? "en"} class="no-js light">
+<html lang={locale ?? "en"} class="no-js">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
