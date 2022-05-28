@@ -147,3 +147,16 @@ table {
 		background: var(--table-bg2);
 	}
 }
+kbd{
+	background-color: var(--kbd-primary);
+	padding-left: .2rem;
+	padding-right: 0;
+	margin-right: .3rem;
+	color: var(--kbd-secondary);
+	border: 1px var(--kbd-secondary) solid;
+	font-size: smaller;
+	box-sizing: content-box;
+	border-radius: 3px;
+	box-shadow: 0px 2px 0px var(--kbd-secondary);
+	vertical-align: top;
+}
