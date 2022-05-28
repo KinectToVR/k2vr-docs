@@ -1,0 +1,12 @@
+.table-of-contents {
+	& > ul {
+		list-style: none;
+		margin-left: 0;
+	}
+}
+
+.table-of-contents-link-text {
+	&::marker {
+		color: var(--text-color);
+	}
+}
