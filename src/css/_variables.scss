@@ -17,6 +17,11 @@
 	--header-height: 4rem;
 	--header-padding: 3rem;
 	--header-title-size: 1.6rem;
+	--heading-icon-size: 1rem;
+	
+	--footer-text-size: 1.5rem;
+	--footer-padding: 1rem;
+	--footer-height: 4rem;
 
 	--search-container-width:  120ex;
 	--search-container-height: 75vh;
@@ -24,7 +29,8 @@
 	--search-input-height: 3rem;
 	--search-input-font-size: 1.2rem;
 
-	--heading-icon-size: 1rem;
+	--content-padding: 2rem;
+	--content-max-width: 120ex;
 }
 @mixin lightMode {
 	--background-color: #fff;

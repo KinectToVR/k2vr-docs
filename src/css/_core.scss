@@ -6,11 +6,12 @@ html {
 }
 .content {
 	margin: 0 auto;
-	padding: 2rem;
-	padding-left: calc(var(--sidebar-width) + 2 * var(--sidebar-padding) + 2rem);
-	max-width: 120ex;
+	padding: var(--content-padding);
+	padding-left: calc(var(--sidebar-width) + 2 * var(--sidebar-padding) + var(--content-padding));
+	max-width: var(--content-max-width);
+	min-height: calc(100vh - var(--footer-height) - var(--header-height) - 2 * (var(--footer-padding) + var(--content-padding)));
 	
 	@media only screen and (max-width: 1111px) {
-		padding-left: 2rem;
+		padding-left: var(--content-padding);
 	}
 }
