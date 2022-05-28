@@ -40,7 +40,7 @@ title = title.trim().length > 0 ? `${title.trim()} | ${SITE.title}` : SITE.title
     <body>
         <Header />
         <div class="main-wrapper">
-            <Sidebar/>
+            <Sidebar locale={locale ?? "en"}/>
             <article class="content">
                     <slot/>
             </article>
