@@ -37,6 +37,9 @@
 
 	--codeblock-bg: #e6e6e6;
 
+	--kbd-primary: #cccccc;
+	--kbd-secondary: #575757;
+
 	--table-bg: #dfdfdf;
 	--table-bg2: #f5f5f5;
 	--table-heading-bg: #6d6d6d;
@@ -96,6 +99,10 @@
 		--card-bg: #168CDD;
 		--card-contrast: #FFF;
 		--codeblock-bg: #3F9EDD;
+	}
+	.card-noicon {
+		--card-bg: #dfe5e9;
+		--card-contrast: rgb(40, 40, 40);
 	}
 }
 .dark {

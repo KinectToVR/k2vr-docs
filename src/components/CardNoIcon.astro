@@ -1,0 +1,9 @@
+---
+import CardBase from './CardBase.astro'
+const { href, title } = Astro.props;
+---
+<a href={href} style="text-decoration:none">
+<CardBase title={title} specialClass="card-noicon">
+	<slot slot="default"/>
+</CardBase>
+</a>

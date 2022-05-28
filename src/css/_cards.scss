@@ -33,6 +33,13 @@
 	}
 }
 
+.card-noicon{
+	border: 2px solid var(--card-contrast);
+	& .heading-container h3{
+		margin: 0;
+	}
+}
+
 .card-download {
 	text-decoration: none;
 }
