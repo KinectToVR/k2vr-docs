@@ -17,7 +17,7 @@
 	}
 	&.collapsed {
 		& .accordion-header svg {
-			transform: rotateX(0deg);
+			transform: scale(1, 1);
 		}
 
 		& .accordion-content {
@@ -39,7 +39,8 @@
 		cursor: default;
 	}
 	& svg {
-		transform: rotateX(180deg);
+		transform: scale(1, -1);
+		transition: transform 250ms cubic-bezier(.79,.14,.15,.86);
 		vertical-align: middle;
 		height:16px;
 		scale: 1.5;
