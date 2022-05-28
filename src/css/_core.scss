@@ -1,9 +1,8 @@
 // Enable smooth scrolling
 html {
 	scroll-behavior: smooth;
-}
-.main-wrapper {
-	
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
 .content {
 	margin: 0 auto;
