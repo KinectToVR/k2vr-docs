@@ -1,7 +1,6 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: How Amethyst compares to 
-other options
+title: How Amethyst compares to other options
 locale: es
 # setup: | 
 #   import CardInfo from '@components/CardInfo.astro'
