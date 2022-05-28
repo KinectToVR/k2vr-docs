@@ -35,8 +35,10 @@
 	}
 }
 
-.card-noicon{
-	border: 2px solid var(--card-contrast);
+a.card-noicon {
+	text-decoration: none;
+}
+.card-noicon {
 	& .heading-container h3{
 		margin: 0;
 	}
