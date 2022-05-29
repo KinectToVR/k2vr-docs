@@ -7,10 +7,11 @@ footer {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 1rem 0;
+	padding: var(--footer-padding) 0;
+	height: var(--footer-height);
 	
 	& .prominent {
-		font-size: 1.5rem;
+		font-size: var(--footer-text-size);
 	}
 	& .socials {
 		margin-top: 0.7rem;
