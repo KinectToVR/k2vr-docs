@@ -3,7 +3,9 @@ layout: '@layouts/DocsPage.astro'
 title: Installing Amethyst
 setup: | 
   import Accordion from '@components/Accordion.astro'
-  import Windows from '~/icons/Windows.astro'
+  import Windows from '@icons/Kbd_Windows.astro'
+  import Enter from '@icons/Kbd_Enter.astro'
+  import Shift from '@icons/Kbd_Shift.astro'
 ---
 # Installing Amethyst
 You can get Amethyst Installer from the [homepage](https://k2vr.tech) by clicking on Get Started. You will be asked a few questions to ensure that you meet prerequisites, then the download button will appear.
@@ -17,8 +19,8 @@ This error happens usually because of a broken `openvrpaths.vrpath` file, or bec
 
 <Accordion title="If you have administrator permissions">
 - Make sure that SteamVR is closed.
-- Press <kbd><Windows />Windows</kbd> + <kbd>R</kbd> to open the Run dialog.
-- Paste or type in `%localappdata%\openvr` and press <kbd>Enter</kbd>.
+- Press <Windows /> + <kbd>R</kbd> to open the Run dialog.
+- Paste or type in `%localappdata%\openvr` and press <Enter />.
 - In the file explorer window, delete the only file present.
 - Start and close SteamVR once to generate a new file.
 - Open the installer again.
