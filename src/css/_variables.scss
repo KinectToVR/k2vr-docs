@@ -39,15 +39,15 @@
 	--accent: #4D37A4;
 	--link: #4D37A4;
 
-	--footer-bg: #B9B3D1;
+	--footer-bg: #bfbcc9;
 	--footer-text: #494361;
 	--footer-border: #746e8b;
 	--footer-link: #484162;
-	--footer-link-hover: #FFFFFF;
+	--footer-link-hover: #5b4b91;
 
-	--header-bg: #d2cade;
+	--header-bg: #cec9d5;
 	--header-text: #0c0c0c;
-	--header-logo: #554d76;
+	--header-logo: #6f6b7a;
 
 	--blockquote-bg: #E3DFE9;
 	--blockquote-text: #494968;
@@ -70,22 +70,22 @@
 	--sidebar-default: #494968;
 	--sidebar-hover: #141414;
 	--sidebar-selected: #141414;
-	--sidebar-bg-default: #E3DFE9;
-	--sidebar-bg-hover: #bfbfdb;
-	--sidebar-bg-selected: #ceceec;
+	--sidebar-bg-default: #f1eff5;
+	--sidebar-bg-hover: #cbcbdb;
+	--sidebar-bg-selected: #dbdbe7;
 	--sidebar-border: #a1a1bb;
 
-	--search-container-bg: #2B2B43;
-	--search-input-bg: #494968;
-	--search-input-text: #FFFFFF;
+	--search-container-bg: #CFCCDE;
+	--search-input-bg: #f1eff5;
+	--search-input-text: #2B2B43;
 	--search-result-bg: var(--search-container-bg);
-	--search-result-hover-bg: #6A6A89;
-	--search-result-text: #FFFFFF;
+	--search-result-hover-bg: #e2e2ed;
+	--search-result-text: #0c0c0c;
 
 	--accordion-bg: #CFCCDE;
 	--accordion-hover-bg: #E3DFE9;
 	--accordion-border: #9c95b7;
-	--accordion-text: #383855;
+	--accordion-text: #272735;
 	--accordion-collapse: #B9B3D1;
 
 	.card-error {
@@ -102,7 +102,7 @@
 	}
 	.card-info {
 		--card-bg: #c7eaf7;
-		--card-contrast: #0989af;
+		--card-contrast: #116b87;
 		--card-border: #37ACCE;
 		--codeblock-bg: #d0defb;
 		// more contrast
@@ -110,7 +110,7 @@
 	}
 	.card-tip {
 		--card-bg: #ebcaf2;
-		--card-contrast: #9a1eab;
+		--card-contrast: #72157e;
 		--codeblock-bg: #f8c6fb;
 		--card-border: #cb73d8;
 	}
