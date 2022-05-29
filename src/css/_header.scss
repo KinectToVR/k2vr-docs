@@ -2,6 +2,7 @@ header {
 	position: sticky;
 	top: 0;
 	width: 100%;
+	max-width: 100%;
 	height: var(--header-height);
 	background-color: var(--header-bg);
 	color: var(--header-text);
