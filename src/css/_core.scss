@@ -16,3 +16,18 @@ html {
 		padding-left: var(--content-padding);
 	}
 }
+
+@keyframes index-header {
+	0%{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.docs-index-header{
+	animation: index-header 1s ease-out;
+}

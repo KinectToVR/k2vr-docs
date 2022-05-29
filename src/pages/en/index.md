@@ -5,7 +5,12 @@ setup: |
   import CardNoIcon from '@components/CardNoIcon.astro'
   import TableOfContents from '@components/TableOfContents.astro'
 ---
-# Amethyst Docs
+<div class="docs-index-header" style="height: 10em; display:flex; justify-content:center;">
+  <img src="/shared/img/amethyst-logo.png" height="100%">
+  <h1 style="line-height:2.7em; margin-left:.5em">Amethyst</h1>
+</div>
+<br>
+
 This is the homepage for the Amethyst documentation. It's built from the markdown source at https://github.com/kinecttovr/k2vr-docs feel free to contribute.
 
 <CardNoIcon title="About Amethyst and K2VR" href="about">
