@@ -42,6 +42,9 @@ a.card-noicon {
 	& .heading-container h3{
 		margin: 0;
 	}
+	&:hover, &:active{
+		background-color: var(--card-bg-hover);
+	}
 }
 
 .card-download {
