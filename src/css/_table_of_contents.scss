@@ -2,7 +2,17 @@
 	& > ul {
 		list-style: none;
 		margin-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5em;
 	}
+	width: 100%;
+
+}
+
+.table-of-contents-section-link{
+	width: fit-content;
+	display: block;
 }
 
 .table-of-contents-link-text {
