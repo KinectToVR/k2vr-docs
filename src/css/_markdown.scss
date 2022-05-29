@@ -10,7 +10,7 @@ code, pre {
 }
 pre{
 	border: 2px solid #FFFFFF11;
-	border-radius: 6px;
+	border-radius: var(--border-radius);
 }
 .comparision-card, .accordion, .card, blockquote, pre, h1, h2, h3, h4, h5, h6 {
 	margin: 0.75rem 0;
@@ -113,7 +113,7 @@ article > p > img {
 	display: block;
 	// Fix oversized images
 	max-width: 100%;
-	border-radius: 4px;
+	border-radius: var(--border-radius);
 }
 article ul {
 	list-style: disc;
@@ -129,6 +129,7 @@ table {
 	background-color: var(--table-bg);
 	color: var(--table-text);
 	width: 100%;
+	line-height: 1.4;
 
 	$padding: 0.5rem;
 	$border-width: 2px;
@@ -173,5 +174,5 @@ hr{
 	opacity: .5;
 }
 video{
-	border-radius: 6px;
+	border-radius: var(--border-radius);
 }

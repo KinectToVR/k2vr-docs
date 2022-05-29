@@ -31,6 +31,8 @@
 
 	--content-padding: 2rem;
 	--content-max-width: 120ex;
+
+	--border-radius: 6px;
 }
 @mixin lightMode {
 	--background-color: #FFFFFF;

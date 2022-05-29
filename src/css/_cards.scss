@@ -4,7 +4,7 @@
 	color: var(--card-contrast);
 	padding: var(--card-padding);
 	border: 2px solid var(--card-border);
-	border-radius: 6px;
+	border-radius: var(--border-radius);
 
 	& .heading-container {
 		
