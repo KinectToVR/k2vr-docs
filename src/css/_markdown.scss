@@ -8,13 +8,17 @@ body {
 code, pre {
 	font-family: var(--fonts-code);
 }
+pre{
+	border: 2px solid #FFFFFF11;
+	border-radius: 6px;
+}
 .comparision-card, .accordion, .card, blockquote, pre, h1, h2, h3, h4, h5, h6 {
 	margin: 0.75rem 0;
 }
 blockquote {
-	border-left: 0.25rem solid #949494;
-	background: #d2d2d2;
-	color: #151515;
+	border-left: 0.3rem solid var(--blockquote-border);
+	background: var(--blockquote-bg);
+	color: var(--blockquote-text);
 	padding: 1rem;
 
 	& p {
@@ -127,22 +131,22 @@ table {
 	width: 100%;
 
 	$padding: 0.5rem;
-	$border-width: 1px;
-
+	$border-width: 2px;
+	border: $border-width solid var(--table-border);
 	& thead {
 		background-color: var(--table-heading-bg);
 		color: var(--table-heading-text);
 	}
 
 	& th {	
-		border: $border-width solid var(--table-border);
+		// border: $border-width solid var(--table-border);
 		text-align: left;
 		font-weight: 700;
 		font-size: 1.2rem;
 		padding: $padding;
 	}
 	& td {	
-		border: $border-width solid var(--table-border);
+		// border: $border-width solid var(--table-border);
 		text-align: left;
 		padding: $padding;
 	}
@@ -152,14 +156,19 @@ table {
 }
 kbd{
 	background-color: var(--kbd-primary);
-	padding-left: .2rem;
-	padding-right: 0;
-	margin-right: .3rem;
+	padding: .1rem .2rem;
+	display: inline-block;
+	line-height: 1;
 	color: var(--kbd-text);
 	border: 1px var(--kbd-secondary) solid;
 	font-size: smaller;
 	box-sizing: content-box;
 	border-radius: 3px;
 	box-shadow: 0px 2px 0px var(--kbd-secondary);
-	vertical-align: top;
+	vertical-align: middle;
+	width: max-content;
+}
+hr{
+	color: var(--link);
+	opacity: .5;
 }

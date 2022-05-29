@@ -127,6 +127,10 @@
 	--header-bg: #2B2B43;
 	--header-text: #FFFFFF;
 
+	--blockquote-bg: #363652;
+	--blockquote-text: #B9B3D1;
+	--blockquote-border: #494968;
+
 	--codeblock-bg: #293652;
 	--codeblock-text: #FFFFFF;
 
@@ -134,12 +138,12 @@
 	--kbd-secondary: #6A6A89;
 	--kbd-text: #B9B3D1;
 
-	--table-bg: #dfdfdf;
-	--table-bg2: #f5f5f5;
-	--table-heading-bg: #6d6d6d;
-	--table-heading-text: #fff;
-	--table-text: #131313;
-	--table-border: #131313;
+	--table-bg: #363652;
+	--table-bg2: #494968;
+	--table-heading-bg: #2B2B43;
+	--table-heading-text: #B9B3D1;
+	--table-text: #FFFFFF;
+	--table-border: #3c3c5c;
 
 	--sidebar-default: #B9B3D1;
 	--sidebar-hover: #FFFFFF;
@@ -149,12 +153,12 @@
 	--sidebar-bg-selected: #6A6A89;
 	--sidebar-border: #536081;
 
-	--search-container-bg: #bababa;
-	--search-input-bg: #dedede;
-	--search-input-text: #242424;
+	--search-container-bg: #2B2B43;
+	--search-input-bg: #494968;
+	--search-input-text: #FFFFFF;
 	--search-result-bg: var(--search-container-bg);
-	--search-result-hover-bg: #a7a7a7;
-	--search-result-text: #191919;
+	--search-result-hover-bg: #6A6A89;
+	--search-result-text: #FFFFFF;
 
 	--accordion-bg: #363652;
 	--accordion-hover-bg: #494968;

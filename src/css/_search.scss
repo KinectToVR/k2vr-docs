@@ -1,3 +1,14 @@
+@keyframes entry {
+	0%{
+		top: 40%;
+		opacity: 0;
+	}
+	100%{
+		top: 50%;
+		opacity: 1;
+	}
+}
+
 // Hide search if the user has JS disabled.
 .no-js .search {
 	display: none;
@@ -19,12 +30,18 @@ button.search {
 	z-index: 100;
 }
 .search-container {
+	animation-name: entry;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-out;
+	animation-play-state: running;
+
 	// Center popup
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 
+	border-radius: 6px;
 	background-color: var(--search-container-bg);
 	width: var(--search-container-width);
 	height: var(--search-container-height);
@@ -37,7 +54,8 @@ button.search {
 .search-input {
 	width: calc(100% - 0.8rem);
 	height: var(--search-input-height);
-	
+	margin-bottom: 1em;
+	border-radius: 6px;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
@@ -84,6 +102,7 @@ button.search {
 		background-color: var(--search-result-bg);
 		color: var(--search-result-text);
 		text-decoration: none;
+		border-radius: 6px;
 
 		width: calc(100% - 2rem);
 		padding: 1rem;
