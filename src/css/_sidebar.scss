@@ -9,7 +9,7 @@
 
 .docs-sidebar {
 	position: fixed;
-	overflow: hidden scroll;
+	overflow-x: hidden;
 	width: calc(var(--sidebar-width) + 2 * var(--sidebar-padding));
 	height: calc(100% - 2 * var(--sidebar-padding) - var(--header-height));
 	padding: var(--sidebar-padding) 0;
