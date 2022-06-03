@@ -10,4 +10,4 @@ export const SOCIALS = {
     twitter:        "https://twitter.com/k2vr_team",
     opencollective: "https://opencollective.com/k2vr",
     github:         "https://github.com/KinectToVR",
-}
+};
