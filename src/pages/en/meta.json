@@ -1,5 +1,5 @@
 {
-    "items": [{
+    "sidebar": [{
             "title": "General",
             "children": [{
                     "title": "How Amethyst compares to other options",
