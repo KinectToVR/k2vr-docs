@@ -62,21 +62,37 @@ export function run() {
 
     files.forEach(currFile => {
         let fileContents = fs.readFileSync(currFile)+''; // trail to convert to string
+        let doSkip = false;
 
         let title = '';
         if (currFile.includes('.md')) {
             title = fileContents.substring(0, fileContents.substring(3).indexOf('---') + 6);
+
+            // check if we should skip the current file
+            const idx = title.indexOf('index:');
+            if (idx != -1) {
+                let indexPart = title.substring(idx + 7);
+                doSkip = (indexPart.substring(0, indexPart.indexOf('\n')).trim()) == "false";
+            }
     
             // Isolate title tag from YAML frontmatter
-            title = title.substring(title.indexOf('title:') + 7);
-            title = title.substring(0, title.indexOf('\n')).trim();
+            if (title.indexOf('title:') === -1) {
+                title = '';
+            } else {
+                title = title.substring(title.indexOf('title:') + 7);
+                title = title.substring(0, title.indexOf('\n')).trim();
+            }
 
         } else if (currFile.includes('.astro')) {
-            // Strip YAML frontmatter
+            // Strip title attribute
             title = fileContents.substring(fileContents.substring(3).indexOf('---') + 7);
             const separator = title.substring(title.indexOf('title=') + 6, title.indexOf('title=') + 7);
             title = title.substring(title.indexOf('title=') + 7);
             title = title.substring(0, title.indexOf(separator)).trim();
+        } else {
+            // Invalid file ; skip
+            console.log(`Skipping ${currFile} (unknown extension)!`);
+            return;
         }
 
         // Parse fileContents so that its plaintext
@@ -87,7 +103,7 @@ export function run() {
         fileContents = fileContents.replaceAll(XmlTagSelector, '');
         
 
-        // Remove big code blocks because the parser is retarded
+        // Remove big code blocks because the parser is stupid
         fileContents = fileContents.replaceAll(/\`\`\`\w+/g, '').replaceAll(/\`\`\`/g, '');
 
         // Filter out markdown syntax
@@ -103,14 +119,14 @@ export function run() {
             parsedFileCount++;
 
             const resolvedFilePath = path.relative('src/pages', currFile)
-                .replaceAll('\\', '/')              // To forward slashes
+                .replaceAll('\\', '/')              // To forward slashes on Windows
                 .replaceAll('.astro', '')           // Trim astro pages
                 .replaceAll('.md', '')              // Trim markdown pages
                 .replaceAll('index', '')            // Hide index
                 .replaceAll(/\/+$/g, "");           // Trailing slash
 
             // Store current page
-            if (title.length > 0 && fileContents.length > 0) {
+            if (doSkip === false && title.length > 0 && fileContents.length > 0) {
                 searchArr.push({
                     title: title,
                     path: resolvedFilePath,
@@ -119,10 +135,13 @@ export function run() {
 
                 console.log(`Indexed ${currFile}!`);
             } else {
-                console.log(`Skipping ${currFile} (missing title or content)!`);
+                if (doSkip === true)
+                    console.log(`Skipping ${currFile} (indexing was disabled)!`);
+                else
+                    console.log(`Skipping ${currFile} (missing title or content)!`);
             }
 
-            // Once we've parse all pages, proceed to save them
+            // Once we've parsed all pages, proceed to save them
             if (parsedFileCount === files.length) {
                 writeToFile();
             }

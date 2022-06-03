@@ -94,13 +94,16 @@ function doSearch () {
 
     const result = fuse.search( searchString );
 
+    const uniqueResults = new Map(result.map(obj => [obj.item.path, obj]));
+    const uniqueResultsArr = [...uniqueResults.values()];
+
     SearchRefs.searchResultsContainer.innerHTML = '';
 
-    result.sort( function( a, b ) { 
-        return b.score - a.score;
+    uniqueResultsArr.sort( function( a, b ) { 
+        return a.score - b.score;
     });
 
-    result.forEach( (item) => {
+    uniqueResultsArr.forEach( (item) => {
         const itemToAdd = createSearchResult( item );
         SearchRefs.searchResultsContainer.appendChild( itemToAdd );
     });
