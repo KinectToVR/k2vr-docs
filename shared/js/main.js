@@ -94,13 +94,16 @@ function doSearch () {
 
     const result = fuse.search( searchString );
 
+    const uniqueResults = new Map(result.map(obj => [obj.item.path, obj]));
+    const uniqueResultsArr = [...uniqueResults.values()];
+
     SearchRefs.searchResultsContainer.innerHTML = '';
 
-    result.sort( function( a, b ) { 
-        return b.score - a.score;
+    uniqueResultsArr.sort( function( a, b ) { 
+        return a.score - b.score;
     });
 
-    result.forEach( (item) => {
+    uniqueResultsArr.forEach( (item) => {
         const itemToAdd = createSearchResult( item );
         SearchRefs.searchResultsContainer.appendChild( itemToAdd );
     });
@@ -177,6 +180,31 @@ document.addEventListener( "DOMContentLoaded", ( () => {
         } else {
             docsSidebar.classList.add( "expand" );
             docsSidebar.classList.remove( "collapse" );
+        }
+    });
+
+    // Theme toggler
+    // Load theme from localStorage
+    const storedTheme = localStorage.getItem('theme');
+    switch (storedTheme) {
+        case 'light':
+            document.documentElement.classList.add( "light" );
+            break;
+        case 'dark':
+            document.documentElement.classList.add( "dark" );
+            break;
+    }
+
+    // Theme toggler button
+    document.querySelector( '.theme-toggle' ).onclick = ( (e) => {
+        if (document.documentElement.classList.contains( "light" )) {
+            document.documentElement.classList.remove( "light" );
+            document.documentElement.classList.add( "dark" );
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.classList.add( "light" );
+            document.documentElement.classList.remove( "dark" );
+            localStorage.setItem('theme', 'light');
         }
     });
 
