@@ -180,6 +180,31 @@ document.addEventListener( "DOMContentLoaded", ( () => {
         }
     });
 
+    // Theme toggler
+    // Load theme from localStorage
+    const storedTheme = localStorage.getItem('theme');
+    switch (storedTheme) {
+        case 'light':
+            document.documentElement.classList.add( "light" );
+            break;
+        case 'dark':
+            document.documentElement.classList.add( "dark" );
+            break;
+    }
+
+    // Theme toggler button
+    document.querySelector( '.theme-toggle' ).onclick = ( (e) => {
+        if (document.documentElement.classList.contains( "light" )) {
+            document.documentElement.classList.remove( "light" );
+            document.documentElement.classList.add( "dark" );
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.classList.add( "light" );
+            document.documentElement.classList.remove( "dark" );
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
     sidebarOverlay.onclick = ( (e) => {
         docsSidebar.classList.remove( "expand" );
         docsSidebar.classList.add( "collapse" );

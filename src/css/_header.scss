@@ -66,6 +66,7 @@ header {
 		border: none;
 		color: currentColor;
 		background-color: transparent;
+		height: 1.25rem;
 	}
 
 	& .mobile.sidebar {
@@ -78,8 +79,71 @@ header {
 		@media only screen and (min-width: 1110px) {
 			display: none;
 		}
-		@media only screen and (max-width: 1111px) {
-			
+	}
+
+	
+	.theme-toggle {
+		position: relative;
+		display: inline-block;
+
+		width: 1.5rem;
+		height: 1.5rem;
+
+		& input {
+			opacity: 0;
+			width: 1.5rem;
+			height: 1.5rem;
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0;
+
+			.light & ~ .moon {
+				opacity: 0;
+				transform: rotateZ(-100deg);
+			}
+			.dark & ~ .sun {
+				opacity: 0;
+				transform: rotateZ(-100deg);
+			}
 		}
+
+		& svg {
+			width: 1.5rem;
+			height: 1.5rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			opacity: 1;
+			transition: transform 250ms ease;
+			transform: rotateZ(0deg);
+		}
+
+		.no-js & {
+			display: none;
+		}
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	html:not(.dark) header .theme-toggle input ~ .moon {
+		opacity: 0;
+		transform: rotateZ(-100deg);
+	}
+	html:not(.dark) header .theme-toggle input ~ .sun {
+		opacity: 1;
+		transform: rotateZ(0deg);
+	}
+}
+@media (prefers-color-scheme: dark) {
+	html:not(.light) header .theme-toggle input ~ .sun {
+		opacity: 0;
+		transform: rotateZ(-100deg);
+	}
+	html:not(.light) header .theme-toggle input ~ .moon {
+		opacity: 1;
+		transform: rotateZ(0deg);
 	}
 }
