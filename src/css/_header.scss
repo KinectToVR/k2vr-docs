@@ -33,17 +33,13 @@ header {
 			margin-left: calc(var(--header-padding) / 2 - 4px);
 		}
 
-		a {
-			color: transparent;
-			background: var(--header-logo);
-			// background-image: url(/shared/k2vr.svg);
-			// background-repeat: no-repeat;
-			// background-size:contain;
- 		    -webkit-mask-image: url(/shared/k2vr.svg);
- 		    mask-image: url(/shared/k2vr.svg);
-			mask-size: contain;
-			mask-repeat: no-repeat;
-			text-decoration: none;
+		& a {
+			color: inherit;
+		}
+
+		& .logo {
+			height: 2rem;
+			width: fit-content;
 		}
 	}
 	& .dock-right {
