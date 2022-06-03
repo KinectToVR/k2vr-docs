@@ -1,4 +1,17 @@
 ---
-import DocsLayout from '@layouts/DocsPage.astro'
+import SocialEmbed from '@components/SocialEmbed.astro';
+import { SITE } from '~/constants.js';
 ---
-<meta http-equiv="refresh" content="0;url=/en" />
+<!DOCTYPE html>
+<html>
+	<head>
+        <SocialEmbed
+            title="Amethyst Docs"
+            color={ SITE.embedColor }
+            canonicalURL={ Astro.canonicalURL }
+        ></SocialEmbed>
+
+		<meta http-equiv="refresh" content="0;url=/en" />
+
+	</head>
+</html>
