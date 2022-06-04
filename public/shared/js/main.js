@@ -81,6 +81,8 @@ function doSearch () {
 	if ( !canSearch )
 		return;
 
+    const currentLocale = document.documentElement.getAttribute("lang") ?? "en";
+
     const searchString = SearchRefs.searchTextbox.value
         .replace ( /[.,\/#!?@\+$%\^&\*;:{}="\-_`~()\\]/g, " " )    // Filter out punctuation
         .replaceAll ( /\s{2,}/g, ' ' ).replaceAll( '\n', ' ' )     // Filter out whitespace
@@ -104,8 +106,11 @@ function doSearch () {
     });
 
     uniqueResultsArr.forEach( (item) => {
-        const itemToAdd = createSearchResult( item );
-        SearchRefs.searchResultsContainer.appendChild( itemToAdd );
+        // Ignore other locales
+        if ( item.item.path.startsWith( currentLocale )) {
+            const itemToAdd = createSearchResult( item );
+            SearchRefs.searchResultsContainer.appendChild( itemToAdd );
+        }
     });
 }
 
