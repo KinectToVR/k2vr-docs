@@ -1,4 +1,9 @@
 {
+    "embed": {
+        "title": "",
+        "description": "Lorem ipsum dolor sit amet",
+        "image": ""
+    },
     "sidebar": [{
             "title": "General",
             "children": [{
