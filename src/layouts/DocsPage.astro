@@ -8,14 +8,29 @@ import SearchPopup from '@components/SearchPopup.astro';
 import { SITE } from '~/constants.js';
 import "~/css/main.scss";
 
+// node hell
+import fs from 'node:fs/promises';
+
 const { content } = Astro.props;
 let title = (Astro.props.title ?? content.title) ?? "";
 let image = Astro.props.image ?? content.image;
 let description = Astro.props.description ?? content.description;
 let locale = Astro.props.locale ?? content.locale;
+locale = locale ?? "en"
 title = (title.trim().length > 0 && (title.trim() != SITE.title)) ? `${title.trim()} | ${SITE.title}` : SITE.title;
+
+// this is stupidly fucking cursed
+const relativeToRoot = "../".repeat(1) + (import.meta.env.DEV === true ? "" : "src/");
+
+const url = new URL(`${relativeToRoot}pages/${locale}/meta.json`, import.meta.url);
+const json = await fs.readFile(url, 'utf-8');
+const LocalisedMetadata = JSON.parse(json);
+
+title = title ?? LocalisedMetadata.embed.title; // Always false so technically redundant ; we'll see later
+image = image ?? LocalisedMetadata.embed.image;
+description = description ?? LocalisedMetadata.embed.description;
 ---
-<html lang={locale ?? "en"} class="no-js">
+<html lang={locale} class="no-js">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
