@@ -194,33 +194,35 @@
 		--card-bg: #5A2C30;
 		--card-contrast: #fb7e87;
 		--card-border: #FC6570;
-		--codeblock-bg: #ffd4d4;
+		--codeblock-bg: #5f1717;
 	}
 	.card-help {
 		--card-bg: #295a38;
 		--card-contrast: #62D470;
 		--card-border: #62D470;
-		--codeblock-bg: #e2ffe0;
+		--codeblock-bg: #164d12;
+		--link: #86f593;
 	}
 	.card-info {
 		--card-bg: #294b56;
 		--card-contrast: #37ACCE;
 		--card-border: #37ACCE;
-		--codeblock-bg: #d0defb;
+		--codeblock-bg: #162f37;
 		// more contrast
-		--link: #126197;
+		--link: #80defb;
 	}
 	.card-tip {
 		--card-bg: #412a46;
 		--card-contrast: #ee99fa;
-		--codeblock-bg: #f8c6fb;
+		--codeblock-bg: #440e47;
 		--card-border: #D97DE8;
+		--link: #f8cafe;
 	}
 	.card-warning {
 		--card-bg: #6A4C26;
 		--card-contrast: #D5C153;
 		--card-border: #D5C153;
-		--codeblock-bg: #faf8cb;
+		--codeblock-bg: #685103;
 	}
 	.card-download {
 		--card-bg: #168CDD;

@@ -42,7 +42,9 @@ blockquote {
 code {
 	background-color: var(--codeblock-bg);
 	color: var(--codeblock-text);
-	padding: 0 0.5rem;
+	padding: 0.15rem 0.25rem;
+	line-height: 1rem;
+	display: inline-block; // I hate CSS.
 	font-size: 0.9rem;
 	pre & {
 		// Remove padding in codeblocks
