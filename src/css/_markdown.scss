@@ -8,8 +8,9 @@ body {
 code, pre {
 	font-family: var(--fonts-code);
 }
-pre{
-	border: 2px solid #FFFFFF11;
+pre {
+	background-color: var(--codeblock-bg);
+	border: var(--codeblock-border-thickness) solid var(--codeblock-border);
 	border-radius: var(--border-radius);
 }
 .comparision-card, .accordion, .card, blockquote, pre, h1, h2, h3, h4, h5, h6 {
@@ -40,8 +41,8 @@ blockquote {
 	}
 }
 code {
-	background-color: var(--codeblock-bg);
-	color: var(--codeblock-text);
+	background-color: var(--inline-codeblock-bg);
+	color: var(--inline-codeblock-text);
 	padding: 0.15rem 0.25rem;
 	line-height: 1rem;
 	display: inline-block; // I hate CSS.

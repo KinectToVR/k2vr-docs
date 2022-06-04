@@ -21,7 +21,7 @@ export default defineConfig({
   integrations: [preact(), react(), sitemap()],
   markdown: {
     mode: 'mdx',
-    syntaxHighlight: 'prism',
+    syntaxHighlight: 'shiki',
     rehypePlugins: [ // These are here because setting custom plugins disables the default plugins
     'rehype-slug', 'remark-smartypants', 'remark-gfm', // This adds links to headings
     ['rehype-autolink-headings', {
@@ -35,6 +35,10 @@ export default defineConfig({
       content: heading => [h(`span.anchor-icon`, {
         ariaHidden: 'true'
       }, AnchorLinkIcon)]
-    }]]
+    }]],
+    shikiConfig: {
+      theme: '../../../../../../src/srcery', // YES I KNOW THIS IS HACKY AS FUCK, IDC LOL
+      wrap: true
+    }
   }
 });
