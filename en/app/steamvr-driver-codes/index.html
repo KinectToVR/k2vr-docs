@@ -4,22 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
 
-        <!-- Generic  --><title>Installing Amethyst | Amethyst Docs</title>
-<link rel="canonical" href="https://docs.k2vr.tech/en/app/installation/">
+        <!-- Generic  --><title>SteamVR Driver Troubleshooting | Amethyst Docs</title>
+<link rel="canonical" href="https://docs.k2vr.tech/en/app/steamvr-driver-codes/">
 <meta name="description" content="Lorem ipsum dolor sit amet">
 <meta name="theme-color" content="#E33388">
 
 <!-- OpenGraph  -->
 <meta property="og:url" content="https://docs.k2vr.tech">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Installing Amethyst | Amethyst Docs">
+<meta property="og:title" content="SteamVR Driver Troubleshooting | Amethyst Docs">
 <meta property="og:description" content="Lorem ipsum dolor sit amet">
 
 
 <!-- Twitter  -->
 <meta property="twitter:domain" content="docs.k2vr.tech">
 <meta property="twitter:url" content="https://docs.k2vr.tech">
-<meta name="twitter:title" content="Installing Amethyst | Amethyst Docs">
+<meta name="twitter:title" content="SteamVR Driver Troubleshooting | Amethyst Docs">
 <meta name="twitter:description" content="Lorem ipsum dolor sit amet">
 
 
@@ -78,7 +78,7 @@
 			</li><li class="sidebar-section-title">
 				<span class="sidebar-title-text">Using Amethyst</span>
 				<ul class="sidebar-section-children">
-						<a class="sidebar-section-link sidebar-link-selected" href="/en/app/installation">
+						<a class="sidebar-section-link" href="/en/app/installation">
 									<li class="sidebar-link-text">
 										Installing Amethyst
 									</li>
@@ -103,7 +103,7 @@
 										General Troubleshooting
 									</li>
 									
-								</a><a class="sidebar-section-link" href="/en/app/steamvr-driver-codes">
+								</a><a class="sidebar-section-link sidebar-link-selected" href="/en/app/steamvr-driver-codes">
 									<li class="sidebar-link-text">
 										SteamVR Driver Troubleshooting
 									</li>
@@ -227,73 +227,99 @@
 <div class="sidebar-overlay">
 </div>
             <article class="content">
-                    <div class="heading-wrapper level-h1"><h1 id="installing-amethyst">Installing Amethyst</h1><a class="anchor-link" href="#installing-amethyst"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>You can get Amethyst Installer from the <a href="https://k2vr.tech">homepage</a> by clicking on Get Started. You will be asked a few questions to ensure that you meet prerequisites, then the download button will appear.</p><p>If you get a Windows Smartscreen pop-up, simply click on <strong>More info</strong> then <strong>Run anyway</strong>.
-<img src="/en/img/smartscreen.png" alt="smartscreen warning window">
-This screen shows up because the installer is not signed. Code signing certificates cost money and we can’t afford that. <a href="https://opencollective.com/k2vr">Unless you donate :)</a> then we can.</p><div class="heading-wrapper level-h3"><h3 id="how-to-fix-steamvr-or-vrpathreg-not-found-error">How to fix SteamVR or VRPathReg Not Found error</h3><a class="anchor-link" href="#how-to-fix-steamvr-or-vrpathreg-not-found-error"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>This error happens usually because of a broken <code>openvrpaths.vrpath</code> file, or because you have a Windows user account without administrator permissions.</p><div class="accordion collapsed">
-	<div class="accordion-header">
-		<span class="accordion-title">If you have administrator permissions</span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
+                    <div class="heading-wrapper level-h1"><h1 id="steamvr-driver-troubleshooting">SteamVR Driver Troubleshooting</h1><a class="anchor-link" href="#steamvr-driver-troubleshooting"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Well shucks, your Amethyst driver isn’t working, what do?</p><div class="heading-wrapper level-h3"><h3 id="how-to-fix-exception-while-checking-code--10">How to fix “EXCEPTION WHILE CHECKING (Code -10)”</h3><a class="anchor-link" href="#how-to-fix-exception-while-checking-code--10"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>This means the SteamVR driver is not loaded at all.</strong> Either because it’s disabled, and/or because it’s not listed to SteamVR in any way.</p><video autoplay muted loop src="/en/mp4/enable-amethyst-driver.mp4" poster="/en/mp4/enable-amethyst-driver.poster.png">
+</video><p>If the driver is missing from that list, Click the <strong>Re-register SteamVR driver entry</strong> button.
+<img src="/en/img/reregister-button.png" alt="re-register steamvr driver button">
+If Amethyst fails to register the SteamVR driver, reach us on Discord for help.</p><div class="heading-wrapper level-h3"><h3 id="how-to-fix-server-connection-error-code--1">How to fix “SERVER CONNECTION ERROR (Code -1)”</h3><a class="anchor-link" href="#how-to-fix-server-connection-error-code--1"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>This usually happens because you have a version of the SteamVR driver running, but it’s outdated. To attempt to fix it:</p><div class="card card-info">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+		<h3 class="card-title">Pre-edited VRPaths file:</h3>
 	</div>
-	<div class="accordion-content">
-		<ul>
-<li>Make sure that SteamVR is closed.</li>
-<li>
-Press 
-<kbd>
-<svg width="11px" height="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13">
+	<div class="card-content">
+		Only use this if you installed Amethyst in the default location (
+<strong>C:\Amethyst</strong>
+) and SteamVR in the default Steam library (
+<strong>C:\Program Files (x86)\Steam\steamapps\common\SteamVR</strong>
+).
+You can
 
+<strong>
+<a href="/shared/openvrpaths.vrpath">
+download this file
+</a>
+</strong>
 
-<path d="M0 2v5h5V2H0Zm6 0v5h5V2H6ZM0 8v5h5V8H0Zm6 0v5h5V8H6Z" fill="currentColor" fill-rule="evenodd">
+and
+
+<strong>
+put it in the
+</strong>
+<code is:raw>
+%localappdata%\openvr
+</code>
+
+folder. While SteamVR is closed.
+
+<br>
+<br>
+<div class="heading-wrapper level-h5">
+<h5 id="note-that-this-method-will-erase-entries-for-other-steamvr-drivers">
+Note that this method will erase entries for other SteamVR drivers!
+</h5>
+<a class="anchor-link" href="#note-that-this-method-will-erase-entries-for-other-steamvr-drivers">
+<span class="anchor-icon" aria-hidden="true">
+<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
 </path>
-
-
 </svg>
-Windows
-</kbd>
+</span>
+</a>
+</div>
+
+We recommend editing it by hand if you’re comfortable editing JSON.
+
+	</div>
+</div><ul>
+<li>Go to the <strong>settings tab</strong> of Amethyst.</li>
+<li>Scroll all the way down.</li>
+<li>Click on <strong>Re-register SteamVR driver entry</strong>.</li>
+<li>Close <strong>both Amethyst and SteamVR</strong>.</li>
+<li>
+Open the Run dialog with 
+<kbd><svg width="11px" height="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13">
+  <path d="M0 2v5h5V2H0Zm6 0v5h5V2H6ZM0 8v5h5V8H0Zm6 0v5h5V8H6Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>Windows</kbd>
  + 
 <kbd>
 R
 </kbd>
- to open the Run dialog.
 </li>
-<li>
-Paste or type in 
-<code is:raw>%localappdata%\openvr</code>
- and press 
-<kbd>
-<svg width="8px" height="9px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 11">
-
-
-<path d="M8 0v8.54H3.44V11L0 7.95 3.44 4.9v2.42h3.41V0H8Z" fill="currentColor" fill-rule="evenodd">
-</path>
-
-
-</svg>
-Enter
-</kbd>
-.
-</li>
-<li>In the file explorer window, delete the only file present.</li>
-<li>Start and close SteamVR once to generate a new file.</li>
-<li>Open the installer again.</li>
-</ul>
-
-	</div>
-</div><div class="accordion collapsed">
-	<div class="accordion-header">
-		<span class="accordion-title">If you are not the administrator on this PC</span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
-	</div>
-	<div class="accordion-content">
-		<ul>
-<li>Log out of your current user account.</li>
-<li>Log in to the account that has administrator privileges.</li>
-<li>Run Amethyst Installer there, installing as normal. (The installation is not user-dependent.)</li>
-<li>Log back into your user account and Amethyst should be installed and available from the Start Menu.</li>
-</ul>
-
-	</div>
-</div><p>The installer checks for updates on start but you can ignore them, so if you have an older installer version (excluding K2EX Installer) you can run that instead of redownloading it.</p><div class="heading-wrapper level-h3"><h3 id="installing-manually">Installing manually</h3><a class="anchor-link" href="#installing-manually"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Alternatively, you can download Amethyst from the <a href="https://github.com/kinecttovr/amethyst-releases/releases">releases on GitHub</a> and extract the ZIP to any folder you wish. We recommend using the installer because it will automatically setup drivers for your Kinect sensor if you have it plugged in.</p><p>Once you have Amethyst up and running, you will need to register its SteamVR driver either by running Amethyst Recovery (In the K2CrashHandler folder) or going to the bottom of options and clicking re-register SteamVR Driver.</p>
+<li>Paste in <code>%localappdata%\openvr\openvrpaths.vrpath</code></li>
+<li>When Windows asks you what to open the file with, either <strong>pick Notepad</strong> or whichever editor you prefer.</li>
+</ul><p>An average openvrpaths.vrpath file will look like this. (Obviously without the coloring in Notepad.)</p><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+	<span class="token property">"config"</span> <span class="token operator">:</span> 
+	<span class="token punctuation">[</span>
+		<span class="token string">"C:\\Program Files (x86)\\Steam\\config"</span>
+	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token property">"external_drivers"</span> <span class="token operator">:</span> 
+	<span class="token punctuation">[</span>
+		<span class="token string">"D:\\vrtools\\OculusTouchLink"</span><span class="token punctuation">,</span>
+		<span class="token string">"D:\\vrtools\\owo-track-release\\driver"</span><span class="token punctuation">,</span>
+		<span class="token string">"E:\\Steam\\steamapps\\common\\MixedRealityVRDriver"</span><span class="token punctuation">,</span>
+		<span class="token string">"C:\\Amethyst\\Amethyst"</span>
+	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token property">"jsonid"</span> <span class="token operator">:</span> <span class="token string">"vrpathreg"</span><span class="token punctuation">,</span>
+	<span class="token property">"log"</span> <span class="token operator">:</span> 
+	<span class="token punctuation">[</span>
+		<span class="token string">"C:\\Program Files (x86)\\Steam\\logs"</span>
+	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token property">"runtime"</span> <span class="token operator">:</span> 
+	<span class="token punctuation">[</span>
+		<span class="token string">"C:\\Program Files (x86)\\Steam\\steamapps\\common\\SteamVR"</span><span class="token punctuation">,</span>
+		<span class="token string">"E:\\Oculus\\Support\\oculus-dash"</span>
+	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token property">"version"</span> <span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span></code></pre>
             </article>
             <footer>
 	<div class="prominent">

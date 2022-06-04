@@ -4,22 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
 
-        <!-- Generic  --><title>Installing Amethyst | Amethyst Docs</title>
-<link rel="canonical" href="https://docs.k2vr.tech/en/app/installation/">
+        <!-- Generic  --><title>How to use overrides | Amethyst Docs</title>
+<link rel="canonical" href="https://docs.k2vr.tech/en/app/overrides/">
 <meta name="description" content="Lorem ipsum dolor sit amet">
 <meta name="theme-color" content="#E33388">
 
 <!-- OpenGraph  -->
 <meta property="og:url" content="https://docs.k2vr.tech">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Installing Amethyst | Amethyst Docs">
+<meta property="og:title" content="How to use overrides | Amethyst Docs">
 <meta property="og:description" content="Lorem ipsum dolor sit amet">
 
 
 <!-- Twitter  -->
 <meta property="twitter:domain" content="docs.k2vr.tech">
 <meta property="twitter:url" content="https://docs.k2vr.tech">
-<meta name="twitter:title" content="Installing Amethyst | Amethyst Docs">
+<meta name="twitter:title" content="How to use overrides | Amethyst Docs">
 <meta name="twitter:description" content="Lorem ipsum dolor sit amet">
 
 
@@ -78,7 +78,7 @@
 			</li><li class="sidebar-section-title">
 				<span class="sidebar-title-text">Using Amethyst</span>
 				<ul class="sidebar-section-children">
-						<a class="sidebar-section-link sidebar-link-selected" href="/en/app/installation">
+						<a class="sidebar-section-link" href="/en/app/installation">
 									<li class="sidebar-link-text">
 										Installing Amethyst
 									</li>
@@ -93,7 +93,7 @@
 										How to calibrate
 									</li>
 									
-								</a><a class="sidebar-section-link" href="/en/app/overrides">
+								</a><a class="sidebar-section-link sidebar-link-selected" href="/en/app/overrides">
 									<li class="sidebar-link-text">
 										How to use overrides
 									</li>
@@ -227,73 +227,7 @@
 <div class="sidebar-overlay">
 </div>
             <article class="content">
-                    <div class="heading-wrapper level-h1"><h1 id="installing-amethyst">Installing Amethyst</h1><a class="anchor-link" href="#installing-amethyst"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>You can get Amethyst Installer from the <a href="https://k2vr.tech">homepage</a> by clicking on Get Started. You will be asked a few questions to ensure that you meet prerequisites, then the download button will appear.</p><p>If you get a Windows Smartscreen pop-up, simply click on <strong>More info</strong> then <strong>Run anyway</strong>.
-<img src="/en/img/smartscreen.png" alt="smartscreen warning window">
-This screen shows up because the installer is not signed. Code signing certificates cost money and we can’t afford that. <a href="https://opencollective.com/k2vr">Unless you donate :)</a> then we can.</p><div class="heading-wrapper level-h3"><h3 id="how-to-fix-steamvr-or-vrpathreg-not-found-error">How to fix SteamVR or VRPathReg Not Found error</h3><a class="anchor-link" href="#how-to-fix-steamvr-or-vrpathreg-not-found-error"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>This error happens usually because of a broken <code>openvrpaths.vrpath</code> file, or because you have a Windows user account without administrator permissions.</p><div class="accordion collapsed">
-	<div class="accordion-header">
-		<span class="accordion-title">If you have administrator permissions</span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
-	</div>
-	<div class="accordion-content">
-		<ul>
-<li>Make sure that SteamVR is closed.</li>
-<li>
-Press 
-<kbd>
-<svg width="11px" height="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13">
-
-
-<path d="M0 2v5h5V2H0Zm6 0v5h5V2H6ZM0 8v5h5V8H0Zm6 0v5h5V8H6Z" fill="currentColor" fill-rule="evenodd">
-</path>
-
-
-</svg>
-Windows
-</kbd>
- + 
-<kbd>
-R
-</kbd>
- to open the Run dialog.
-</li>
-<li>
-Paste or type in 
-<code is:raw>%localappdata%\openvr</code>
- and press 
-<kbd>
-<svg width="8px" height="9px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 11">
-
-
-<path d="M8 0v8.54H3.44V11L0 7.95 3.44 4.9v2.42h3.41V0H8Z" fill="currentColor" fill-rule="evenodd">
-</path>
-
-
-</svg>
-Enter
-</kbd>
-.
-</li>
-<li>In the file explorer window, delete the only file present.</li>
-<li>Start and close SteamVR once to generate a new file.</li>
-<li>Open the installer again.</li>
-</ul>
-
-	</div>
-</div><div class="accordion collapsed">
-	<div class="accordion-header">
-		<span class="accordion-title">If you are not the administrator on this PC</span>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
-	</div>
-	<div class="accordion-content">
-		<ul>
-<li>Log out of your current user account.</li>
-<li>Log in to the account that has administrator privileges.</li>
-<li>Run Amethyst Installer there, installing as normal. (The installation is not user-dependent.)</li>
-<li>Log back into your user account and Amethyst should be installed and available from the Start Menu.</li>
-</ul>
-
-	</div>
-</div><p>The installer checks for updates on start but you can ignore them, so if you have an older installer version (excluding K2EX Installer) you can run that instead of redownloading it.</p><div class="heading-wrapper level-h3"><h3 id="installing-manually">Installing manually</h3><a class="anchor-link" href="#installing-manually"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Alternatively, you can download Amethyst from the <a href="https://github.com/kinecttovr/amethyst-releases/releases">releases on GitHub</a> and extract the ZIP to any folder you wish. We recommend using the installer because it will automatically setup drivers for your Kinect sensor if you have it plugged in.</p><p>Once you have Amethyst up and running, you will need to register its SteamVR driver either by running Amethyst Recovery (In the K2CrashHandler folder) or going to the bottom of options and clicking re-register SteamVR Driver.</p>
+                    <div class="heading-wrapper level-h1"><h1 id="how-to-use-overrides">How to use overrides</h1><a class="anchor-link" href="#how-to-use-overrides"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Overrides in Amethyst allow you to take the rotation and/or position of one device and replace it with that of another. It is only limited to two devices though.</p><p>You could for example use an Xbox 360 Kinect for your general tracking. And use PSMoveService as an override, using rotation from PS Move controllers for your feet while still using the Kinect’s skeleton tracking for the position.</p><p>Note for example, when using PS Moves for foot rotation like this, <strong>the center of rotation of the controller is not going to match where the joint from the Kinect is. So you’ll most likely want to use offsets</strong> in the general page to adjust the position until it matches more closely. Or else you’ll have weird displacement when turning.</p><p>When an override runs into an error, the base device will still be affected, which means that in our PS Move feet example, your feet would lose all rotation until the device is deselected.</p><p>Also, you can only select a device as override if it’s status is successful.</p>
             </article>
             <footer>
 	<div class="prominent">
