@@ -1,13 +1,3 @@
-function AccordionClick (e) {
-    const accordionContent = e.srcElement.parentElement;
-
-    if (accordionContent.classList.contains( 'collapsed' )) {
-        accordionContent.classList.remove( 'collapsed' );
-    } else {
-        accordionContent.classList.add( 'collapsed' );
-    }
-}
-
 function ComparisionControlClick (e) {
 
     // Early quit if we aren't holding any buttons
@@ -162,12 +152,7 @@ document.addEventListener( "DOMContentLoaded", ( () => {
     });
 
 	documentLoaded = true;
-
-    // Accordions
-    document.querySelectorAll( '.accordion .accordion-header' ).forEach( (accordion) => {
-        accordion.onclick = AccordionClick;
-    });
-
+    
     // Comparision Control
     document.querySelectorAll( '.comparision-card' ).forEach( (comparisionControl) => {
         comparisionControl.onmousemove = ComparisionControlClick;
