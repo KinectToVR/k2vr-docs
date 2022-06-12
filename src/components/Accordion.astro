@@ -6,14 +6,14 @@ import Chevron from '~/icons/expand_icon_24dp.astro';
 
 const { title } = Astro.props;
 ---
-<div class="accordion collapsed">
-	<div class="accordion-header">
-		<span class="accordion-title">{ title }</span>
+<details class="accordion">
+	<summary class="accordion-header">
+		{title}
 		<Chevron />
-	</div>
+	</summary>
 	<div class="accordion-content">
 		<Markdown>
 			<slot/>
 		</Markdown>
 	</div>
-</div>
+</details>

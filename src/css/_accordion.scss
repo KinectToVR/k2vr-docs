@@ -6,23 +6,16 @@
 	&:hover {
 		background: var(--accordion-hover-bg);
 	}
-
-	.no-js &.collapsed {
-		& .accordion-header svg {
-			display: none;
-		}
-		& .accordion-content {
-			display: block;
-		}
+	
+	& .accordion-header svg {
+		transform: scale(1, 1);
+		transition: transform 250ms cubic-bezier(.79,.14,.15,.86);
+		vertical-align: middle;
+		height:16px;
+		scale: 1.5;
 	}
-	&.collapsed {
-		& .accordion-header svg {
-			transform: scale(1, 1);
-		}
-
-		& .accordion-content {
-			display: none;
-		}
+	&[open] .accordion-header  svg {
+		transform: scale(1, -1);
 	}
 }
 
@@ -31,20 +24,6 @@
 	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
-	& span {
-		pointer-events: none;
-		height: min-content;
-	}
-	.no-js & {
-		cursor: default;
-	}
-	& svg {
-		transform: scale(1, -1);
-		transition: transform 250ms cubic-bezier(.79,.14,.15,.86);
-		vertical-align: middle;
-		height:16px;
-		scale: 1.5;
-	}
 }
 
 .accordion-content {
