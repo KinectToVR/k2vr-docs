@@ -136,10 +136,6 @@ header {
 
 		& option {
 			font-family: var(--fonts-header);
-
-			&:default {
-				display: none;
-			}
 		}
 	}
 }

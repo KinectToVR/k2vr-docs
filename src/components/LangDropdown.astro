@@ -5,6 +5,10 @@ const availableLocales = Object.keys(LocaleList[locale]);
 ---
 <select class="locale-picker">{
 	availableLocales.map((data) => (
-		<option selected={locale === data} value={data}>{LocaleList[locale][data]}</option>
+		<option selected={locale === data} value={data}>{
+			data === locale ?
+			`${LocaleList[locale][data]}` :
+			`${LocaleList[data][data]} (${LocaleList[locale][data]})`
+		}</option>
 	))
 }</select>
