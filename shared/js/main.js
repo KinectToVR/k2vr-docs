@@ -104,9 +104,34 @@ function doSearch () {
     });
 }
 
+async function initLocalePicker() {
+    let localeJSON = await getJSON( '/shared/locales.json' );
+    
+    let temp = "true";
+    const localeSelection = document.getElementsByClassName("locale-picker")[0];
+
+    for (let i, j = 0; i = localeSelection.options[j]; j++) {
+        if(i.value == temp) {
+            localeSelection.selectedIndex = j;
+            break;
+        }
+    }
+
+    localeSelection.onchange = function(e) {
+        const newLocale = localeSelection.options[localeSelection.selectedIndex].value;
+        const currentLocale = document.documentElement.getAttribute("lang") ?? "en";
+        let currentURL = new URL(document.location);
+        const pathNameIndex = currentURL.pathname.indexOf(currentLocale) + currentLocale.length;
+        const newURL = `${currentURL.origin}/${newLocale}` + currentURL.pathname.substring(pathNameIndex);
+        window.location = new URL(newURL);
+    }
+}
+
 document.addEventListener( "DOMContentLoaded", ( () => {
 	// Try yeeting noJS flag
 	document.documentElement.classList.remove( 'no-js' );
+
+    initLocalePicker();
 
     // Search
 	// Fetch references
