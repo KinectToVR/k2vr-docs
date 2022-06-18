@@ -1,0 +1,21 @@
+---
+import Debug from "astro/components/Debug.astro";
+
+const { src } = Astro.props;
+let videoAutoplay = (Astro.props.autoplay ?? "true") === "true";
+let videoMuted = (Astro.props.muted ?? "true") === "true";
+let videoLoop = (Astro.props.loop ?? "true") === "true";
+
+/*
+TODO: Delayed autoplay
+TODO: Autoplay on hover?
+TODO: Autoplay when scrolled into view?
+*/
+
+---
+<div class="video-container">
+	<video	{... videoAutoplay ? {autoplay: true} : {controls: true}}
+			{... videoMuted ? {muted: true} : {}}
+			{... videoLoop ? {loop: true} : {}}
+			src={src}></video>
+</div>
