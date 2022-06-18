@@ -11,7 +11,7 @@ setup: |
 </div>
 <br>
 
-This is the homepage for the Amethyst documentation. It's built from the markdown source at https://github.com/kinecttovr/k2vr-docs feel free to contribute.
+This is the homepage for the Amethyst documentation. It's built from the markdown source at https://github.com/kinecttovr/k2vr-docs. Feel free to contribute.
 
 <CardNoIcon title="About Amethyst and K2VR" href="about">
 Learn more about the history and development of the app and everyone in the team.  
