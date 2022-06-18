@@ -81,8 +81,7 @@ header {
 		}
 	}
 
-	
-	.theme-toggle {
+	& .theme-toggle {
 		position: relative;
 		display: inline-block;
 
@@ -123,6 +122,24 @@ header {
 
 		.no-js & {
 			display: none;
+		}
+	}
+
+	& .locale-picker {
+		outline: none;
+		font-family: var(--fonts-header);
+		background-color: var(--lang-picker-bg);
+		color: var(--lang-picker-contrast);
+		border: var(--lang-picker-border-thickness) solid var(--lang-picker-border-color);
+		border-radius: var(--lang-picker-border-radius);
+		padding: var(--lang-picker-padding);
+
+		& option {
+			font-family: var(--fonts-header);
+
+			&:default {
+				display: none;
+			}
 		}
 	}
 }

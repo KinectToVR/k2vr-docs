@@ -24,6 +24,10 @@
 	--header-title-size: 1.6rem;
 	--heading-icon-size: 1rem;
 	
+	--lang-picker-border-radius: var(--border-radius);
+	--lang-picker-border-thickness: 0.1rem;
+	--lang-picker-padding: 0.25rem;
+
 	--footer-text-size: 1.5rem;
 	--footer-padding: 1rem;
 	--footer-height: 4rem;
@@ -99,6 +103,10 @@
 	--accordion-border: #9c95b7;
 	--accordion-text: #272735;
 	--accordion-collapse: #B9B3D1;
+
+	--lang-picker-bg: #CFCCDE;
+	--lang-picker-contrast: #272735;
+	--lang-picker-border-color: #9c95b7;
 
 	.card-error {
 		--card-bg: #f8d0d3;
@@ -202,6 +210,10 @@
 	--accordion-border: #383855;
 	--accordion-text: #B9B3D1;
 	--accordion-collapse: #2B2B43;
+
+	--lang-picker-bg: #363652;
+	--lang-picker-contrast: #B9B3D1;
+	--lang-picker-border-color: #454565;
 
 	.card-error {
 		--card-bg: #5A2C30;

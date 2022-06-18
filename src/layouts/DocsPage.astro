@@ -53,9 +53,9 @@ description = description ?? LocalisedMetadata.embed.description;
         <script is:inline src='/shared/js/main.js'></script>
     </head>
     <body>
-        <Header />
+        <Header locale={locale} />
         <div class="main-wrapper">
-            <Sidebar locale={locale ?? "en"}/>
+            <Sidebar locale={locale}/>
             <article class="content">
                     <slot/>
             </article>

@@ -1,5 +1,6 @@
 ---
 import { SITE, SOCIALS } from '~/constants.js';
+import LangDropdown from '@components/LangDropdown.astro';
 import SearchIcon from '@icons/search_black_24dp.astro';
 import HamburgerIcon from '@icons/hamburger_black_24dp.astro';
 import K2VRWordmark from '@icons/K2VR.astro';
@@ -7,13 +8,15 @@ import K2VRWordmark from '@icons/K2VR.astro';
 // Dark mode 
 import SunIcon from '@icons/sun.astro';
 import MoonIcon from '@icons/moon.astro';
+const { locale } = Astro.props;
 ---
 <header>
 	<button class="mobile sidebar">
 		<HamburgerIcon />
 	</button>
-	<h1 class="site-title"><a href={ SITE.docsRoot }><K2VRWordmark class="logo"/></a></h1>
+	<h1 class="site-title"><a href={ SITE.docsRoot.replace("en", locale) }><K2VRWordmark class="logo"/></a></h1>
 	<div class="dock-right">
+		<LangDropdown locale={locale}/>
 		<label class="theme-toggle switch">
 			<input type="checkbox"><SunIcon  class="sun"/><MoonIcon class="moon"/>
 		</label>

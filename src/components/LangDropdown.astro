@@ -1,0 +1,10 @@
+---
+import LocaleList from '~/../public/shared/locales.json';
+const { locale } = Astro.props;
+const availableLocales = Object.keys(LocaleList[locale]);
+---
+<select class="locale-picker">{
+	availableLocales.map((data) => (
+		<option selected={locale === data} value={data}>{LocaleList[locale][data]}</option>
+	))
+}</select>
