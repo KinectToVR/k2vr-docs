@@ -6,6 +6,7 @@
         "image": ""
     },
     "sidebar": [{
+            
             "title": "General",
             "children": [{
                     "title": "How Amethyst compares to other options",
@@ -46,6 +47,10 @@
                 {
                     "title": "SteamVR Driver Troubleshooting",
                     "url": "/en/app/steamvr-driver-codes"
+                },
+                {
+                    "title": "Improve tracking",
+                    "url": "/en/app/improve-tracking"
                 }
             ]
         },
