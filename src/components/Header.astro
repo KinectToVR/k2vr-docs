@@ -14,7 +14,7 @@ const { locale } = Astro.props;
 	<button class="mobile sidebar">
 		<HamburgerIcon />
 	</button>
-	<h1 class="site-title"><a href={ SITE.docsRoot.replace("en", locale) }><K2VRWordmark class="logo"/></a></h1>
+	<h1 class="site-title"><a href={ SITE.root }><K2VRWordmark class="logo"/></a></h1>
 	<div class="dock-right">
 		<LangDropdown locale={locale}/>
 		<label class="theme-toggle switch">

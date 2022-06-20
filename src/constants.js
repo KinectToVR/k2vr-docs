@@ -1,6 +1,7 @@
 export const SITE = {
     title: "Amethyst Docs",
     domain: "docs.k2vr.tech",
+    root: "https://k2vr.tech",
     embedColor: "#E33388",
     docsRoot: "/en/", // TODO: Localisation support
 };
