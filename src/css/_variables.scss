@@ -7,7 +7,7 @@
 	--codeblock-padding: 1rem;
 	--codeblock-border-thickness: 2px;
 	--codeblock-line-number-width: 1.5rem;
-	--codeblock-line-number-padding-right: 0.6rem;
+	--codeblock-line-number-padding-right: 0.8rem;
 
 	--brand-blue: #52BFFF;
 	--brand-midtone: #AA6AF1;
@@ -56,7 +56,7 @@
 	--footer-link: #484162;
 	--footer-link-hover: #5b4b91;
 
-	--header-bg: #cec9d5;
+	--header-bg: #c8c5d4;
 	--header-text: #0c0c0c;
 	--header-logo: #6f6b7a;
 
@@ -70,7 +70,8 @@
 	--codeblock-bg: #1C1B19;
 	--codeblock-bg-hover: #312f2b;
 	--codeblock-border: #FFFFFF11;
-	--codeblock-line-number-color: #FCE8C3;
+	--codeblock-line-number-color: #858585;
+	--codeblock-line-number-hover-color: #C6C6C6;
 
 	--kbd-primary: #E3DFE9;
 	--kbd-secondary: #66617b;
@@ -113,12 +114,14 @@
 		--card-contrast: #bb131f;
 		--card-border: #df676f;
 		--inline-codeblock-bg: #ffd4d4;
+		--link: #711c00;
 	}
 	.card-help {
 		--card-bg: #b8f0c9;
 		--card-contrast: #019212;
 		--card-border: #58c465;
 		--inline-codeblock-bg: #e2ffe0;
+		--link: #00712d;
 	}
 	.card-info {
 		--card-bg: #c7eaf7;
@@ -133,12 +136,14 @@
 		--card-contrast: #72157e;
 		--inline-codeblock-bg: #f8c6fb;
 		--card-border: #cb73d8;
+		--link: #3e0071;
 	}
 	.card-warning {
 		--card-bg: #f6e4a4;
 		--card-contrast: #a77302;
 		--card-border: #D5AD21;
 		--inline-codeblock-bg: #faf8cb;
+		--link: #714900;
 	}
 	.card-download {
 		--card-bg: #168CDD;
@@ -220,6 +225,7 @@
 		--card-contrast: #fb7e87;
 		--card-border: #FC6570;
 		--inline-codeblock-bg: #5f1717;
+		--link: #fdb0c9;
 	}
 	.card-help {
 		--card-bg: #295a38;
@@ -248,6 +254,7 @@
 		--card-contrast: #D5C153;
 		--card-border: #D5C153;
 		--inline-codeblock-bg: #685103;
+		--link: #ead66a;
 	}
 	.card-download {
 		--card-bg: #168CDD;

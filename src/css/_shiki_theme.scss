@@ -5,7 +5,6 @@ pre.astro-code {
 		overflow: hidden;
 		padding: var(--codeblock-padding);
 		background-color: transparent;
-
 		& .line {
 			margin-left: calc(var(--codeblock-line-number-width) + var(--codeblock-line-number-padding-right));
 			counter-increment: line;
@@ -16,6 +15,7 @@ pre.astro-code {
 				background-color: var(--codeblock-bg-hover);
 				&::before {
 					background-color: var(--codeblock-bg-hover);
+					color: var(--codeblock-line-number-hover-color);
 					// border: var(--codeblock-line-number-padding-right) solid var(--codeblock-bg-hover);
 				}
 			}
