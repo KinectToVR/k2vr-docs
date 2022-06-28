@@ -1,5 +1,6 @@
 ---
 import { SITE, SOCIALS } from '~/constants.js';
+import LocaleList from '~/../public/shared/locales.json';
 import LangDropdown from '@components/LangDropdown.astro';
 import SearchIcon from '@icons/search_black_24dp.astro';
 import HamburgerIcon from '@icons/hamburger_black_24dp.astro';
@@ -9,6 +10,8 @@ import K2VRWordmark from '@icons/K2VR.astro';
 import SunIcon from '@icons/sun.astro';
 import MoonIcon from '@icons/moon.astro';
 const { locale } = Astro.props;
+const availableLocales = Object.keys(LocaleList[locale]);
+const render = availableLocales.length > 1;
 ---
 <header>
 	<button class="mobile sidebar">
@@ -16,7 +19,9 @@ const { locale } = Astro.props;
 	</button>
 	<h1 class="site-title"><a href={ SITE.root }><K2VRWordmark class="logo"/></a></h1>
 	<div class="dock-right">
-		<LangDropdown locale={locale}/>
+		{render && <>
+			<LangDropdown locale={locale}/>
+		</>}
 		<label class="theme-toggle switch">
 			<input type="checkbox"><SunIcon  class="sun"/><MoonIcon class="moon"/>
 		</label>
