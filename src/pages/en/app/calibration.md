@@ -4,6 +4,8 @@ title: How to calibrate
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
   import CardWarning from '@components/CardWarning.astro'
+  import Automatic from '@icons/calibration_automatic.astro'
+  import Manual from '@icons/calibration_manual.astro'
 ---
 # How to calibrate
 <CardInfo title="This is about Amethyst calibration!">
@@ -23,7 +25,7 @@ Amethyst comes with two calibration modes, Automatic and Manual. **Depending on 
 Calibration serves to **line up** the Amethyst tracking space with that of your VR headset. It's unrelated to improving the tracking quality from your device. [Check this page](improve-tracking) for more information on improving your tracking quality.
 </CardWarning>
 
-### Automatic calibration
+### <Automatic /> Automatic calibration
 This mode involves calculating the offset between the Amethyst and the SteamVR playspaces, based on the alignment of the skeleton tracking's head bone and your VR headset. Then the calibration points are averaged together to improve the precision of the result.
 
 There is a setting to change the number of **calibration points**. Note that this is **not related to the number of trackers.** Instead it defines how many positions are going to be captured to average your alignment from.
@@ -44,7 +46,7 @@ There is a setting to change the number of **calibration points**. Note that thi
 ###### If automatic calibration fails
 Try again, tracking glitches can cause the captured position to be off from where it should be. Increasing the number of points is helpful to avoid those problems.
 
-### Manual calibration
+### <Manual /> Manual calibration
 This mode involves lining up the tracking space of Amethyst manually using VR controls.
 Those controls are shown in the app. Though, they won't match if you change them via the SteamVR bindings menu.
 
