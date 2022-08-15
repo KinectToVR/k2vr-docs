@@ -1,4 +1,5 @@
 ---
+import Debug from 'astro/components/Debug.astro';
 import { Markdown } from 'astro/components';
 import SocialEmbed from '@components/SocialEmbed.astro';
 import Sidebar from '@components/Sidebar/Sidebar.astro';
@@ -29,6 +30,7 @@ const LocalisedMetadata = JSON.parse(json);
 title = title ?? LocalisedMetadata.embed.title; // Always false so technically redundant ; we'll see later
 image = image ?? LocalisedMetadata.embed.image;
 description = description ?? LocalisedMetadata.embed.description;
+
 ---
 <html lang={locale} class="no-js">
     <head>
@@ -57,7 +59,7 @@ description = description ?? LocalisedMetadata.embed.description;
         <div class="main-wrapper">
             <Sidebar locale={locale}/>
             <article class="content">
-                    <slot/>
+                <slot />
             </article>
             <Footer />
         </div>

@@ -1,18 +1,21 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/preact': ^0.0.2
   '@astrojs/react': ^0.1.0
   '@astrojs/sitemap': ^0.1.0
   '@babel/core': ^7.17.9
+  '@microflash/rehype-slugify': ^1.0.0
   '@types/react': ^17.0.43
   astro: ^1.0.0-beta.12
+  github-slugger: ^1.4.0
   hastscript: ^7.0.2
   preact: ^10.7.1
   prettier: ^2.6.2
   react: ^17.0.2
   react-dom: ^17.0.2
   rehype-autolink-headings: ^6.1.1
+  rehype-slugify-counter: file:./rehype-slugify-counter
   remark: ^14.0.2
   sass: ^1.50.0
   serialize-javascript: ^6.0.0
@@ -21,18 +24,21 @@ specifiers:
   strip-markdown: ^5.0.0
 
 dependencies:
-  '@astrojs/preact': 0.0.2_@babel+core@7.17.9+preact@10.7.1
-  '@astrojs/react': 0.1.0_f370f735164a03a12cea0cc89593cbee
+  '@astrojs/preact': 0.0.2_4aogvlozmxuufv32kpculfbxce
+  '@astrojs/react': 0.1.0_6nyponiwjib2clhkbtejle6l5y
   '@astrojs/sitemap': 0.1.0
   '@babel/core': 7.17.9
+  '@microflash/rehype-slugify': 1.0.0
   '@types/react': 17.0.44
   astro: 1.0.0-beta.12_sass@1.50.0
+  github-slugger: 1.4.0
   hastscript: 7.0.2
   preact: 10.7.1
   prettier: 2.6.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   rehype-autolink-headings: 6.1.1
+  rehype-slugify-counter: file:rehype-slugify-counter
   remark: 14.0.2
   sass: 1.50.0
   serialize-javascript: 6.0.0
@@ -101,7 +107,7 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/preact/0.0.2_@babel+core@7.17.9+preact@10.7.1:
+  /@astrojs/preact/0.0.2_4aogvlozmxuufv32kpculfbxce:
     resolution: {integrity: sha512-rpmQ+nffweQFQQnuSf6tGT8RDVzYURSve8R/fuuf02P0fTU7ZoqBzfG+BlQsAzkqJU8L9BHsnyRJOUoETrfK8w==}
     engines: {node: ^14.15.0 || >=16.0.0}
     peerDependencies:
@@ -119,7 +125,7 @@ packages:
     engines: {node: ^14.15.0 || >=16.0.0}
     dev: false
 
-  /@astrojs/react/0.1.0_f370f735164a03a12cea0cc89593cbee:
+  /@astrojs/react/0.1.0_6nyponiwjib2clhkbtejle6l5y:
     resolution: {integrity: sha512-WWowT/TsrV5iiBuUstUdm2fBzDkL8EJt5B71xgEEC8OUcLonSD9+cHohVtbgOrNKHqEpm3Shoxx9GrjhK9tZPg==}
     engines: {node: ^14.15.0 || >=16.0.0}
     peerDependencies:
@@ -143,7 +149,7 @@ packages:
     resolution: {integrity: sha512-O6LYL9igYSzxCxDHYWUqEquuuUlMG0UL1SliZ7rF/vx9GwU71TCpsRe4iHZ0bcemM5ju9ihoTzGCmLXzYrNw0g==}
     dependencies:
       svelte: 3.47.0
-      svelte2tsx: 0.5.9_svelte@3.47.0+typescript@4.6.3
+      svelte2tsx: 0.5.9_ucc3fdkrl6lb7lhnlfimbouujy
     transitivePeerDependencies:
       - typescript
     dev: false
@@ -314,6 +320,8 @@ packages:
     resolution: {integrity: sha512-vqUSBLP8dQHFPdPi9bc5GK9vRkYHJ49fsZdtoJ8EQ8ibpwk5rPKfvNIwChB0KVXcIjcepEBBd2VHC5r9Gy8ueg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.0
     dev: false
 
   /@babel/plugin-syntax-jsx/7.16.7_@babel+core@7.17.9:
@@ -409,6 +417,15 @@ packages:
 
   /@ljharb/has-package-exports-patterns/0.0.2:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==}
+    dev: false
+
+  /@microflash/rehype-slugify/1.0.0:
+    resolution: {integrity: sha512-pp9LB4zp8cxF+Pf6oXNpqCMNXAmFKeIP9Ab6MOb/SrzxDvGfi0O2RZwG7znXh7dmVgYa0//Dte4X5kcIf+G3/w==}
+    dependencies:
+      hast-util-has-property: 2.0.0
+      hast-util-heading-rank: 2.1.0
+      hast-util-to-string: 2.0.0
+      unist-util-visit: 4.1.0
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -3304,7 +3321,7 @@ packages:
     engines: {node: '>= 8'}
     dev: false
 
-  /svelte2tsx/0.5.9_svelte@3.47.0+typescript@4.6.3:
+  /svelte2tsx/0.5.9_ucc3fdkrl6lb7lhnlfimbouujy:
     resolution: {integrity: sha512-xTDASjlh+rKo4QRhTRYSH87sS7fRoyX67xhGIMPKa3FYqftRHRmMes6nVgEskiuhBovslNHYYpMMg5YM5n/STg==}
     peerDependencies:
       svelte: ^3.24
@@ -3714,4 +3731,16 @@ packages:
 
   /zwitch/2.0.2:
     resolution: {integrity: sha512-JZxotl7SxAJH0j7dN4pxsTV6ZLXoLdGME+PsjkL/DaBrVryK9kTGq06GfKrwcSOqypP+fdXGoCHE36b99fWVoA==}
+    dev: false
+
+  file:rehype-slugify-counter:
+    resolution: {directory: rehype-slugify-counter, type: directory}
+    name: '@hyblocker/rehype-slugify-counter'
+    version: 1.0.0
+    dependencies:
+      github-slugger: 1.4.0
+      hast-util-has-property: 2.0.0
+      hast-util-heading-rank: 2.1.0
+      hast-util-to-string: 2.0.0
+      unist-util-visit: 4.1.0
     dev: false
