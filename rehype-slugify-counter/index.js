@@ -19,6 +19,6 @@ export default function rehypeSlugify(options) {
                 node.properties.id = slugger.slug(toString(node));
                 node.counter = counter;
             }
-        })
+        });
     }
 }
