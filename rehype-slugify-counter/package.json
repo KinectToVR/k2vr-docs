@@ -1,0 +1,19 @@
+{
+	"name": "@hyblocker/rehype-slugify-counter",
+	"version": "1.0.0",
+	"description": "rehype plugin to add id attributes to headings and counter headings",
+	"license": "MIT",
+	"type": "module",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"dependencies": {
+		"hast-util-has-property": "^2.0.0",
+		"hast-util-heading-rank": "^2.1.0",
+		"hast-util-to-string": "^2.0.0",
+		"unist-util-visit": "^4.1.0",
+		"github-slugger": "^1.4.0"
+	}
+}
+

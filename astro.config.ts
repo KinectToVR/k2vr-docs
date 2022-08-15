@@ -3,6 +3,7 @@ import preact from '@astrojs/preact';
 import react from '@astrojs/react';
 import sitemap from "@astrojs/sitemap";
 import { h } from 'hastscript';
+import rehypeSlugifyCounter from 'rehype-slugify-counter';
 
 const AnchorLinkIcon = h('svg', {
   width: 16,
@@ -22,16 +23,20 @@ export default defineConfig({
   markdown: {
     mode: 'mdx',
     syntaxHighlight: 'shiki',
-    rehypePlugins: [ // These are here because setting custom plugins disables the default plugins
-    'rehype-slug', 'remark-smartypants', 'remark-gfm', // This adds links to headings
+    rehypePlugins: [
+    // These are here because setting custom plugins disables the default plugins
+    'remark-smartypants', 'remark-gfm',
+    // This generates a set of IDs and numeric counters for headers
+    rehypeSlugifyCounter,
+    // This adds said IDs to headings
     ['rehype-autolink-headings', {
       properties: {
         class: 'anchor-link'
       },
       behavior: 'after',
-      group: ({
-        tagName
-      }) => h(`div.heading-wrapper.level-${tagName}`),
+      group: ({tagName, counter}) => h(`div.heading-wrapper.level-${tagName}`, {
+        id: counter
+      }),
       content: heading => [h(`span.anchor-icon`, {
         ariaHidden: 'true'
       }, AnchorLinkIcon)]
