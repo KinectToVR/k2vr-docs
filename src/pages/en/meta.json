@@ -1,8 +1,8 @@
 {
     "locale": "en",
     "embed": {
-        "title": "",
-        "description": "Lorem ipsum dolor sit amet",
+        "title": "Amethyst Documentation",
+        "description": "The documentation for Amethyst",
         "image": ""
     },
     "sidebar": [{
