@@ -69,6 +69,7 @@
 	
 	& .sidebar-link-text {
 		color: currentColor;
+		padding-right: var(--sidebar-text-padding);
 	}
 }
 .docs-sidebar + .sidebar-overlay {
