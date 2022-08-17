@@ -1,6 +1,7 @@
 ---
 import SocialEmbed from '@components/SocialEmbed.astro';
 import { SITE } from '~/constants.js';
+import { embed } from '~/pages/en/meta.json';
 ---
 <!DOCTYPE html>
 <html>
@@ -8,6 +9,8 @@ import { SITE } from '~/constants.js';
         <SocialEmbed
             title="Amethyst Docs"
             color={ SITE.embedColor }
+            description={ embed.description }
+            image={ embed.image }
             canonicalURL={ Astro.canonicalURL }
         ></SocialEmbed>
 
