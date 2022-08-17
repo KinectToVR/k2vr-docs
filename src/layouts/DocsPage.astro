@@ -6,11 +6,22 @@ import Sidebar from '@components/Sidebar/Sidebar.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import SearchPopup from '@components/SearchPopup.astro';
+import PageFooter from '@components/PageFooter.astro';
 import { SITE } from '~/constants.js';
 import "~/css/main.scss";
 
+
 // node hell
 import fs from 'node:fs/promises';
+import fs2 from 'fs';
+
+// this is stupidly fucking cursed
+const relativeToRoot = "../".repeat(1) + (import.meta.env.DEV === true ? "" : "src/");
+const currentPage = new URL(Astro.request.url).pathname;
+const currentFile = ([`${currentPage}.md`, `${currentPage}/index.md`].find(function(subpath) {
+    return fs2.existsSync(new URL(`${relativeToRoot}pages${subpath}`.replaceAll('//', '/'), import.meta.url));
+}) ?? "").replaceAll('//', '/');
+const githubEditUrl = `${ SITE.gitRepo }/blob/${ SITE.gitBranch }/src/pages${currentFile}`;
 
 const { content } = Astro.props;
 let title = (Astro.props.title ?? content.title) ?? "";
@@ -19,9 +30,6 @@ let description = Astro.props.description ?? content.description;
 let locale = Astro.props.locale ?? content.locale;
 locale = locale ?? "en"
 title = (title.trim().length > 0 && (title.trim() != SITE.title)) ? `${title.trim()} | ${SITE.title}` : SITE.title;
-
-// this is stupidly fucking cursed
-const relativeToRoot = "../".repeat(1) + (import.meta.env.DEV === true ? "" : "src/");
 
 const url = new URL(`${relativeToRoot}pages/${locale}/meta.json`, import.meta.url);
 const json = await fs.readFile(url, 'utf-8');
@@ -60,6 +68,7 @@ description = description ?? LocalisedMetadata.embed.description;
             <Sidebar locale={locale}/>
             <article class="content">
                 <slot />
+                <PageFooter githubEditUrl={githubEditUrl} file={currentFile} />
             </article>
             <Footer />
         </div>

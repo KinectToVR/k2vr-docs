@@ -17,6 +17,24 @@ html {
 	@media only screen and (max-width: 1111px) {
 		padding-left: var(--content-padding);
 	}
+
+	& .page-footer-separator {
+		margin: 2rem 0;
+	}
+
+	& .page-footer {
+		line-height: 24px;
+		display: inline-flex;
+		align-items: center;
+		width: 100%;
+
+		& .edit-on-github {
+			display: inline-flex;
+			align-items: center;
+			align-self: flex-end;
+			margin-left: auto;
+		}
+	}
 }
 
 @keyframes index-header {

@@ -1,0 +1,18 @@
+---
+import EditIcon from '@icons/edit_note_black_24dp.astro';
+
+const { githubEditUrl, file } = Astro.props;
+
+// Use the GitHub API as otherwise the files will state that they have last been edited whenever the build happens on the server (since it freshly clones)
+// TODO: Abstract into config or something
+const githubAPIRequest = `https://api.github.com/repos/KinectToVR/k2vr-docs/commits?path=src%2Fpages%2F${encodeURIComponent(file)}&page=1&per_page=1`;
+const response = await fetch(githubAPIRequest);
+const data = await response.json();
+const date = new Date(data[0]?.commit?.author?.date ?? null);
+const lastEditTime = `${("0" + date.getDate()).slice(-2)}/${("0" + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`;
+---
+<hr class="page-footer-separator">
+<div class="page-footer">
+    <span class="last-edited">Last updated on { lastEditTime }</span>
+    <a class="edit-on-github" href={ githubEditUrl } target="_blank"><EditIcon />Edit on GitHub</a>
+</div>
