@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+        <!-- Generic  --><title>How to fix E_NUI_NOTPOWERED | Amethyst Docs</title>
+<link rel="canonical" href="https://docs.k2vr.tech/en/360/troubleshooting/notpowered/">
+<meta name="description" content="Lorem ipsum dolor sit amet">
+<meta name="theme-color" content="#E33388">
+
+<!-- OpenGraph  -->
+<meta property="og:url" content="https://docs.k2vr.tech">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to fix E_NUI_NOTPOWERED | Amethyst Docs">
+<meta property="og:description" content="Lorem ipsum dolor sit amet">
+
+
+<!-- Twitter  -->
+<meta property="twitter:domain" content="docs.k2vr.tech">
+<meta property="twitter:url" content="https://docs.k2vr.tech">
+<meta name="twitter:title" content="How to fix E_NUI_NOTPOWERED | Amethyst Docs">
+<meta name="twitter:description" content="Lorem ipsum dolor sit amet">
+
+
+
+        <link rel="icon" href="/shared/favicon.ico">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet"> 
+        <script src="/shared/js/fuse.js"></script>
+        <script src="/shared/js/mobile.js"></script>
+        <script src="/shared/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/asset.c9ea4bae.css"></link>
+</head>
+    <body>
+        <header>
+	<button class="mobile sidebar">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+	</button>
+	<h1 class="site-title"><a href="https://k2vr.tech"><svg width="215px" height="48px" class="logo" viewBox="0 0 2115 471.98" xmlns="http://www.w3.org/2000/svg">
+    <path d="m1275.77 4.08 171.62 467.9h114.47l171.62-467.9h-100.29L1505.3 375.7 1376.73 4.1h-100.96ZM1902.21 286.85 2005.91 470H2115l-112.46-190.57c35.47-9.43 62.18-26.6 80.14-51.51 17.96-24.92 26.93-52.87 26.93-83.84 0-26.94-6.39-51.3-19.19-73.06-12.79-21.78-27.33-39.15-52.92-51.95-25.59-12.8-61.14-15-97.5-15h-176.51v465.93h94.28V286.85h44.44Zm-814.35-3.57c-25.47 23.9-59.65 53.73-102.54 89.48l-23.63 16.75c-3.72 2.64-6.63 6-8.7 10.06a27.52 27.52 0 0 0-3.06 12.96l.54 59.42h331.09V394.2h-197.72c38.87-33.06 70.37-61.32 94.5-84.78 24.13-23.46 45.58-51.05 64.34-82.77 18.77-31.73 28.15-65.02 28.15-99.87-6.55-47.5-35.47-77.35-53.5-93.21C1199.29 17.7 1162.26 0 1111.32 0c-46.47 0-85.89 12.5-110.42 33.57-24.53 21.06-49.32 62.66-51.1 116.28h91.15c.44-25.91 6.7-35.63 18.76-50.6 12.07-14.97 29.27-22.45 51.61-22.45s38.87 6.48 49.6 19.43c10.72 12.96 17.42 20.61 17.42 43.4 0 25.02-9.83 43-26.81 68.92-16.98 25.92-38.2 50.83-63.67 74.73ZM643.9 263.51l170.23 208.44h118.63L734.38 236.03 927.4 4.13H814.13L643.9 213.91V4.13h-54.92c-11.56 0-21.43 4.1-29.61 12.27-8.18 8.18-12.26 18.04-12.26 29.6v384.07c0 11.57 4.08 21.44 12.26 29.61 8.18 8.18 18.05 12.27 29.61 12.27h54.92V263.5Zm1292.65-47.37h-78.78V78.1h78.78c25.59 0 44.67 5.94 57.24 17.84 12.57 11.9 18.86 28.62 18.86 50.17 0 22-6.29 39.17-18.86 51.51-12.57 12.35-31.65 18.52-57.24 18.52ZM41.17 3.98h385.66c11.37 0 21.07 4.02 29.11 12.06C463.98 24.08 468 33.78 468 45.15v385.66c0 11.37-4.02 21.07-12.06 29.12-8.04 8.03-17.74 12.05-29.11 12.05H41.17c-11.37 0-21.07-4.02-29.11-12.06C4.02 451.88 0 442.19 0 430.82V45.14c0-11.37 4.02-21.07 12.06-29.1C20.1 8 29.8 3.97 41.17 3.97Zm3.78 238.96a46.13 46.13 0 1 0 92.26 0 46.13 46.13 0 0 0-92.26 0Zm286.1 0a46.13 46.13 0 1 0 92.25 0 46.13 46.13 0 0 0-92.25 0Zm-123.3.21a46.13 46.13 0 1 0 92.25 0 46.13 46.13 0 0 0-92.26 0Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg></a></h1>
+	<div class="dock-right">
+		<select class="locale-picker"><option selected="true" value="en">English</option><option value="es">Español (Spanish)</option></select>
+		<label class="theme-toggle switch">
+			<input type="checkbox"><svg width="16px" height="16px" class="sun" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg"><path d="M124.4 22.79 104 0 83.86 22.5a83.6 83.6 0 0 1 19.68-2.34c7.2 0 14.2.91 20.86 2.63Zm22.28 9.38A83.8 83.8 0 0 1 175.8 61.9l1.74-31.44-30.86 1.7ZM32.12 60.49A83.8 83.8 0 0 1 60.5 32.12l-30.03-1.66 1.66 30.03Zm8.2 43.05a63.22 63.22 0 1 1 126.45 0 63.22 63.22 0 0 1-126.45 0Zm144-20.73a83.56 83.56 0 0 1 2.6 20.73c0 7.6-1 14.95-2.91 21.94L208 104l-23.67-21.2ZM22.8 124.4a83.54 83.54 0 0 1-2.63-20.87c0-6.78.8-13.37 2.33-19.68L0 104l22.79 20.4Zm152.97 20.85a83.8 83.8 0 0 1-30.5 30.5l32.28 1.78-1.78-32.28ZM61.9 175.8a83.8 83.8 0 0 1-29.73-29.13l-1.7 30.87 31.43-1.74Zm63.58 8.21a83.48 83.48 0 0 1-21.94 2.92c-7.16 0-14.1-.9-20.73-2.6L104 208l21.48-23.99Z" fill="currentColor" fill-rule="evenodd"></path></svg><svg width="16px" height="16px" class="moon" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h208v208H0V0Z" fill="none"></path><path d="M102.67 186A83.43 83.43 0 0 1 39 156.59c64.2-.6 116.05-52.82 116.05-117.15 0-.76-.01-1.51-.03-2.26A83.62 83.62 0 0 1 102.67 186h.01Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+		</label>
+		<button class="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></button>
+		<a class="link-external" href="https://discord.gg/YBQCRDG" target="_blank">Discord</a>
+		<a class="link-external" href="https://github.com/KinectToVR" target="_blank">GitHub</a>
+	</div>
+</header>
+        <div class="main-wrapper">
+            <div class="docs-sidebar collapse">
+	
+	<a class="sidebar-section-link" href="/en/">
+		<span class="sidebar-link-text">Amethyst Docs</span></a>
+
+	<ul>
+	<li class="sidebar-section-title">
+				<span class="sidebar-title-text">General</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/comparison">
+									<li class="sidebar-link-text">
+										How Amethyst compares to other options
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/buying-kinect">
+									<li class="sidebar-link-text">
+										Getting a Kinect and adapter
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/about">
+									<li class="sidebar-link-text">
+										About Amethyst and K2VR
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Using Amethyst</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/app/installation">
+									<li class="sidebar-link-text">
+										Installing Amethyst
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/overview">
+									<li class="sidebar-link-text">
+										App Overview
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/calibration">
+									<li class="sidebar-link-text">
+										How to calibrate
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/overrides">
+									<li class="sidebar-link-text">
+										How to use overrides
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/help">
+									<li class="sidebar-link-text">
+										General Troubleshooting
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/steamvr-driver-codes">
+									<li class="sidebar-link-text">
+										SteamVR Driver Troubleshooting
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/improve-tracking">
+									<li class="sidebar-link-text">
+										Improve tracking
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Xbox 360 Kinect</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/360/setup">
+									<li class="sidebar-link-text">
+										Setting up your Xbox 360 Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link sidebar-link-selected" href="/en/360/troubleshooting">
+									<li class="sidebar-link-text">
+										Xbox 360 Kinect Troubleshooting
+									</li>
+									
+								</a><a class="sidebar-section-link sidebar-link-selected" href="/en/360/troubleshooting/notpowered">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTPOWERED
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/notready">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTREADY
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/notgenuine">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTGENUINE
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/insufficientbandwidth">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_INSUFFICIENTBANDWIDTH
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Xbox One Kinect</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/one/common-issues">
+									<li class="sidebar-link-text">
+										Common issues with Xbox One Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/one/setup">
+									<li class="sidebar-link-text">
+										Setting up your Xbox One Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/one/troubleshooting">
+									<li class="sidebar-link-text">
+										Xbox One Kinect Troubleshooting
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">PlayStation Move</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/psmove/what-to-buy">
+									<li class="sidebar-link-text">
+										Prerequisites
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/setup">
+									<li class="sidebar-link-text">
+										Setting up PSMoveServiceEx
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/usage">
+									<li class="sidebar-link-text">
+										Using PS Move with Amethyst
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/troubleshooting">
+									<li class="sidebar-link-text">
+										PlayStation Move Troubleshooting
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">owoTrack</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/owo/about">
+									<li class="sidebar-link-text">
+										What is owoTrack
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/owo/setup">
+									<li class="sidebar-link-text">
+										How to configure and use owoTrack
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Augmented Hip</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/aughip/about">
+									<li class="sidebar-link-text">
+										What is Augmented Hip
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/aughip/setup">
+									<li class="sidebar-link-text">
+										How to use Augmented Hip
+									</li>
+									
+								</a>
+					</ul>
+			</li>
+</ul>
+	
+</div>
+<div class="sidebar-overlay">
+</div>
+            <article class="content">
+                <div class="heading-wrapper level-h1" id="1"><h1 id="how-to-fix-e_nui_notpowered">How to fix E_NUI_NOTPOWERED</h1><a class="anchor-link" href="#how-to-fix-e_nui_notpowered"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>This error usually has two possible causes.</p><ul>
+<li>A bug occured during the Kinect for Windows driver installation, leaving one or more devices as “unknowns” until manually refreshed.</li>
+<li>The adapter is not sending 12 volts power to the Kinect, either because it’s not plugged into a working power outlet, or because it’s faulty.</li>
+</ul><div class="heading-wrapper level-h2" id="2"><h2 id="fixing-the-device-installation-bug">Fixing the device installation bug</h2><a class="anchor-link" href="#fixing-the-device-installation-bug"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-tip">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"></path></svg>
+		<h3 class="card-title">When using Amethyst Installer</h3>
+	</div>
+	<div class="card-content">
+		<p>If you used Amethyst Installer, it already attempted to fix this.</p>
+
+	</div>
+</div><p>Open Device Manager, you can do so by right-clicking on the Start Menu button.
+<img src="/en/img/device-manager-poweruser-menu.png" alt="right-clicking on start">
+In Device Manager, locate the <strong>Other Devices</strong> category and extend it.
+In there you should see up to 3 of the following devices:</p><ul>
+<li>Audios</li>
+<li>Kinect for Windows Security</li>
+<li>Xbox NUI Camera</li>
+</ul><p>For each of them, right-click, then <strong>Uninstall device</strong> then OK.</p><div class="card card-warning">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+		<h3 class="card-title">Don&#39;t uninstall anything else!</h3>
+	</div>
+	<div class="card-content">
+		<p>The Other Devices category may contain devices unrelated to Kinect. Only uninstall devices matching the list above!</p>
+
+	</div>
+</div>
+Finally, right-click on any device, then 
+<strong>Scan for hardware changes</strong>
+.
+
+<details class="accordion">
+	<summary class="accordion-header">
+		Video instructions
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
+	</summary>
+	<div class="accordion-content">
+		<video controls muted src="/en/mp4/notpowered.mp4">
+</video>
+
+	</div>
+</details><div class="heading-wrapper level-h2" id="3"><h2 id="nothing-appears-in-other-devices">Nothing appears in “Other Devices”</h2><a class="anchor-link" href="#nothing-appears-in-other-devices"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>First, check that your adapter is getting power. There should be a light either where the Kinect plugs in, or on the part that plugs into the wall.
+<img src="/shared/img/360-adapter-light.jpg" alt="360 adapter light placement">
+If you don’t see any light. Try connecting it to a different outlet, but you probably have a faulty/broken adapter.</p><div class="heading-wrapper level-h3" id="4"><h3 id="what-now">What now?</h3><a class="anchor-link" href="#what-now"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>If you just purchased the adapter, try returning it or asking for a refund if possible. Then <a href="/en/buying-kinect#where-do-i-get-the-adapter">get another adapter</a> from a recommended source.</p>
+            </article>
+            <footer>
+	<div class="prominent">
+	Built with <svg style="vertical-align:bottom" height="1.5rem" width="1.5rem" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0" y1="0" x2="1" y2="1" id="a"><stop offset="0%" stop-color="#46BCFE"></stop><stop offset="40%" stop-color="#AA6AF1"></stop><stop offset="75%" stop-color="#D73BA4"></stop></linearGradient></defs><path d="M21.34.275A7.406 7.406 0 0 0 19.313 0c-.602 0-1.168.059-1.7.176a6.73 6.73 0 0 0-1.506.521c-.472.23-.925.512-1.359.844a12.06 12.06 0 0 0-1.271 1.13 12.06 12.06 0 0 0-1.272-1.13 7.726 7.726 0 0 0-1.36-.838A7.146 7.146 0 0 0 9.34.182 7.631 7.631 0 0 0 7.64 0a7.47 7.47 0 0 0-2.033.275 7.587 7.587 0 0 0-3.37 1.963 7.587 7.587 0 0 0-1.962 3.37A7.47 7.47 0 0 0 0 7.64c0 1.039.19 2.015.568 2.93a7.583 7.583 0 0 0 1.67 2.472l11.239 11.238 11.238-11.238a7.583 7.583 0 0 0 1.67-2.473c.379-.914.568-1.89.568-2.93 0-.702-.092-1.378-.275-2.027a7.776 7.776 0 0 0-.774-1.822 7.65 7.65 0 0 0-2.742-2.742A7.774 7.774 0 0 0 21.34.275Z" fill="url(#a)" fill-rule="evenodd"></path></svg> by K2VR Team
+	</div>
+	<ul class="socials">
+		<li class="social-link"><a href="https://discord.gg/YBQCRDG" target="_blank">Discord</a></li>
+		<li class="social-link"><a href="https://github.com/KinectToVR" target="_blank">GitHub</a></li>
+		<li class="social-link"><a href="https://twitter.com/k2vr_team" target="_blank">Twitter</a></li>
+		<li class="social-link"><a href="https://opencollective.com/k2vr" target="_blank">OpenCollective</a></li>
+	</ul>
+</footer>
+        </div>
+        <div class="search-container-root">
+    <div class="search-container">
+        <div class="search-wrapper">
+            <div class="search-input">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                <input class="search-input-textbox" aria-autocomplete="both" aria-labelledby="earch-label" id="search-input" autocomplete="off" autocorrect="off" autocapitalize="none" enterkeyhint="search" spellcheck="false" placeholder="Search docs" maxlength="64" type="search">
+                <button id="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </button>
+            </div>
+            <ul class="search-results-container">
+                <li class="search-result">
+                    <a class="search-result-link">Sus</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </body></html>
