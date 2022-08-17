@@ -176,6 +176,10 @@ hr{
 	color: var(--link);
 	opacity: .5;
 }
-video{
+video {
 	border-radius: var(--border-radius);
+	width: 100%;
+}
+.video-container {
+	width: 100%;
 }
