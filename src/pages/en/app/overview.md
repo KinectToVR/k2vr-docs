@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: App Overview
+description: Detailed view of each page of the Amethyst application
 setup: | 
   import CardNoIcon from '@components/CardNoIcon.astro'
   import TableOfContents from '@components/TableOfContents.astro'

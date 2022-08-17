@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: How Amethyst compares to other options
+description: Comparing Kinect tracking in Amethyst with competing options like SlimeVR or Vive Trackers
 # setup: | 
 #   import CardInfo from '@components/CardInfo.astro'
 #   import CardTip from '@components/CardTip.astro'

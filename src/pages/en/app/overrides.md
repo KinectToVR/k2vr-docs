@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: How to use overrides
+description: Information about setting up tracking overrides in Amethyst
 setup: | 
   import Accordion from '@components/Accordion.astro'
 ---

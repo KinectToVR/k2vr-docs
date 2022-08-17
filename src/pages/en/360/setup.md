@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: Setting up your Xbox 360 Kinect
+description: How to place your kinect, connect it to your computer and install the drivers for it
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
   import CardWarning from '@components/CardWarning.astro'

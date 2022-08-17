@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: How to calibrate
+description: Instructions on using automatic and manual calibration in Amethyst
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
   import CardWarning from '@components/CardWarning.astro'

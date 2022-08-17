@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: Xbox 360 Kinect Troubleshooting
+description: Pages on various Xbox 360 Kinect errors and how to fix them
 setup: | 
   import CardNoIcon from '@components/CardNoIcon.astro'
   import CardTip from '@components/CardTip.astro'

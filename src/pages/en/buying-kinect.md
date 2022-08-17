@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: Getting a Kinect and adapter
+description: Is Kinect for you? Is your room large enough? What and where to buy? All these questions answered here.
 setup: | 
   import CardTip from '@components/CardTip.astro'
   import Accordion from '@components/Accordion.astro'

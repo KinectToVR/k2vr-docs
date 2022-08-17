@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: How to fix E_NUI_NOTPOWERED
+description: What to do if your Xbox 360 Kinect comes up with a Not Powered error
 setup: | 
   import CardNoIcon from '@components/CardNoIcon.astro'
   import CardTip from '@components/CardTip.astro'

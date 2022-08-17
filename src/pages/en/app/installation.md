@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: Installing Amethyst
+description: How to run and use Amethyst Installer
 setup: | 
   import Accordion from '@components/Accordion.astro'
   import Windows from '@icons/Kbd_Windows.astro'
