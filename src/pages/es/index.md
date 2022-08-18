@@ -3,6 +3,7 @@ layout: '@layouts/DocsPage.astro'
 title: Amethyst Docs
 locale: es
 setup: | 
+  import CardTip from '@components/CardTip.astro'
   import CardNoIcon from '@components/CardNoIcon.astro'
   import TableOfContents from '@components/TableOfContents.astro'
 ---
