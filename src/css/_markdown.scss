@@ -36,6 +36,8 @@ blockquote {
 		}
 	}
 
+	& a,
+	& em,
 	& strong {
 		margin-left: 0;
 	}
@@ -158,7 +160,7 @@ table {
 		background: var(--table-bg2);
 	}
 }
-kbd{
+kbd {
 	background-color: var(--kbd-primary);
 	padding: .1rem .2rem;
 	display: inline-block;
@@ -172,10 +174,14 @@ kbd{
 	vertical-align: middle;
 	width: max-content;
 }
-hr{
+hr {
 	color: var(--link);
 	opacity: .5;
 }
-video{
+video {
 	border-radius: var(--border-radius);
+	width: 100%;
+}
+.video-container {
+	width: 100%;
 }

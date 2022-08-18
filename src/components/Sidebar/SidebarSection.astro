@@ -19,7 +19,10 @@ const { items } = Astro.props;
 							<>
 								
 								<a class={
-									currUrl.includes(new URL('https://a.c'+itemA.url).pathname) ? "sidebar-section-link sidebar-link-selected" : "sidebar-section-link"
+									(
+										currUrl.includes(new URL('https://a.c'+itemA.url).pathname) &&
+										(currUrl.length - new URL('https://a.c'+itemA.url).pathname.length) < 2
+									) ? "sidebar-section-link sidebar-link-selected" : "sidebar-section-link"
 									} href={itemA.url}>
 									<li class="sidebar-link-text">
 										{itemA.title}
