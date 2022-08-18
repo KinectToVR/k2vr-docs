@@ -7,7 +7,7 @@ setup: |
   import TableOfContents from '@components/TableOfContents.astro'
 ---
 <div class="docs-index-header" style="height: 10em; display:flex; justify-content:center;">
-  <img src="/shared/img/amethyst-logo.png" height="100%">
+  <img src="/shared/img/amethyst-logo.webp" height="100%">
   <h1 style="line-height:2.7em; margin-left:.5em">Amethyst</h1>
 </div>
 <br>
