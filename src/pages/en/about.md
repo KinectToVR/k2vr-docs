@@ -16,7 +16,7 @@ Akaya's efforts in fixing up KinectToVR for their usecase led to a new version o
 Years have passed, and an official website, custom graphical installer, multiple large scale *yearly* updates and thousands of users later, we've arrived at present day.
 
 ## What is Amethyst?
-Amethyst is a modular platform with support for [device plugins](app/overview#devices) that [you can write yourself](https://github.com/KinectToVR/K2TrackingDevice-Samples). if you know C++. By default it comes with device plugins for Xbox 360 Kinect, Xbox One Kinect, PSMoveService(Ex) and owoTrack.
+Amethyst is a modular platform with support for [device plugins](app/overview#4) that [you can write yourself](https://github.com/KinectToVR/K2TrackingDevice-Samples). if you know C++. By default it comes with device plugins for Xbox 360 Kinect, Xbox One Kinect, PSMoveService(Ex) and owoTrack.
 
 It's pretty much a complete departure from the original KinectToVR app.
 

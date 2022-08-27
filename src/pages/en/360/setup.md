@@ -22,7 +22,7 @@ A **minimum distance of 1.5 meters (5 feet)** is required for tracking to functi
 Height-wise, **put the Kinect at around eye level.** It depends on how tall you are and how big your room is. But generally, it should be **high up, pointing down.** Never pointing up, it wasn't made to track like that.
 
 ### Connecting it to your computer
-Using [the adapter](/en/buying-kinect#where-do-i-get-the-adapter), connect the sensor to a power outlet, and to your computer. **Avoid USB hubs or extensions**, as they can degrade the signal quality and data transfer speed of the Kinect, causing various errors.
+Using [the adapter](/en/buying-kinect#5), connect the sensor to a power outlet, and to your computer. **Avoid USB hubs or extensions**, as they can degrade the signal quality and data transfer speed of the Kinect, causing various errors.
 
 ### Installing the drivers
 <CardInfo title="Automatic driver installation">

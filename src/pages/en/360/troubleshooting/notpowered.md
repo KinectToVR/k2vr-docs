@@ -43,4 +43,4 @@ First, check that your adapter is getting power. There should be a light either 
 ![360 adapter light placement](/shared/img/360-adapter-light.jpg)
 If you don't see any light. Try connecting it to a different outlet, but you probably have a faulty/broken adapter.
 ### What now?
-If you just purchased the adapter, try returning it or asking for a refund if possible. Then [get another adapter](/en/buying-kinect#where-do-i-get-the-adapter) from a recommended source.
+If you just purchased the adapter, try returning it or asking for a refund if possible. Then [get another adapter](/en/buying-kinect#5) from a recommended source.
