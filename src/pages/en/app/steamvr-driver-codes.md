@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: SteamVR Driver Troubleshooting
-description: How to fix the Amethyst SteamVR driver not working
+description: How to fix the SteamVR driver not working
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
   import KbdWindows from '@icons/Kbd_Windows.astro'

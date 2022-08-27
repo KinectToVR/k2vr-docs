@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: About Amethyst and K2VR
-description: How the project originally came about, and our hopes for the future
+description: How the project originally came about, What is Amethyst. And our hopes for the future.
 setup: | 
   import Accordion from '@components/Accordion.astro'
 ---

@@ -1,14 +1,14 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: Installing Amethyst
-description: How to run and use Amethyst Installer
+title: Installation
+description: How to run and use the installer
 setup: | 
   import Accordion from '@components/Accordion.astro'
   import Windows from '@icons/Kbd_Windows.astro'
   import Enter from '@icons/Kbd_Enter.astro'
   import Shift from '@icons/Kbd_Shift.astro'
 ---
-# Installing Amethyst
+# Installation
 You can get Amethyst Installer from the [homepage](https://k2vr.tech) by clicking on Get Started. You will be asked a few questions to ensure that you meet prerequisites, then the download button will appear.
 
 If you get a Windows Smartscreen pop-up, simply click on **More info** then **Run anyway**.
