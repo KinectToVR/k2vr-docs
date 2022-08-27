@@ -1,5 +1,5 @@
 export const SITE = {
-    title: "Amethyst Docs",
+    title: "Amethyst Docs Preview",
     domain: "docs.k2vr.tech",
     root: "https://k2vr.tech",
     embedColor: "#E33388",
