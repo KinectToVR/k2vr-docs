@@ -47,11 +47,14 @@ If you search for common mispellings of Kinect like "xbox connect", "konect", "k
 </CardTip>
 
 ## Where do I get the adapter?
-**Get it on eBay,. please.** We have it on good authority, that every user who got shipped a dead adapter, had purchased it on Amazon. I know that some people may be reticent to use eBay because of past experiences. But **we've had only good feedback from people using eBay on our Discord.**
+**Get it on eBay, please.**  
+After doing years of suport on the K2VR Comunity Discord, we found that **every user who got shipped a dead adapter, had purchased it through Amazon.** I know that some people may be reticent to use eBay because of past experiences. But **we've had only good feedback from people using eBay on our Discord.**
 
 Depending on where you live, the link for eBay will change, but just **open the homepage and search "kinect 360 adapter"** and pick the first or second listing. Whichever has cheaper shipping, or if you wanna get it faster, buy it from a seller in your country.
 
+If you don't have eBay, you can check local stores, classified ads, or local eBay-like websites, e.g. Mercari, Marketplaats, Facebook Marketplace, Craigslist, e.t.c.
+
 Once the stuff arrives, go to either  
 [Setting up your Xbox 360 Kinect](360/setup)  
-or [Setting up your Xbox One Kinect](one/setup)  
+or [Setting up your Xbox One Kinect](one/setup)   
 depending on the Kinect you got.
