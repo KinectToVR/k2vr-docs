@@ -7,6 +7,7 @@ setup: |
   import CardTip from '@components/CardTip.astro'
   import CardWarning from '@components/CardWarning.astro'
   import Accordion from '@components/Accordion.astro'
+  import LinkButton from '@components/LinkButton.astro'
 ---
 # How to fix E_NUI_NOTPOWERED
 This error usually has two possible causes.
@@ -14,6 +15,8 @@ This error usually has two possible causes.
 - The adapter is not sending 12 volts power to the Kinect, either because it's not plugged into a working power outlet, or because it's faulty.
 
 ## Fixing the device installation bug
+
+<LinkButton href="amethyst://notpowered">Fix E_NUI_NOTPOWERED</LinkButton>
 
 <CardTip title="When using Amethyst Installer">
 If you used Amethyst Installer, it already attempted to fix this.

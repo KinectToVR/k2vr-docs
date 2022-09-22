@@ -185,3 +185,21 @@ video {
 .video-container {
 	width: 100%;
 }
+
+.button.primary.link {
+	line-height: calc(3 * var(--button-primary-padding));
+	padding: var(--button-primary-padding);
+	border-radius: var(--border-radius);
+	background-color: var(--button-primary-neutral);
+	color: var(--button-primary-text);
+	text-decoration: none;
+
+	&:hover {
+		background-color: var(--button-primary-hover);
+	}
+	&:focus,
+	&:focus-within,
+	&:active {
+		background-color: var(--button-primary-click);
+	}
+}

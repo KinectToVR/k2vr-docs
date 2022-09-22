@@ -43,6 +43,7 @@
 	--content-max-width: 120ex;
 
 	--border-radius: 6px;
+	--button-primary-padding: 0.5rem;
 }
 @mixin lightMode {
 	--background-color: #FFFFFF;
@@ -109,6 +110,11 @@
 	--lang-picker-bg: #CFCCDE;
 	--lang-picker-contrast: #272735;
 	--lang-picker-border-color: #9c95b7;
+
+	--button-primary-neutral: #7957FF;
+	--button-primary-hover: #623AFF;
+	--button-primary-click: #4D37A4;
+	--button-primary-text: #dad6ee;
 
 	.card-error {
 		--card-bg: #f8d0d3;
@@ -220,6 +226,11 @@
 	--lang-picker-bg: #363652;
 	--lang-picker-contrast: #B9B3D1;
 	--lang-picker-border-color: #454565;
+
+	--button-primary-neutral: #6046C8;
+	--button-primary-hover: #563bc5;
+	--button-primary-click: #43318A;
+	--button-primary-text: #dad6ee;
 
 	.card-error {
 		--card-bg: #5A2C30;

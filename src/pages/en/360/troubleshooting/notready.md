@@ -7,6 +7,7 @@ setup: |
   import CardTip from '@components/CardTip.astro'
   import CardWarning from '@components/CardWarning.astro'
   import Accordion from '@components/Accordion.astro'
+  import LinkButton from '@components/LinkButton.astro'
 ---
 # How to fix E_NUI_NOTREADY
 The NotReady error is infamous for either being super easy to fix, or an absolute nightmare. More often than not, disabling Windows' Memory Integrity feature, then reinstalling the Kinect SDK is enough. But sometimes, we just never manage to fix it.
@@ -16,7 +17,8 @@ Let's go through this circus shall we?
 
 ### Uninstalling
 
-Go to Windows Settings, then apps and features. **Or click this link [ms-settings:appsfeatures](ms-settings:appsfeatures) to go there directly.**
+Go to Windows Settings, then apps and features.
+<LinkButton href="ms-settings:appsfeatures">Open Apps and Features</LinkButton>
 
 In the **right-hand** search box, type "kinect" (without quotes).
 
@@ -27,7 +29,10 @@ Click each item, then click Uninstall. Follow the instructions.
 Click on the three dots on the right edge of each item, then click Uninstall. Follow the instructions.
 
 ### Disabling Memory Integrity
-Open Windows Security **Or click this link [ms-settings:windowsdefender](ms-settings:windowsdefender) to go directly there, again.**  
+
+<LinkButton href="windowsdefender://coreisolation">Go to Core Isolation on Windows Security</LinkButton>
+
+Open Windows Security.
 
 Go to Device Security.
 

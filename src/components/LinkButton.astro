@@ -1,0 +1,8 @@
+---
+import LinkIcon from '~/icons/icon_open_link_external.astro';
+const { href } = Astro.props;
+---
+<a href={href} class="button primary link">
+    <LinkIcon />
+    <slot />
+</a>
