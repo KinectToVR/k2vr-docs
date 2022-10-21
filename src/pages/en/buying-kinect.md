@@ -29,7 +29,7 @@ And if that wasn't funny enough, the Kinect, especially the Xbox One Kinect, is 
 Generally, if you have an AMD Ryzen computer you're almost guaranteed to be fine. **Laptops and Quest 2 with Oculus Link are notable things that can cause issues.** If you're unsure, I would recommend [joining the Discord](https://discord.gg/YBQCRDG) and asking us for advice there.
 
 ## Which Kinect should you get?
-**In most cases the answer will be to get an Xbox 360 Kinect.** For reasons detailed [on this page](one/common-issues).
+**In most cases the answer will be to get an Xbox 360 Kinect.** For reasons detailed [on this page](/en/one/common-issues).
 
 <Accordion title="Xbox One Kinect common issues">
 The Xbox One Kinect costs a lot more over the Xbox 360, and apart from a larger field of view, smaller minimum required distance for tracking and a 1080p color camera, it doesn't actually track you any better or faster than the Xbox 360 Kinect. It also suffers from a lot of issues with USB 3.0 bandwidth and chipset compatibility and breaks tracking on headsets and controllers using base stations e.g. Vive, Index, Pimax.
@@ -55,6 +55,6 @@ Depending on where you live, the link for eBay will change, but just **open the 
 If you don't have eBay, you can check local stores, classified ads, or local eBay-like websites, e.g. Mercari, Marketplaats, Facebook Marketplace, Craigslist, e.t.c.
 
 Once the stuff arrives, go to either  
-[Setting up your Xbox 360 Kinect](360/setup)  
-or [Setting up your Xbox One Kinect](one/setup)   
+[Setting up your Xbox 360 Kinect](/en/360/setup)  
+or [Setting up your Xbox One Kinect](/en/one/setup)   
 depending on the Kinect you got.

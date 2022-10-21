@@ -10,7 +10,7 @@ setup: |
   import KbdWindows from '@icons/Kbd_Windows.astro'
 ---
 # How to fix E_NUI_INSUFFICIENTBANDWIDTH
-This error happens in two situations, either, you really are lacking bandwidth, in which case the instructions on the [NOTGENUINE page](notgenuine) should be helpful. Or the Kinect for Windows SDK has gotten confused because of something else, and is throwing this error.
+This error happens in two situations, either, you really are lacking bandwidth, in which case the instructions on the [NOTGENUINE page](/en/360/troubleshooting/notgenuine) should be helpful. Or the Kinect for Windows SDK has gotten confused because of something else, and is throwing this error.
 
 First, check to see if the Kinect Management service is running.
 

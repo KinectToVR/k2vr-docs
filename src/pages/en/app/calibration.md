@@ -23,7 +23,7 @@ This will open a panel for you to choose your calibration mode.
 Amethyst comes with two calibration modes, Automatic and Manual. **Depending on the device, it is possible that only manual calibration will be available** (For example, if calibrating PSMoveServiceEx).
 
 <CardWarning title="You must wear your VR headset to calibrate">
-Calibration serves to **line up** the Amethyst tracking space with that of your VR headset. It's unrelated to improving the tracking quality from your device. [Check this page](improve-tracking) for more information on improving your tracking quality.
+Calibration serves to **line up** the Amethyst tracking space with that of your VR headset. It's unrelated to improving the tracking quality from your device. [Check this page](/en/app/improve-tracking) for more information on improving your tracking quality.
 </CardWarning>
 
 ### <Automatic /> Automatic calibration
