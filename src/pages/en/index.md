@@ -8,7 +8,7 @@ setup: |
 ---
 <div class="docs-index-header">
   <img src="/shared/img/amethyst-logo.webp">
-  <h1 style="line-height:2.7em; margin-left:.5em">Amethyst</h1>
+  <h1>Amethyst</h1>
 </div>
 <br>
 
