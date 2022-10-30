@@ -131,6 +131,18 @@ document.addEventListener( "DOMContentLoaded", ( () => {
 	// Try yeeting noJS flag
 	document.documentElement.classList.remove( 'no-js' );
 
+    // https://twitter.com/hakimel/status/1262337065670316033
+    let sidebar = document.querySelector(".docs-sidebar");
+    
+    let sidebarScrollTop = localStorage.getItem("sidebar-scroll");
+    if (sidebarScrollTop !== null) {
+      sidebar.scrollTop = parseInt(sidebarScrollTop, 10);
+    }
+    
+    window.addEventListener("beforeunload", () => {
+      localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
+    });
+
     initLocalePicker();
 
     // Search
