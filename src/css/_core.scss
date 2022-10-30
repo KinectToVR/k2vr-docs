@@ -50,4 +50,13 @@ html {
 
 .docs-index-header{
 	animation: index-header 1s ease-out;
+	height: 10em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.docs-index-header > img {
+	height: 100%;
+	max-height: 30vw;
 }
