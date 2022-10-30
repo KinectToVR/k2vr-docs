@@ -18,7 +18,7 @@ There's other options out there, SlimeVR, Apriltag, Vive trackers obviously, PS 
 - Joint rotation is far from perfect unless you provide external data from compatible devices.
 - And most of all, you need a really large room.
 
-With Xbox 360 Kinect, **you need to stand at least 1.5 meters away** from it for tracking to work, and preferably 2 meters for the best tracking.
+**With Xbox 360 Kinect, you need to stand at least 1.5 meters away** from it for tracking to work, and preferably 2 meters for the best tracking.
 
 **With Xbox One Kinect, it's more around 1.2 meters** minimum, and 1.8 preferably.
 
