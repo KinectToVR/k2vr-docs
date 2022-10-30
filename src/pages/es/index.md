@@ -7,9 +7,9 @@ setup: |
   import CardNoIcon from '@components/CardNoIcon.astro'
   import TableOfContents from '@components/TableOfContents.astro'
 ---
-<div class="docs-index-header" style="height: 10em; display:flex; justify-content:center;">
-  <img src="/shared/img/amethyst-logo.webp" height="100%">
-  <h1 style="line-height:2.7em; margin-left:.5em">Amethyst</h1>
+<div class="docs-index-header">
+  <img src="/shared/img/amethyst-logo.webp">
+  <h1>Amethyst</h1>
 </div>
 <br>
 
