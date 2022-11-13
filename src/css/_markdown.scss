@@ -194,6 +194,11 @@ video {
 	color: var(--button-primary-text);
 	text-decoration: none;
 
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	gap: 0.5rem;
+
 	&:hover {
 		background-color: var(--button-primary-hover);
 	}
