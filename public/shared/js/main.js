@@ -127,10 +127,42 @@ async function initLocalePicker() {
     }
 }
 
+async function retainSidebarScroll() {
+    let sidebar = document.querySelector(".docs-sidebar");
+
+    const legalConditions = ["reload", "back_forward"];
+    let shouldScrollSidebar = false;
+    if (window.performance.navigation) {
+        shouldScrollSidebar = (window.performance.navigation && window.performance.navigation.type === 1);
+    }
+    {
+        const navType = window.performance.getEntriesByType('navigation').map((nav) => nav.type);
+        if (legalConditions.some(el => navType.includes(el))) {
+            shouldScrollSidebar = true;
+        }
+        if ( navType.includes("navigate")) {
+            if (document.referrer.startsWith(window.location.origin)) {
+                shouldScrollSidebar = true;
+            }
+        }
+    }
+    if (shouldScrollSidebar === true) {
+        let sidebarScrollTop = localStorage.getItem("sidebar-scroll");
+        if (sidebarScrollTop !== null) {
+            sidebar.scrollTop = parseInt(sidebarScrollTop, 10);
+        }
+    }
+    
+    window.addEventListener("beforeunload", () => {
+        localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
+    });
+}
+
 document.addEventListener( "DOMContentLoaded", ( () => {
 	// Try yeeting noJS flag
 	document.documentElement.classList.remove( 'no-js' );
 
+    retainSidebarScroll();
     initLocalePicker();
 
     // Search

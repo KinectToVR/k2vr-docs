@@ -67,4 +67,4 @@ This page will go over the various features and options in each tab of Amethyst.
 |Overrides         |Lists all the supported trackers from the base device and allows you to configure which joints are affected.                                         |
 </Accordion>
 
-If you wish to learn more about overrides go [over here](app/overrides).
+If you wish to learn more about overrides go [over here](/en/app/overrides).

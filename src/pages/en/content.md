@@ -65,7 +65,7 @@ While Kinect is awesome for it's price, **some people just want Vive Trackers**,
 ### Xbox 360 Kinect > Xbox One Kinect
 Newer is not always better, and it couldn't be more true than with the Xbox One Kinect. Between **incompatibility with lighthouse devices, even stricter and higher USB controller requirements and an unfixable hardware flaw that causes the foot rotation to jitter back and forth**, it's really not a good option for anyone compared to Xbox 360 Kinect.
 
-You can find more info [on this page](one/common-issues) about the matter.
+You can find more info [on this page](/en/one/common-issues) about the matter.
 
 ### Avoid Amazon when purchasing adapters
 Statistics from our Discord server show that **nearly every adapter that has been dead on arrival, or died later on, was purchased from Amazon.**
@@ -75,7 +75,7 @@ Statistics from our Discord server show that **nearly every adapter that has bee
 With Kinect One, you need to ensure it has a signal repeater, and the cables aren't bad, *and that it says Microsoft on it*, and generally, **getting a 360 Kinect and an adapter for it costs less than a good quality Xbox One adapter.**
 
 ### Users need a very large playspace.
-As shown on the [Improve tracking](app/improve-tracking) page, the **difference between a room that is too small for Kinect, and one that lets you stand a few meters away, is HUGE.**
+As shown on the [Improve tracking](/en/app/improve-tracking) page, the **difference between a room that is too small for Kinect, and one that lets you stand a few meters away, is HUGE.**
 
 It goes from unuseable garbage, to fooling people into thinking it's Vive pucks.
 
