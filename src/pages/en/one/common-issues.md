@@ -28,6 +28,12 @@ Devices that use base stations for tracking like **Vive, Index, Tundra or Pimax 
 **The time of flight sensor** on the Xbox One Kinect **confuses these devices into thinking an invalid base station is present,** and thus blocks them from tracking either completely or in large blind spots.
 
 ## Foot rotation
+<CardTip title="Update as of Amethyst 1.1">
+As of Amethyst 1.1.0.0 a new rotation mode was added specifically to alleviate the foot rotation issues. It's called "Leg-based Orientation". You can find it in **Settings > Tracker Configuration > Feet Trackers > Orientation Tracking > Leg-based Orientation.**
+
+The behavior is similar to Xbox 360 Kinect's default rotation mode, but the feet mostly face forward.
+</CardTip>
+
 **There is an unfixable hardware flaw of the Xbox One Kinect that makes it create a "fog" near the floor** because of the way the infrared bounces are modulated on the sensor.
 
 **As long as your feet are inside the fog, foot rotation will jitter back and forth** continuously. Using the "Software-calculated Rotation" option in Amethyst's tracker configuration screen will help, but **cannot solve the issue entirely.**
