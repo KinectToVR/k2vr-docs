@@ -5,11 +5,16 @@ description: How to fix the SteamVR driver not working
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
   import KbdWindows from '@icons/Kbd_Windows.astro'
+  import LinkButton from '@components/LinkButton.astro'
 ---
 # SteamVR Driver Troubleshooting
 Well shucks, your Amethyst SteamVR driver isn't working, how do you go about fixing that?
 ### How to fix "EXCEPTION WHILE CHECKING (Code -10)"
 **This means the SteamVR driver is not loaded at all.** Either because it's disabled, and/or because it's not listed to SteamVR in any way.
+
+<p>
+<LinkButton href="amethyst://register">Enable the Amethyst SteamVR add-on</LinkButton>
+</p>
 
 <video autoplay muted loop src="/en/mp4/enable-amethyst-driver.mp4" poster="/en/mp4/enable-amethyst-driver.poster.png"></video>
 
@@ -87,5 +92,9 @@ If all else fails, come to our Discord for help, but odds are you might have to 
 
 ### If SteamVR fails to launch with error 203
 This happens because of a conflict between the K2EX and Amethyst drivers. You must manually edit the VRPaths file as shown above because SteamVR's add-on list won't load, *because it crashed*. So you can't turn the driver off from there.
+
+<p>
+<LinkButton href="amethyst://removelegacyaddons">Disable conflicting SteamVR add-ons</LinkButton>
+</p>
 
 Follow the instructions above, and remove any driver where the folder ends with "KinectToVR". Then save the file and relaunch SteamVR.
