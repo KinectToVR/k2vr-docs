@@ -33,10 +33,10 @@
 	border-bottom-right-radius: 6px;
 	padding: 1rem;
 
-	& *:first-child {
+	& > *:first-child {
 		margin-top: 0;
 	}
-	& *:last-child {
+	& > *:last-child {
 		margin-bottom: 0;
 	}
 }
