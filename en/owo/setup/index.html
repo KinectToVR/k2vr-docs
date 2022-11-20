@@ -8,23 +8,23 @@
         <meta name="darkreader" content="a2418bfce121417ab0a1b6634c3aa076">
         <meta name="darkreader-lock">
 
-        <!-- Generic  --><title>SteamVR Driver Troubleshooting | Amethyst Docs Preview</title>
-<link rel="canonical" href="https://docs.k2vr.tech/en/app/steamvr-driver-codes/">
-<meta name="description" content="How to fix the SteamVR driver not working">
+        <!-- Generic  --><title>How to configure and use owoTrack | Amethyst Docs Preview</title>
+<link rel="canonical" href="https://docs.k2vr.tech/en/owo/setup/">
+<meta name="description" content="How to use the Amethyst owoTrack plugin to use a phone as a waist tracker.">
 <meta name="theme-color" content="#E33388">
 
 <!-- OpenGraph  -->
 <meta property="og:url" content="https://docs.k2vr.tech">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SteamVR Driver Troubleshooting | Amethyst Docs Preview">
-<meta property="og:description" content="How to fix the SteamVR driver not working">
+<meta property="og:title" content="How to configure and use owoTrack | Amethyst Docs Preview">
+<meta property="og:description" content="How to use the Amethyst owoTrack plugin to use a phone as a waist tracker.">
 
 
 <!-- Twitter  -->
 <meta property="twitter:domain" content="docs.k2vr.tech">
 <meta property="twitter:url" content="https://docs.k2vr.tech">
-<meta name="twitter:title" content="SteamVR Driver Troubleshooting | Amethyst Docs Preview">
-<meta name="twitter:description" content="How to fix the SteamVR driver not working">
+<meta name="twitter:title" content="How to configure and use owoTrack | Amethyst Docs Preview">
+<meta name="twitter:description" content="How to use the Amethyst owoTrack plugin to use a phone as a waist tracker.">
 
 
 
@@ -111,7 +111,7 @@
 										How to use overrides
 									</li>
 									
-								</a><a class="sidebar-section-link sidebar-link-selected" href="/en/app/steamvr-driver-codes">
+								</a><a class="sidebar-section-link" href="/en/app/steamvr-driver-codes">
 									<li class="sidebar-link-text">
 										SteamVR Driver Troubleshooting
 									</li>
@@ -211,7 +211,7 @@
 										What is owoTrack
 									</li>
 									
-								</a><a class="sidebar-section-link" href="/en/owo/setup">
+								</a><a class="sidebar-section-link sidebar-link-selected" href="/en/owo/setup">
 									<li class="sidebar-link-text">
 										How to configure and use owoTrack
 									</li>
@@ -240,137 +240,75 @@
 <div class="sidebar-overlay">
 </div>
             <article class="content">
-                <div class="heading-wrapper level-h1" id="1"><h1 id="steamvr-driver-troubleshooting">SteamVR Driver Troubleshooting</h1><a class="anchor-link" href="#steamvr-driver-troubleshooting"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Well shucks, your Amethyst SteamVR driver isn’t working, how do you go about fixing that?</p><div class="heading-wrapper level-h3" id="2"><h3 id="how-to-fix-exception-while-checking-code--10">How to fix “EXCEPTION WHILE CHECKING (Code -10)”</h3><a class="anchor-link" href="#how-to-fix-exception-while-checking-code--10"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>This means the SteamVR driver is not loaded at all.</strong> Either because it’s disabled, and/or because it’s not listed to SteamVR in any way.</p><video autoplay muted loop src="/en/mp4/enable-amethyst-driver.mp4" poster="/en/mp4/enable-amethyst-driver.poster.png">
-</video><p>If the driver is missing from that list, Click the <strong>Re-register SteamVR driver entry</strong> button.
-<img src="/en/img/reregister-button.png" alt="re-register steamvr driver button">
-After restarting SteamVR, the driver should now be working.<br>
-If Amethyst fails to register the SteamVR driver, reach us on Discord for help.</p><div class="heading-wrapper level-h3" id="3"><h3 id="how-to-fix-server-connection-error-code--1">How to fix “SERVER CONNECTION ERROR (Code -1)”</h3><a class="anchor-link" href="#how-to-fix-server-connection-error-code--1"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>This usually happens because you have a version of the SteamVR driver running, but it’s outdated. To attempt to fix it:</p><div class="card card-info">
+                <div class="heading-wrapper level-h1" id="1"><h1 id="how-to-configure-and-use-owotrack">How to configure and use owoTrack</h1><a class="anchor-link" href="#how-to-configure-and-use-owotrack"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h2" id="2"><h2 id="can-i-use-my-samsung-smart-fridge-for-this">Can I use my Samsung Smart Fridge for this?</h2><a class="anchor-link" href="#can-i-use-my-samsung-smart-fridge-for-this"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>owoTrack requires a compatible phone, and a stable WiFi connection. A stable WiFi connection <strong>does NOT</strong> mean that you need a stable internet connection to use owoTrack.</p><p><img src="/shared/img/fridge-my-behated.png" alt="Look, we've tried."></p><div class="heading-wrapper level-h2" id="3"><h2 id="using-owotrack-with-amethyst">Using owoTrack with Amethyst</h2><a class="anchor-link" href="#using-owotrack-with-amethyst"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><ol>
+<li>Inside of Amethyst, navigate to the devices page, then select “owoTrack”.</li>
+<li>Click the “Refresh” button to start the server.</li>
+<li>Open owoTrack on your mobile device, and enable auto-discovery.</li>
+<li>Point your phone forward like a remote.</li>
+<li>Calibrate forward.</li>
+<li>Place your phone upright, with the screen facing, and place it in your pants or however you’re mounting your phone.</li>
+<li>Calibrate down.</li>
+<li>You’re using owoTrack now!</li>
+</ol><div class="heading-wrapper level-h2" id="4"><h2 id="installing-owotrack">Installing owoTrack</h2><a class="anchor-link" href="#installing-owotrack"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h3" id="5"><h3 id="android-44-kitkat-or-newer">Android 4.4 (KitKat) or newer</h3><a class="anchor-link" href="#android-44-kitkat-or-newer"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><ul>
+<li>Check if your phone has an <strong>accelerometer</strong> and a <strong>gyroscope</strong> by going to <a href="https://www.gsmarena.com/">GSMArena</a> and checking if your phone has these sensors.</li>
+<li>Download the <a href="https://play.google.com/store/apps/details?id=org.ovrgyrotrackersync">owoTrack</a> app from Google Play.</li>
+</ul><div class="heading-wrapper level-h3" id="6"><h3 id="ios-13-or-newer">iOS 13 or newer</h3><a class="anchor-link" href="#ios-13-or-newer"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><ul>
+<li>Download and install <a href="https://apps.apple.com/us/app/testflight/id899247664">TestFlight</a>.</li>
+<li>Download and install <a href="https://testflight.apple.com/join/1DZAkuCX">owoTrack</a> via TestFlight.</li>
+</ul><div class="card card-info">
 	<div class="heading-container">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
-		<h3 class="card-title">Pre-edited VRPaths file:</h3>
+		<h3 class="card-title">TestFlight Code</h3>
 	</div>
 	<div class="card-content">
-		Only use this if you installed Amethyst in the default location (
-<strong>C:\Amethyst</strong>
-) and SteamVR in the default Steam library (
-<strong>C:\Program Files (x86)\Steam\steamapps\common\SteamVR</strong>
-).
-You can
+		<p>The TestFlight code for owoTrack is <code is:raw>1DZAkuCX</code>.</p>
 
-<strong>
-<a href="/shared/openvrpaths.vrpath">
-download this file
-</a>
-</strong>
+	</div>
+</div><div class="heading-wrapper level-h3" id="7"><h3 id="ios-12">iOS 12</h3><a class="anchor-link" href="#ios-12"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-warning">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+		<h3 class="card-title">Jailbreak required</h3>
+	</div>
+	<div class="card-content">
+		<p>iOS devices running iOS 12 require a jailbreak to install apps which are not available via the App Store. We are not responsible for any damage you perform on your device, proceed at your own risk.</p>
 
-and
+	</div>
+</div><details class="accordion">
+	<summary class="accordion-header">
+		iOS 12
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
+	</summary>
+	<div class="accordion-content">
+		<ul>
+<li>Jailbreak your phone. That is beyond the scope of this documentation.</li>
+<li>Open Cydia.</li>
+<li>Add <code is:raw>repo.hackyouriphone.org</code> to the list of sources in repo sources.</li>
+<li>Install AppStore++.</li>
+<li>Open the AppStore and search for TestFlight.</li>
+<li>Press and hold “Get”. Install <strong>version 2.7.0</strong>.</li>
+<li>Download and install <a href="https://testflight.apple.com/join/1DZAkuCX">owoTrack</a> via TestFlight from here.</li>
+</ul>
 
-<strong>
-put it in the
-</strong>
-<code is:raw>
-%localappdata%\openvr
-</code>
+	</div>
+</details><div class="heading-wrapper level-h2" id="8"><h2 id="troubleshooting">Troubleshooting</h2><a class="anchor-link" href="#troubleshooting"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h3" id="9"><h3 id="disabling-the-steamvr-add-on">Disabling the SteamVR Add-on</h3><a class="anchor-link" href="#disabling-the-steamvr-add-on"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Amethyst is not compatible with the owoTrack SteamVR add-on. You must disable owoTrack from SteamVR settings > Startup > Add-ons.</p><a href="amethyst://disableowotrack" class="button primary link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
+    
+Disable owoTrack SteamVR add-on
 
-folder. While SteamVR is closed.
+</a><div class="heading-wrapper level-h3" id="10"><h3 id="firewall">Firewall</h3><a class="anchor-link" href="#firewall"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Your firewall might prevent owoTrack from being able to connect to your computer. Please make sure that ports <code>6969</code> and <code>35903</code> are open on UDP.</p><div class="card card-info">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+		<h3 class="card-title">Amethyst Installer</h3>
+	</div>
+	<div class="card-content">
+		<p>Amethyst Installer automatically handles this for Windows Firewall, but you may need to open these ports on other firewalls if you have any.</p>
 
-<br>
-<br>
-<div class="heading-wrapper level-h5" id="4">
-<h5 id="note-that-this-method-will-erase-entries-for-other-steamvr-drivers">
-Note that this method will erase entries for other SteamVR drivers!
-</h5>
-<a class="anchor-link" href="#note-that-this-method-will-erase-entries-for-other-steamvr-drivers">
-<span class="anchor-icon" aria-hidden="true">
-<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-</path>
-</svg>
-</span>
-</a>
+	</div>
 </div>
-
-We recommend editing it by hand if you’re comfortable editing JSON.
-
-	</div>
-</div><ul>
-<li>Go to the <strong>settings tab</strong> of Amethyst.</li>
-<li>Scroll all the way down.</li>
-<li>Click on <strong>Re-register SteamVR driver entry</strong>.</li>
-<li>Close <strong>both Amethyst and SteamVR</strong>.</li>
-<li>
-Open the Run dialog with 
-<kbd><svg width="11px" height="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13">
-  <path d="M0 2v5h5V2H0Zm6 0v5h5V2H6ZM0 8v5h5V8H0Zm6 0v5h5V8H6Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>Windows</kbd>
- + 
-<kbd>
-R
-</kbd>
-</li>
-<li>Paste in <code>%localappdata%\openvr\openvrpaths.vrpath</code></li>
-<li>When Windows asks you what to open the file with, either <strong>pick Notepad</strong> or whichever editor you prefer.</li>
-</ul><p>Here’s an example VRPaths file. We’re going to remove the old Amethyst line, because SteamVR will ignore the new one otherwise.</p><pre class="astro-code" style="background-color: #1c1b19; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FCE8C3">{</span></span>
-<span class="line"><span style="color: #FCE8C3">	</span><span style="color: #2C78BF; font-style: italic">&quot;config&quot;</span><span style="color: #FCE8C3"> : </span></span>
-<span class="line"><span style="color: #FCE8C3">	[</span></span>
-<span class="line"><span style="color: #FCE8C3">		</span><span style="color: #FBB829">&quot;C:</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Program Files (x86)</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Steam</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">config&quot;</span></span>
-<span class="line"><span style="color: #FCE8C3">	],</span></span>
-<span class="line"><span style="color: #FCE8C3">	</span><span style="color: #2C78BF; font-style: italic">&quot;external_drivers&quot;</span><span style="color: #FCE8C3"> : </span></span>
-<span class="line"><span style="color: #FCE8C3">	[</span></span>
-<span class="line"><span style="color: #FCE8C3">        </span><span style="color: #FBB829">&quot;C:</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Program Files</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">ALVR&quot;</span><span style="color: #FCE8C3">,</span></span>
-<span class="line"><span style="color: #FCE8C3">        </span><span style="color: #FBB829">&quot;D:</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">VR Software</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Amethyst-Old&quot;</span><span style="color: #FCE8C3">,</span></span>
-<span class="line"><span style="color: #FCE8C3">        </span><span style="color: #FBB829">&quot;C:</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Amethyst</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Amethyst&quot;</span></span>
-<span class="line"><span style="color: #FCE8C3">	],</span></span>
-<span class="line"><span style="color: #FCE8C3">	</span><span style="color: #2C78BF; font-style: italic">&quot;jsonid&quot;</span><span style="color: #FCE8C3"> : </span><span style="color: #FBB829">&quot;vrpathreg&quot;</span><span style="color: #FCE8C3">,</span></span>
-<span class="line"><span style="color: #FCE8C3">	</span><span style="color: #2C78BF; font-style: italic">&quot;log&quot;</span><span style="color: #FCE8C3"> : </span></span>
-<span class="line"><span style="color: #FCE8C3">	[</span></span>
-<span class="line"><span style="color: #FCE8C3">		</span><span style="color: #FBB829">&quot;C:</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Program Files (x86)</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Steam</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">logs&quot;</span></span>
-<span class="line"><span style="color: #FCE8C3">	],</span></span>
-<span class="line"><span style="color: #FCE8C3">	</span><span style="color: #2C78BF; font-style: italic">&quot;runtime&quot;</span><span style="color: #FCE8C3"> : </span></span>
-<span class="line"><span style="color: #FCE8C3">	[</span></span>
-<span class="line"><span style="color: #FCE8C3">		</span><span style="color: #FBB829">&quot;C:</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Program Files (x86)</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Steam</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">steamapps</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">common</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">SteamVR&quot;</span><span style="color: #FCE8C3">,</span></span>
-<span class="line"><span style="color: #FCE8C3">		</span><span style="color: #FBB829">&quot;E:</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Oculus</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">Support</span><span style="color: #0AAEB3">\\</span><span style="color: #FBB829">oculus-dash&quot;</span></span>
-<span class="line"><span style="color: #FCE8C3">	],</span></span>
-<span class="line"><span style="color: #FCE8C3">	</span><span style="color: #2C78BF; font-style: italic">&quot;version&quot;</span><span style="color: #FCE8C3"> : </span><span style="color: #0AAEB3">1</span></span>
-<span class="line"><span style="color: #FCE8C3">}</span></span></code></pre><p>In this example, you would remove Line 9 completely.</p><div class="card card-info">
-	<div class="heading-container">
-		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
-		<h3 class="card-title">Don&#39;t forget about JSON formatting!</h3>
-	</div>
-	<div class="card-content">
-		If another driver was listed under the new Amethyst line. You would add a comma at the end of that line because it isn’t the last item in the list anymore.
-<br>
-
-
-<br>
-
-If you edit any of the paths, they always need two backslashes like this 
-<code is:raw>\\</code>
- because the backslash character is used to represent other characters within “strings”. (For example, 
-<code is:raw>\n</code>
- is a new line.)
-
-	</div>
-</div><ul>
-<li>Remove the line(s) pointing to an older version of the Amethyst driver.</li>
-<li>
-Save the file, either with 
-<kbd>
-Ctrl
-</kbd>
- + 
-<kbd>
-S
-</kbd>
- or going to File > Save.
-</li>
-<li>Close the editor, and reopen SteamVR.</li>
-<li>Follow the steps at the top of this page and <strong>make sure the driver is enabled.</strong></li>
-</ul><p><strong>You’re done! 🎉 Your Amethyst SteamVR driver should be working now.</strong></p><div class="heading-wrapper level-h3" id="5"><h3 id="how-to-fix-other-errors-1-12-10-etc">How to fix other errors (1, 12, 10, e.t.c.)</h3><a class="anchor-link" href="#how-to-fix-other-errors-1-12-10-etc"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>First, you should try restarting your PC, restarts are always a good first step.</p><p>Failing that, if you have any third-party firewall software, try turning that off and see if it fixes the issue or becomes any of the two above.</p><p>If all else fails, come to our Discord for help, but odds are you might have to diagnose some serious issue on your PC.</p><div class="heading-wrapper level-h3" id="6"><h3 id="if-steamvr-fails-to-launch-with-error-203">If SteamVR fails to launch with error 203</h3><a class="anchor-link" href="#if-steamvr-fails-to-launch-with-error-203"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>This happens because of a conflict between the K2EX and Amethyst drivers. You must manually edit the VRPaths file as shown above because SteamVR’s add-on list won’t load, <em>because it crashed</em>. So you can’t turn the driver off from there.</p><p>Follow the instructions above, and remove any driver where the folder ends with “KinectToVR”. Then save the file and relaunch SteamVR.</p>
                 <hr class="page-footer-separator">
 <div class="page-footer">
-    <span class="last-edited">Last updated on 27/08/2022</span>
-    <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/app/steamvr-driver-codes.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
+    <span class="last-edited">Last updated on 20/11/2022</span>
+    <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/owo/setup.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
 </div>
             </article>
             <footer>
