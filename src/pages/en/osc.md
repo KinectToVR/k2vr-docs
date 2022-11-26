@@ -42,11 +42,16 @@ This isn't garanteed to work, but sometimes, you will have separate Wi-Fi networ
 
 - Open the Quest's **Universal Menu**
 - Click on "**Quick Settings**" on the left side
+
+![Quick Settings in the Quest main menu](/en/img/quest-quick-settings.png)
 - Click on **Wi-Fi**
+
+![Wi-Fi in the Quest quick settings](/en/img/quest-wifi.png)
 - **Connect to the desired network** if it isn't already
-- **Click the network itself** on it's successfully connected
+- **Click the network itself** once it's successfully connected
 - Scroll down to **Advanced**, then click on that
 - Scroll further down until you see **IP Address**
+> I would add more images but they come out blank. WHY FACEBOOK!?
 
 This is what other devices in your house see the Quest as, and **you will need to enter it in Amethyst, so keep note of it.**
 
@@ -56,12 +61,14 @@ This is what other devices in your house see the Quest as, and **you will need t
 - Open [the VRChat BETA page on Oculus App Lab](https://www.oculus.com/experiences/quest/4821132827998004/) on your PC or phone
 - Make sure you're logged in to the same Oculus/Facebook/Meta account as on your Quest
 - Click the blue GET button on the page
+
+![App Lab get button](/en/img/applab-get.png)
 - Wait a few minutes and it should appear in your Quest's library
 
 ##### You must have a VRChat.com account
 **You cannot login to VRChat BETA on Quest using an Oculus account**, you must make an account on https://vrchat.com/home/register if you were using Oculus login previously.
 
-See this page [ I want to turn my Steam, Oculus or Viveport account into a VRChat account ](https://help.vrchat.com/hc/en-us/articles/360062659053-I-want-to-turn-my-Steam-Oculus-or-Viveport-account-into-a-VRChat-account) on the VRChat documentation to c**reate and merge the two accounts together, so you don't lose worlds, friends and avatars.**
+See this page [ I want to turn my Steam, Oculus or Viveport account into a VRChat account ](https://help.vrchat.com/hc/en-us/articles/360062659053-I-want-to-turn-my-Steam-Oculus-or-Viveport-account-into-a-VRChat-account) on the VRChat documentation to **create and merge the two accounts together, so you don't lose worlds, friends and avatars.**
 
 - In your Quest library, click on Install on the **VRChat BETA** tile
 - Wait for the installation to finish, then **click it again to launch the game**
@@ -71,6 +78,8 @@ See this page [ I want to turn my Steam, Oculus or Viveport account into a VRCha
 Once you've done all that:
 - Open the **Action Menu (The round one)** by pressing and holding one of the Quick Menu buttons
 - Go to "**Options**", then "**OSC**", and **toggle on** "**Enabled**"
+![Enabling OSC](/shared/img/osc-enable.png)
+
 **It's easy to forget this step, and then spend 20 minutes why it's not working. so make sure to do it now instead of later.**
 
 ##### You are now ready to receive OSC Tracker data!
@@ -94,10 +103,17 @@ You can now install Amethyst using this button:
 You now have VRChat BETA ready to accept OSC input, and Amethyst ready to send OSC to the Quest.
 
 - **Start SteamVR,** and **then Amethyst**
+
 - **DO NOT CONNECT TRACKERS**
+
 - Click the dropdown next to the Hide Skeleton button in the corner of the black window, then check on **"Force Preview"**
+![Force Skeleton Preview on](/en/img/force-preview.png)
+
 - **Make sure the Kinect can track you properly**, if it can't see your head, that's okay.
+
 - > **See the [Improve tracking](/en/app/improve-tracking) page for tips to get the best tracking out of your Kinect.**
+
+![the Amethyst OSC plugin screen](/en/img/amethyst-osc.png)
 - Go to the **Devices** tab on the left of the app
 - Click on **Amethyst OSC**
 - Change **Device IP** to **the one you took note of** earlier
