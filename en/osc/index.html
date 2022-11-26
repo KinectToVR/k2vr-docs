@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+        <!-- Darkreader breaks our dark theme -->
+        <meta name="darkreader" content="a2418bfce121417ab0a1b6634c3aa076">
+        <meta name="darkreader-lock">
+
+        <!-- Generic  --><title>Setting up the Amethyst OSC Plugin for Quest | Amethyst Docs Preview</title>
+<link rel="canonical" href="https://docs.k2vr.tech/en/osc/">
+<meta name="description" content="Step-by-step instructions on setting up Amethyst and VRChat on Quest to use full-body tracking on OSC.">
+<meta name="theme-color" content="#E33388">
+
+<!-- OpenGraph  -->
+<meta property="og:url" content="https://docs.k2vr.tech">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Setting up the Amethyst OSC Plugin for Quest | Amethyst Docs Preview">
+<meta property="og:description" content="Step-by-step instructions on setting up Amethyst and VRChat on Quest to use full-body tracking on OSC.">
+
+
+<!-- Twitter  -->
+<meta property="twitter:domain" content="docs.k2vr.tech">
+<meta property="twitter:url" content="https://docs.k2vr.tech">
+<meta name="twitter:title" content="Setting up the Amethyst OSC Plugin for Quest | Amethyst Docs Preview">
+<meta name="twitter:description" content="Step-by-step instructions on setting up Amethyst and VRChat on Quest to use full-body tracking on OSC.">
+
+
+
+        <link rel="icon" href="/shared/favicon.ico">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet"> 
+        <script src="/shared/js/fuse.js"></script>
+        <script src="/shared/js/mobile.js"></script>
+        <script src="/shared/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/asset.b76c0223.css"></link>
+</head>
+    <body>
+        <header>
+	<button class="mobile sidebar">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+	</button>
+	<h1 class="site-title"><a href="https://k2vr.tech"><svg width="215px" height="48px" class="logo" viewBox="0 0 2115 471.98" xmlns="http://www.w3.org/2000/svg">
+    <path d="m1275.77 4.08 171.62 467.9h114.47l171.62-467.9h-100.29L1505.3 375.7 1376.73 4.1h-100.96ZM1902.21 286.85 2005.91 470H2115l-112.46-190.57c35.47-9.43 62.18-26.6 80.14-51.51 17.96-24.92 26.93-52.87 26.93-83.84 0-26.94-6.39-51.3-19.19-73.06-12.79-21.78-27.33-39.15-52.92-51.95-25.59-12.8-61.14-15-97.5-15h-176.51v465.93h94.28V286.85h44.44Zm-814.35-3.57c-25.47 23.9-59.65 53.73-102.54 89.48l-23.63 16.75c-3.72 2.64-6.63 6-8.7 10.06a27.52 27.52 0 0 0-3.06 12.96l.54 59.42h331.09V394.2h-197.72c38.87-33.06 70.37-61.32 94.5-84.78 24.13-23.46 45.58-51.05 64.34-82.77 18.77-31.73 28.15-65.02 28.15-99.87-6.55-47.5-35.47-77.35-53.5-93.21C1199.29 17.7 1162.26 0 1111.32 0c-46.47 0-85.89 12.5-110.42 33.57-24.53 21.06-49.32 62.66-51.1 116.28h91.15c.44-25.91 6.7-35.63 18.76-50.6 12.07-14.97 29.27-22.45 51.61-22.45s38.87 6.48 49.6 19.43c10.72 12.96 17.42 20.61 17.42 43.4 0 25.02-9.83 43-26.81 68.92-16.98 25.92-38.2 50.83-63.67 74.73ZM643.9 263.51l170.23 208.44h118.63L734.38 236.03 927.4 4.13H814.13L643.9 213.91V4.13h-54.92c-11.56 0-21.43 4.1-29.61 12.27-8.18 8.18-12.26 18.04-12.26 29.6v384.07c0 11.57 4.08 21.44 12.26 29.61 8.18 8.18 18.05 12.27 29.61 12.27h54.92V263.5Zm1292.65-47.37h-78.78V78.1h78.78c25.59 0 44.67 5.94 57.24 17.84 12.57 11.9 18.86 28.62 18.86 50.17 0 22-6.29 39.17-18.86 51.51-12.57 12.35-31.65 18.52-57.24 18.52ZM41.17 3.98h385.66c11.37 0 21.07 4.02 29.11 12.06C463.98 24.08 468 33.78 468 45.15v385.66c0 11.37-4.02 21.07-12.06 29.12-8.04 8.03-17.74 12.05-29.11 12.05H41.17c-11.37 0-21.07-4.02-29.11-12.06C4.02 451.88 0 442.19 0 430.82V45.14c0-11.37 4.02-21.07 12.06-29.1C20.1 8 29.8 3.97 41.17 3.97Zm3.78 238.96a46.13 46.13 0 1 0 92.26 0 46.13 46.13 0 0 0-92.26 0Zm286.1 0a46.13 46.13 0 1 0 92.25 0 46.13 46.13 0 0 0-92.25 0Zm-123.3.21a46.13 46.13 0 1 0 92.25 0 46.13 46.13 0 0 0-92.26 0Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg></a></h1>
+	<div class="dock-right">
+		<select class="locale-picker"><option selected="true" value="en">English</option><option value="es">Español (Spanish)</option></select>
+		<label class="theme-toggle switch">
+			<input type="checkbox"><svg width="16px" height="16px" class="sun" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg"><path d="M124.4 22.79 104 0 83.86 22.5a83.6 83.6 0 0 1 19.68-2.34c7.2 0 14.2.91 20.86 2.63Zm22.28 9.38A83.8 83.8 0 0 1 175.8 61.9l1.74-31.44-30.86 1.7ZM32.12 60.49A83.8 83.8 0 0 1 60.5 32.12l-30.03-1.66 1.66 30.03Zm8.2 43.05a63.22 63.22 0 1 1 126.45 0 63.22 63.22 0 0 1-126.45 0Zm144-20.73a83.56 83.56 0 0 1 2.6 20.73c0 7.6-1 14.95-2.91 21.94L208 104l-23.67-21.2ZM22.8 124.4a83.54 83.54 0 0 1-2.63-20.87c0-6.78.8-13.37 2.33-19.68L0 104l22.79 20.4Zm152.97 20.85a83.8 83.8 0 0 1-30.5 30.5l32.28 1.78-1.78-32.28ZM61.9 175.8a83.8 83.8 0 0 1-29.73-29.13l-1.7 30.87 31.43-1.74Zm63.58 8.21a83.48 83.48 0 0 1-21.94 2.92c-7.16 0-14.1-.9-20.73-2.6L104 208l21.48-23.99Z" fill="currentColor" fill-rule="evenodd"></path></svg><svg width="16px" height="16px" class="moon" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h208v208H0V0Z" fill="none"></path><path d="M102.67 186A83.43 83.43 0 0 1 39 156.59c64.2-.6 116.05-52.82 116.05-117.15 0-.76-.01-1.51-.03-2.26A83.62 83.62 0 0 1 102.67 186h.01Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+		</label>
+		<button class="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></button>
+		<a class="link-external" href="https://discord.gg/YBQCRDG" target="_blank">Discord</a>
+		<a class="link-external" href="https://github.com/KinectToVR" target="_blank">GitHub</a>
+	</div>
+</header>
+        <div class="main-wrapper">
+            <div class="docs-sidebar collapse">
+	
+	<a class="sidebar-section-link" href="/en/">
+		<span class="sidebar-link-text">Amethyst Docs</span></a>
+
+	<ul>
+	<li class="sidebar-section-title">
+				<span class="sidebar-title-text">General</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/comparison">
+									<li class="sidebar-link-text">
+										How Amethyst compares to other options
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/buying-kinect">
+									<li class="sidebar-link-text">
+										Getting a Kinect and adapter
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/about">
+									<li class="sidebar-link-text">
+										About Amethyst and K2VR
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/content">
+									<li class="sidebar-link-text">
+										Making content about Amethyst
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Using Amethyst</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/app/installation">
+									<li class="sidebar-link-text">
+										Installing Amethyst
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/overview">
+									<li class="sidebar-link-text">
+										App Overview
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/calibration">
+									<li class="sidebar-link-text">
+										How to calibrate
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/overrides">
+									<li class="sidebar-link-text">
+										How to use overrides
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/steamvr-driver-codes">
+									<li class="sidebar-link-text">
+										SteamVR Driver Troubleshooting
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/improve-tracking">
+									<li class="sidebar-link-text">
+										Improve tracking
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Xbox 360 Kinect</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/360/setup">
+									<li class="sidebar-link-text">
+										Setting up your Xbox 360 Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting">
+									<li class="sidebar-link-text">
+										Xbox 360 Kinect Troubleshooting
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/notpowered">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTPOWERED
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/notready">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTREADY
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/notgenuine">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTGENUINE
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/insufficientbandwidth">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_INSUFFICIENTBANDWIDTH
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Xbox One Kinect</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/one/common-issues">
+									<li class="sidebar-link-text">
+										Common issues with Xbox One Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/one/setup">
+									<li class="sidebar-link-text">
+										Setting up your Xbox One Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/one/troubleshooting">
+									<li class="sidebar-link-text">
+										Xbox One Kinect Troubleshooting
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">PlayStation Move</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/psmove/what-to-buy">
+									<li class="sidebar-link-text">
+										Prerequisites
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/setup">
+									<li class="sidebar-link-text">
+										Setting up PSMoveServiceEx
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/usage">
+									<li class="sidebar-link-text">
+										Using PS Move with Amethyst
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/troubleshooting">
+									<li class="sidebar-link-text">
+										PlayStation Move Troubleshooting
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">owoTrack</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/owo/about">
+									<li class="sidebar-link-text">
+										What is owoTrack
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/owo/setup">
+									<li class="sidebar-link-text">
+										How to configure and use owoTrack
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Augmented Hip</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/aughip/about">
+									<li class="sidebar-link-text">
+										What is Augmented Hip
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/aughip/setup">
+									<li class="sidebar-link-text">
+										How to use Augmented Hip
+									</li>
+									
+								</a>
+					</ul>
+			</li>
+</ul>
+	
+</div>
+<div class="sidebar-overlay">
+</div>
+            <article class="content">
+                <div class="heading-wrapper level-h1" id="1"><h1 id="setting-up-the-amethyst-osc-plugin-for-quest">Setting up the Amethyst OSC Plugin for Quest</h1><a class="anchor-link" href="#setting-up-the-amethyst-osc-plugin-for-quest"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h5" id="2"><h5 id="before-you-go-any-further-please-join-our-discord-at-httpsdiscordggybqcrdg">Before you go any further, please join our Discord at <a href="https://discord.gg/YBQCRDG">https://discord.gg/YBQCRDG</a></h5><a class="anchor-link" href="#before-you-go-any-further-please-join-our-discord-at-httpsdiscordggybqcrdg"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h3" id="3"><h3 id="️-this-guide-is-relatively-long">⚠️ This guide is relatively long</h3><a class="anchor-link" href="#️-this-guide-is-relatively-long"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h5" id="4"><h5 id="every-step-on-this-page-is-important-many-of-them-will-be-made-obselete-when-amethyst-gets-native-osc-support-but-transitioning-from-the-plugin-to-the-native-version-will-be-very-simple">Every step on this page is important. Many of them will be made obselete when Amethyst gets native OSC support, but transitioning from the plugin to the native version will be very simple.</h5><a class="anchor-link" href="#every-step-on-this-page-is-important-many-of-them-will-be-made-obselete-when-amethyst-gets-native-osc-support-but-transitioning-from-the-plugin-to-the-native-version-will-be-very-simple"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h2" id="5"><h2 id="preface">Preface</h2><a class="anchor-link" href="#preface"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>In late November 2022, <strong>VRChat released an Open Beta including a feature called OSC Trackers. What this feature allows, is for any application to send data over the network using OSC to VRChat, with information about the position and rotation for 1 to 8 trackers. And then allow the user to calibrate with them for full-body-tracking.</strong></p><p>Until now, VRChat only supported Vive trackers directly in SteamVR, and applications that emulated those, like Amethyst or SlimeVR.</p><p><strong>We have created a plugin for Amethyst to send the enabled trackers over OSC.</strong> Told you that whole modular and extensible thing would come in useful</p><p><strong>As long as your computer runs an up-to-date version of Windows 10 or 11, and was built in the last decade, you’re most likely good to go.</strong> We recommend taking a look at the USB Controllers section in Amethyst Installer, you should have at least one compatible controller to have a good experience.</p><div class="heading-wrapper level-h2" id="6"><h2 id="part-1-wi-fi-is-not-internet">Part 1: Wi-Fi is not internet!</h2><a class="anchor-link" href="#part-1-wi-fi-is-not-internet"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-warning">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+		<h3 class="card-title">Your internet speed does not matter!</h3>
+	</div>
+	<div class="card-content">
+		<p><strong>The speed of your internet connection, what allows you to visit websites and play online games, does not matter.</strong> In fact, you could have the old 90s dial-up internet with the funny modem sounds and it wouldn’t matter.</p>
+
+	</div>
+</div><p>Because OSC goes over the network, <strong>you need to make sure your Quest is connected to the same local network as your PC.</strong></p><p><em>This part only really applies if you have two Wi-Fi routers. You would probably know if you have two of those.</em></p><blockquote>
+<p>If your PC is connected to the router with a cable, then make sure the Quest is connected to the Wi-Fi network that router is on.</p>
+</blockquote><blockquote>
+<p>If you’re using a Wi-Fi adapter on your PC, or using a laptop, make sure the PC and the Quest are on the same Wi-Fi network.</p>
+</blockquote><div class="card card-tip">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"></path></svg>
+		<h3 class="card-title">If you get nothing on the Quest after connecting OSC trackers</h3>
+	</div>
+	<div class="card-content">
+		<p>This isn’t garanteed to work, but sometimes, you will have separate Wi-Fi networks for the 2.4GHz and 5GHz bands. And some routers will only show devices on the 2.4GHz network to devices connected with a cable. So, <strong>try connecting to the 2.4GHz Wi-Fi specifically if they are separate.</strong> Though 5GHz is preferable.</p>
+
+	</div>
+</div><ul>
+<li>Open the Quest’s <strong>Universal Menu</strong></li>
+<li>Click on ”<strong>Quick Settings</strong>” on the left side</li>
+<li>Click on <strong>Wi-Fi</strong></li>
+<li><strong>Connect to the desired network</strong> if it isn’t already</li>
+<li><strong>Click the network itself</strong> on it’s successfully connected</li>
+<li>Scroll down to <strong>Advanced</strong>, then click on that</li>
+<li>Scroll further down until you see <strong>IP Address</strong></li>
+</ul><p>This is what other devices in your house see the Quest as, and <strong>you will need to enter it in Amethyst, so keep note of it.</strong></p><div class="heading-wrapper level-h2" id="7"><h2 id="part-2-installing-and-setting-up-vrchat-beta">Part 2: Installing and setting up VRChat BETA</h2><a class="anchor-link" href="#part-2-installing-and-setting-up-vrchat-beta"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><blockquote>
+<p>If VRChat released OSC Trackers out of beta, and I haven’t updated this page yet, just skip over this part. Or if you already have VRChat Beta.</p>
+</blockquote><ul>
+<li>Open <a href="https://www.oculus.com/experiences/quest/4821132827998004/">the VRChat BETA page on Oculus App Lab</a> on your PC or phone</li>
+<li>Make sure you’re logged in to the same Oculus/Facebook/Meta account as on your Quest</li>
+<li>Click the blue GET button on the page</li>
+<li>Wait a few minutes and it should appear in your Quest’s library</li>
+</ul><div class="heading-wrapper level-h5" id="8"><h5 id="you-must-have-a-vrchatcom-account">You must have a VRChat.com account</h5><a class="anchor-link" href="#you-must-have-a-vrchatcom-account"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>You cannot login to VRChat BETA on Quest using an Oculus account</strong>, you must make an account on <a href="https://vrchat.com/home/register">https://vrchat.com/home/register</a> if you were using Oculus login previously.</p><p>See this page <a href="https://help.vrchat.com/hc/en-us/articles/360062659053-I-want-to-turn-my-Steam-Oculus-or-Viveport-account-into-a-VRChat-account"> I want to turn my Steam, Oculus or Viveport account into a VRChat account </a> on the VRChat documentation to c<strong>reate and merge the two accounts together, so you don’t lose worlds, friends and avatars.</strong></p><ul>
+<li>In your Quest library, click on Install on the <strong>VRChat BETA</strong> tile</li>
+<li>Wait for the installation to finish, then <strong>click it again to launch the game</strong></li>
+<li>Login with your <strong>VRChat.com account</strong></li>
+<li>
+<blockquote>
+<p>Settings are separate between the beta and normal builds of VRChat on Quest, so it will make you do the tutorial and have you reconfigure stuff again</p>
+</blockquote>
+</li>
+</ul><p>Once you’ve done all that:</p><ul>
+<li>Open the <strong>Action Menu (The round one)</strong> by pressing and holding one of the Quick Menu buttons</li>
+<li>Go to ”<strong>Options</strong>”, then ”<strong>OSC</strong>”, and <strong>toggle on</strong> ”<strong>Enabled</strong>”
+<strong>It’s easy to forget this step, and then spend 20 minutes why it’s not working. so make sure to do it now instead of later.</strong></li>
+</ul><div class="heading-wrapper level-h5" id="9"><h5 id="you-are-now-ready-to-receive-osc-tracker-data">You are now ready to receive OSC Tracker data!</h5><a class="anchor-link" href="#you-are-now-ready-to-receive-osc-tracker-data"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h2" id="10"><h2 id="part-3-installing-amethyst-and-the-plugin">Part 3: Installing Amethyst and the plugin</h2><a class="anchor-link" href="#part-3-installing-amethyst-and-the-plugin"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Before installing Amethyst, you must have SteamVR installed. <strong>You do not need to connect a headset to SteamVR, but it must be present to install and run Amethyst.</strong> (This will not be the case once native OSC support is released)</p>
+Assuming you have Steam on your computer, you can install SteamVR using this button:
+<br><br><br><a href="steam://install/250280" class="button primary link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
+    
+Install SteamVR from Steam
+
+</a><br><br><strong>Once SteamVR is installed, run it at least once, even without a headset.</strong><br>
+
+
+You can now install Amethyst using this button:
+
+<br><br><a href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe" class="button primary link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
+    
+Download Latest Amethyst Installer Version
+
+</a><br><br><div class="heading-wrapper level-h5" id="11"><h5 id="osc-plugin-section-tbd-will-probably-include-autosetup-script-for-null-driver-and-device-folder-setup-or-even-be-bundled-into-an-installer-update">OSC Plugin section TBD, will probably include autosetup script for null driver and device folder setup, or even be bundled into an installer update</h5><a class="anchor-link" href="#osc-plugin-section-tbd-will-probably-include-autosetup-script-for-null-driver-and-device-folder-setup-or-even-be-bundled-into-an-installer-update"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h2" id="12"><h2 id="part-4-final-setup">Part 4: Final setup</h2><a class="anchor-link" href="#part-4-final-setup"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>You now have VRChat BETA ready to accept OSC input, and Amethyst ready to send OSC to the Quest.</p><ul>
+<li>
+<p><strong>Start SteamVR,</strong> and <strong>then Amethyst</strong></p>
+</li>
+<li>
+<p><strong>DO NOT CONNECT TRACKERS</strong></p>
+</li>
+<li>
+<p>Click the dropdown next to the Hide Skeleton button in the corner of the black window, then check on <strong>“Force Preview”</strong></p>
+</li>
+<li>
+<p><strong>Make sure the Kinect can track you properly</strong>, if it can’t see your head, that’s okay.</p>
+</li>
+<li>
+<blockquote>
+<p><strong>See the <a href="/en/app/improve-tracking">Improve tracking</a> page for tips to get the best tracking out of your Kinect.</strong></p>
+</blockquote>
+</li>
+<li>
+<p>Go to the <strong>Devices</strong> tab on the left of the app</p>
+</li>
+<li>
+<p>Click on <strong>Amethyst OSC</strong></p>
+</li>
+<li>
+<p>Change <strong>Device IP</strong> to <strong>the one you took note of</strong> earlier</p>
+</li>
+<li>
+<p>Click <strong>“Connect Trackers (OSC)”</strong></p>
+</li>
+<li>
+<div class="heading-wrapper level-h5" id="13"><h5 id="your-kinect-tracking-is-now-being-broadcast-over-osc-">Your Kinect tracking is now being broadcast over OSC! 🎉</h5><a class="anchor-link" href="#your-kinect-tracking-is-now-being-broadcast-over-osc-"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div>
+</li>
+<li>
+<p><strong>Launch VRChat BETA</strong> on your Quest</p>
+</li>
+<li>
+<p>Open the <strong>Quick Menu</strong> (The square one)</p>
+</li>
+<li>
+<p>For testing sake, <strong>please try a default public avatar first.</strong></p>
+</li>
+<li>
+<p>Let’s change a few settings for a better experience</p>
+</li>
+<li>
+<p>In the Quick Menu, click the <strong>Settings tab</strong>, the one with the gear icon</p>
+</li>
+<li>
+<p>Scroll down to <strong>Tracking and IK</strong></p>
+</li>
+<li>
+<p>Change the <strong>Avatar Measurement</strong> to <strong>Height Scale</strong></p>
+</li>
+<li>
+<p>Once you’ve changed avatars, <strong>open the Quick Menu</strong> again, and <strong>click on Calibrate FBT</strong></p>
+</li>
+<li>
+<p><strong>You will be in a T-Pose</strong>, with the trackers represented as spheres.</p>
+</li>
+<li>
+<p>You can bind into the avatar by <strong>pressing both triggers together.</strong></p>
+</li>
+<li>
+<p>Open the <strong>Quick Menu</strong> again and return to <strong>Settings</strong>, then <strong>Tracking and IK</strong></p>
+</li>
+<li>
+<p>This time, change <strong>Lock Behavior</strong> to <strong>Lock Head</strong>.</p>
+</li>
+<li>
+<blockquote>
+<p>Specifically, this allows the Kinect trackers to drift back into position over time and makes your overall body position based on your headset movement, it looks a LOT better for Kinect.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>You can now use whatever avatar you want</strong>, though not all of them will work as good as you’d wish.</p>
+</li>
+</ul><div class="heading-wrapper level-h5" id="14"><h5 id="enjoy-fbt-on-quest">Enjoy FBT on Quest!!!!</h5><a class="anchor-link" href="#enjoy-fbt-on-quest"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h2" id="15"><h2 id="part-4b-what-to-do-the-next-time-around">Part 4B: What to do the next time around</h2><a class="anchor-link" href="#part-4b-what-to-do-the-next-time-around"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><ul>
+<li><strong>Start SteamVR,</strong> and <strong>then Amethyst</strong></li>
+<li><strong>Make sure the Kinect can track you properly</strong></li>
+<li>Go to the <strong>Devices</strong> tab on the left of the app</li>
+<li>Click on <strong>Amethyst OSC</strong></li>
+<li>Change <strong>Device IP</strong> to <strong>the one you took note of</strong> earlier</li>
+<li>Click <strong>“Connect Trackers (OSC)”</strong></li>
+<li><strong>Launch VRChat BETA</strong> on your Quest</li>
+<li>Open the <strong>Quick Menu</strong> (The square one) and <strong>click on Calibrate FBT</strong></li>
+<li><strong>You will be in a T-Pose</strong>, with the trackers represented as spheres.</li>
+<li>You can bind into the avatar by <strong>pressing both triggers together.</strong></li>
+</ul>
+                <hr class="page-footer-separator">
+<div class="page-footer">
+    <span class="last-edited">Last updated on 26/11/2022</span>
+    <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/osc.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
+</div>
+            </article>
+            <footer>
+	<div class="prominent">
+	Built with <svg style="vertical-align:bottom" height="1.5rem" width="1.5rem" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0" y1="0" x2="1" y2="1" id="a"><stop offset="0%" stop-color="#46BCFE"></stop><stop offset="40%" stop-color="#AA6AF1"></stop><stop offset="75%" stop-color="#D73BA4"></stop></linearGradient></defs><path d="M21.34.275A7.406 7.406 0 0 0 19.313 0c-.602 0-1.168.059-1.7.176a6.73 6.73 0 0 0-1.506.521c-.472.23-.925.512-1.359.844a12.06 12.06 0 0 0-1.271 1.13 12.06 12.06 0 0 0-1.272-1.13 7.726 7.726 0 0 0-1.36-.838A7.146 7.146 0 0 0 9.34.182 7.631 7.631 0 0 0 7.64 0a7.47 7.47 0 0 0-2.033.275 7.587 7.587 0 0 0-3.37 1.963 7.587 7.587 0 0 0-1.962 3.37A7.47 7.47 0 0 0 0 7.64c0 1.039.19 2.015.568 2.93a7.583 7.583 0 0 0 1.67 2.472l11.239 11.238 11.238-11.238a7.583 7.583 0 0 0 1.67-2.473c.379-.914.568-1.89.568-2.93 0-.702-.092-1.378-.275-2.027a7.776 7.776 0 0 0-.774-1.822 7.65 7.65 0 0 0-2.742-2.742A7.774 7.774 0 0 0 21.34.275Z" fill="url(#a)" fill-rule="evenodd"></path></svg> by K2VR Team
+	</div>
+	<ul class="socials">
+		<li class="social-link"><a href="https://discord.gg/YBQCRDG" target="_blank">Discord</a></li>
+		<li class="social-link"><a href="https://github.com/KinectToVR" target="_blank">GitHub</a></li>
+		<li class="social-link"><a href="https://twitter.com/k2vr_team" target="_blank">Twitter</a></li>
+		<li class="social-link"><a href="https://opencollective.com/k2vr" target="_blank">OpenCollective</a></li>
+	</ul>
+</footer>
+        </div>
+        <div class="search-container-root">
+    <div class="search-container">
+        <div class="search-wrapper">
+            <div class="search-input">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                <input class="search-input-textbox" aria-autocomplete="both" aria-labelledby="earch-label" id="search-input" autocomplete="off" autocorrect="off" autocapitalize="none" enterkeyhint="search" spellcheck="false" placeholder="Search docs" maxlength="64" type="search">
+                <button id="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </button>
+            </div>
+            <ul class="search-results-container">
+                <li class="search-result">
+                    <a class="search-result-link">Sus</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </body></html>
