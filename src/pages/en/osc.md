@@ -97,7 +97,26 @@ You can now install Amethyst using this button:
 <LinkButton href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe">Download Latest Amethyst Installer Version</LinkButton>
 <br><br>
 
-##### OSC Plugin section TBD, will probably include autosetup script for null driver and device folder setup, or even be bundled into an installer update
+### Installing the OSC plugin
+#### ⚠️ Important crap!
+- ##### **I understand that the plugin is janky and experimental**
+- ##### **I accept the tracker alignment is imperfect because of plugin limitations**
+- ##### **I understand that OSC trackers in their  native implementation will be much better**
+- ##### **I have read all of the above**
+
+If so, here's the download link.
+<br><br>
+<LinkButton href="https://github.com/KinectToVR/OSC-FBT-Plugin/releases/latest/download/Amethyst-OSC-Plugin.zip">Downlaod the Amethyst OSC Plugin</LinkButton>
+<br><br>
+
+Once you've download the plugin ZIP, you need to extract it to Amethyst's install folder
+<br><br>
+<LinkButton href="amethyst://installfolder">Open the Amethyst install folder</LinkButton>
+<br><br>
+
+![Dragging the OSC zip into the correct folder](/en/img/drag-osc-zip.gif)
+
+##### TBD: null driver instructions or autosetup script
 
 ## Part 4: Final setup
 You now have VRChat BETA ready to accept OSC input, and Amethyst ready to send OSC to the Quest.
@@ -145,6 +164,19 @@ You now have VRChat BETA ready to accept OSC input, and Amethyst ready to send O
 - Change **Device IP** to **the one you took note of** earlier
 - Click **"Connect Trackers (OSC)"**
 - **Launch VRChat BETA** on your Quest
-- Open the **Quick Menu** (The square one) and **click on Calibrate FBT**
+- Open the **Quick Menu** (The square one)
+- Click on **Calibrate FBT**
 - **You will be in a T-Pose**, with the trackers represented as spheres.
+- Open the Quick Menu again
+- Go to **Settings** then **Tracking and IK**
+- Click on **Auto-center OSC trackers**
+
+<CardWarning title="Tracker offset">
+In the OSC plugin UI, there's a box to adjust the offset of the trackers from the floor. You might have to adjust it to match correctly.
+</CardWarning>
+
+<CardWarning title="Mirrored trackers">
+If the tracker movement is mirrored in VRChat compared to what you're doing. Click the auto-center button again.
+</CardWarning>
+
 - You can bind into the avatar by **pressing both triggers together.**
