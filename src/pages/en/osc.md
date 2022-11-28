@@ -106,7 +106,7 @@ You can now install Amethyst using this button:
 
 If so, here's the download link.
 <br><br>
-<LinkButton href="https://github.com/KinectToVR/OSC-FBT-Plugin/releases/latest/download/Amethyst-OSC-Plugin.zip">Downlaod the Amethyst OSC Plugin</LinkButton>
+<LinkButton href="https://github.com/KinectToVR/OSC-FBT-Plugin/releases/latest/download/Amethyst-OSC-Plugin.zip">Download the Amethyst OSC Plugin</LinkButton>
 <br><br>
 
 Once you've download the plugin ZIP, you need to extract it to Amethyst's install folder
