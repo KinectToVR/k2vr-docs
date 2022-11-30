@@ -116,7 +116,15 @@ Once you've download the plugin ZIP, you need to extract it to Amethyst's instal
 
 ![Dragging the OSC zip into the correct folder](/en/img/drag-osc-zip.gif)
 
-##### TBD: null driver instructions or autosetup script
+##### TBD: dummy headset driver instructions or autosetup script. Because we don't have a script to automate this yet, here's a temporary method.
+
+- **Install ALVR from here.** https://github.com/alvr-org/ALVR/releases/download/v19.0.0/ALVR_Installer_v19.0.0.exe
+- Once it's installed, open it and skip through the wizard, **we don't care about any of it. Just the fact it creates a headset in SteamVR.**
+- Click on the **"Installation"** tab on the left of the ALVR dashboard window.
+- Click on **"Register ALVR driver"**
+- Finally, click on **"Restart SteamVR"** in the bottom-left to confirm your changes.
+
+If you wish to use the Quest for PCVR later. Disable the ALVR __**add-on**__ in SteamVR settings
 
 ## Part 4: Final setup
 You now have VRChat BETA ready to accept OSC input, and Amethyst ready to send OSC to the Quest.
@@ -152,7 +160,14 @@ You now have VRChat BETA ready to accept OSC input, and Amethyst ready to send O
 - Open the **Quick Menu** again and return to **Settings**, then **Tracking and IK**
 - This time, change **Lock Behavior** to **Lock Head**.
 - > Specifically, this allows the Kinect trackers to drift back into position over time and makes your overall body position based on your headset movement, it looks a LOT better for Kinect.
-- **You can now use whatever avatar you want**, though not all of them will work as good as you'd wish.
+- Open the **Quick Menu**, yes again.
+- Click on **Calibrate FBT**
+- **You will be in a T-Pose**, with the trackers represented as spheres.
+- Open the Quick Menu again
+- Go to **Settings** then **Tracking and IK**
+- Click on **Auto-center OSC trackers**
+- > If the trackers are too low or too high, play with the height offset in Amethyst. Click Auto-center again if the tracking is mirrored.
+- You can confirm the calibration by **pressing both triggers together.**
 
 ##### Enjoy FBT on Quest!!!!
 
