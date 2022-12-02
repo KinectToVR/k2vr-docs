@@ -75,27 +75,9 @@ This is what other devices in your house see the Quest as, and **you will need t
 
 <br><br>
 
-## Part 2: Installing and setting up VRChat BETA
-> If VRChat released OSC Trackers out of beta, and I haven't updated this page yet, just skip over this part. Or if you already have VRChat Beta.
+## Part 2: Enabling OSC in VRChat
 
-- Open [the VRChat BETA page on Oculus App Lab](https://www.oculus.com/experiences/quest/4821132827998004/) on your PC or phone
-- Make sure you're logged in to the same Oculus/Facebook/Meta account as on your Quest
-- Click the blue GET button on the page
-
-![App Lab get button](/en/img/applab-get.png)
-- Wait a few minutes and it should appear in your Quest's library
-
-##### You must have a VRChat.com account
-**You cannot login to VRChat BETA on Quest using an Oculus account**, you must make an account on https://vrchat.com/home/register if you were using Oculus login previously.
-
-See this page [ I want to turn my Steam, Oculus or Viveport account into a VRChat account ](https://help.vrchat.com/hc/en-us/articles/360062659053-I-want-to-turn-my-Steam-Oculus-or-Viveport-account-into-a-VRChat-account) on the VRChat documentation to **create and merge the two accounts together, so you don't lose worlds, friends and avatars.**
-
-- In your Quest library, click on Install on the **VRChat BETA** tile
-- Wait for the installation to finish, then **click it again to launch the game**
-- Login with your **VRChat.com account**
-- > Settings are separate between the beta and normal builds of VRChat on Quest, so it will make you do the tutorial and have you reconfigure stuff again
-
-Once you've done all that:
+- Launch VRChat on the Quest
 - Open the **Action Menu (The round one)** by pressing and holding one of the Quick Menu buttons
 - Go to "**Options**", then "**OSC**", and **toggle on** "**Enabled**"
 ![Enabling OSC](/shared/img/osc-enable.png)
