@@ -4,16 +4,24 @@ title: Installation
 description: How to run and use the installer
 setup: | 
   import Accordion from '@components/Accordion.astro'
+  import LinkButton from '@components/LinkButton.astro'
   import Windows from '@icons/Kbd_Windows.astro'
   import Enter from '@icons/Kbd_Enter.astro'
   import Shift from '@icons/Kbd_Shift.astro'
 ---
 # Installation
-You can get Amethyst Installer from the [homepage](https://k2vr.tech) by clicking on Get Started. You will be asked a few questions to ensure that you meet prerequisites, then the download button will appear.
+You can get Amethyst Installer from the [homepage](https://k2vr.tech). Click on "Click here for more info"
+
+Alternatively, just click this.
+<br><br>
+<LinkButton href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe">Download Latest Amethyst Installer Version</LinkButton>
+<br><br>
 
 If you get a Windows Smartscreen pop-up, simply click on **More info** then **Run anyway**.
 ![smartscreen warning window](/en/img/smartscreen.png)
-This screen shows up because the installer is not signed. Code signing certificates cost money and we can't afford that. [Unless you donate :)](https://opencollective.com/k2vr) then we can.
+<!-- This screen shows up because the installer is not signed. Code signing certificates cost money and we can't afford that. [Unless you donate :)](https://opencollective.com/k2vr) then we can. -->
+This appears because the application does not have a certificate. We've yet to get one for financial and privacy reasons.  
+_(Also, getting a certificate wouldn't garantee the immediate disappearance of this pop-up. Thanks Microsoft.)_
 
 ### How to fix SteamVR or VRPathReg Not Found error
 This error happens usually because of a broken `openvrpaths.vrpath` file, or because you have a Windows user account without administrator permissions.
@@ -39,7 +47,8 @@ This error happens usually because of a broken `openvrpaths.vrpath` file, or bec
 </Accordion>  
 
 The installer checks for updates on start but you can ignore them, so if you have an older installer version (excluding K2EX Installer) you can run that instead of redownloading it.
-### Installing manually
+
+### Installing manually (Don't do this)
 Alternatively, you can download Amethyst from the [releases on GitHub](https://github.com/kinecttovr/amethyst-releases/releases) and extract the ZIP to any folder you wish. We recommend using the installer because it will automatically setup drivers for your Kinect sensor if you have it plugged in.
 
 Once you have Amethyst up and running, you will need to register its SteamVR driver either by running Amethyst Recovery (In the K2CrashHandler folder) or going to the bottom of options and clicking re-register SteamVR Driver.
