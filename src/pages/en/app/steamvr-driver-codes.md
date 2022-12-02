@@ -6,6 +6,7 @@ setup: |
   import CardInfo from '@components/CardInfo.astro'
   import KbdWindows from '@icons/Kbd_Windows.astro'
   import LinkButton from '@components/LinkButton.astro'
+  import VideoPlayer from '@components/VideoPlayer.astro'
 ---
 # SteamVR Driver Troubleshooting
 Well shucks, your Amethyst SteamVR driver isn't working, how do you go about fixing that?
@@ -16,7 +17,7 @@ Well shucks, your Amethyst SteamVR driver isn't working, how do you go about fix
 <LinkButton href="amethyst://register">Enable the Amethyst SteamVR add-on</LinkButton>
 </p>
 
-<video autoplay muted loop src="/en/mp4/enable-amethyst-driver.mp4" poster="/en/mp4/enable-amethyst-driver.poster.png"></video>
+<VideoPlayer src="/en/video/enable-amethyst-driver.mp4" poster="/en/video/enable-amethyst-driver.poster.png">
 
 If the driver is missing from that list, Click the **Re-register SteamVR driver entry** button.
 ![re-register steamvr driver button](/en/img/reregister-button.png)

@@ -8,6 +8,7 @@ setup: |
   import CardWarning from '@components/CardWarning.astro'
   import Accordion from '@components/Accordion.astro'
   import LinkButton from '@components/LinkButton.astro'
+  import VideoPlayer from '@components/VideoPlayer.astro'
 ---
 # How to fix E_NUI_NOTPOWERED
 This error usually has two possible causes.
@@ -38,7 +39,7 @@ The Other Devices category may contain devices unrelated to Kinect. Only uninsta
 
 Finally, right-click on any device, then **Scan for hardware changes**.
 <Accordion title="Video instructions">
-<video controls muted src="/en/mp4/notpowered.mp4"></video>
+<VideoPlayer src="/en/video/notpowered.mp4" />
 </Accordion>
 
 ## Nothing appears in "Other Devices"
