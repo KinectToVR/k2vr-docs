@@ -1,10 +1,9 @@
 ---
-import Debug from "astro/components/Debug.astro";
-
 const { src } = Astro.props;
 let videoAutoplay = (Astro.props.autoplay ?? "true") === "true";
 let videoMuted = (Astro.props.muted ?? "true") === "true";
 let videoLoop = (Astro.props.loop ?? "true") === "true";
+let videoPoster = Astro.props.poster;
 
 /*
 TODO: Delayed autoplay
@@ -17,5 +16,6 @@ TODO: Autoplay when scrolled into view?
 	<video	{... videoAutoplay ? {autoplay: true} : {controls: true}}
 			{... videoMuted ? {muted: true} : {}}
 			{... videoLoop ? {loop: true} : {}}
+			{... (videoPoster !== undefined && videoPoster !== null) ? {poster: videoPoster} : {}}
 			src={src}></video>
 </div>
