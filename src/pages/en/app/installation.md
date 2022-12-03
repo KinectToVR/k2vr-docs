@@ -10,9 +10,8 @@ setup: |
   import Shift from '@icons/Kbd_Shift.astro'
 ---
 # Installation
-You can get Amethyst Installer from the [homepage](https://k2vr.tech). Click on "Click here for more info"
 
-Alternatively, just click this.
+Here's the download for the latest version of Amethyst Installer.
 <br><br>
 <LinkButton href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe">Download Latest Amethyst Installer Version</LinkButton>
 <br><br>
