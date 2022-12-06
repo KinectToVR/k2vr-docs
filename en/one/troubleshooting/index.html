@@ -71,6 +71,11 @@
 										How Amethyst compares to other options
 									</li>
 									
+								</a><a class="sidebar-section-link" href="/en/roadmap">
+									<li class="sidebar-link-text">
+										Roadmap
+									</li>
+									
 								</a><a class="sidebar-section-link" href="/en/buying-kinect">
 									<li class="sidebar-link-text">
 										Getting a Kinect and adapter
@@ -94,6 +99,11 @@
 						<a class="sidebar-section-link" href="/en/app/installation">
 									<li class="sidebar-link-text">
 										Installing Amethyst
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/getting-started">
+									<li class="sidebar-link-text">
+										Getting started
 									</li>
 									
 								</a><a class="sidebar-section-link" href="/en/app/overview">
@@ -262,7 +272,7 @@ Check that all the cables are firmly plugged in. And that the adapter is receivi
 It’s also possible with cheap adapters that the signal is being degraded either through cheap wiring or cables that are too long. (It’s not like they actually test it.)</p><div class="heading-wrapper level-h3" id="8"><h3 id="low-framerate">Low framerate</h3><a class="anchor-link" href="#low-framerate"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Low framerates are usually caused by there being <strong>other devices on the same USB controller, taking just enough bandwidth that the Kinect can still start, but can’t send it’s full data</strong> through.</p><p>Basically, <strong>try unplugging everything USB near the Kinect.</strong></p><div class="heading-wrapper level-h3" id="9"><h3 id="temperature-sensor">Temperature sensor</h3><a class="anchor-link" href="#temperature-sensor"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Inside the Kinect is a fan, and a temperature sensor attached to that fan. <strong>Because it’s an analog part, it can go bad over time</strong>, and report very high temperatures in error.</p><p>You need to <strong>open the Kinect up</strong> with a <strong>Torx T2 screwdriver</strong>, then <strong>cut the yellow and blue wires</strong> and put some electrical tape to cover them up. <strong>This will disable the temperature sensor.</strong></p><p>Here’s a <a href="https://youtu.be/BoRK3jJVMLM">video showing how to do it</a></p><div class="heading-wrapper level-h3" id="10"><h3 id="foot-rotation">Foot rotation</h3><a class="anchor-link" href="#foot-rotation"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>The default rotation mode for Xbox One Kinect allows you to turn your feet freely. The problem is that <strong>in 99% of cases, your floor, and everything near it are invisible to the Kinect.</strong></p><p>Because only your legs are visible to the Kinect, <strong>in Amethyst, you should switch the Orientation Tracking mode for the feet trackers to Leg-Based Orientation.</strong> It’s not perfect, but will fix the issue.</p>
                 <hr class="page-footer-separator">
 <div class="page-footer">
-    <span class="last-edited">Last updated on 02/12/2022</span>
+    <span class="last-edited">Last updated on 01/01/1970</span>
     <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/one/troubleshooting.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
 </div>
             </article>
