@@ -10,6 +10,13 @@ setup: |
 # Getting started with Amethyst
 ## Requirements and installation
 ### Amethyst works with local PCs only.
+### Amethyst only works on Windows 10 20H2 or newer
+### You need a roomscale VR headset with tracked motion controllers
+You must have roomscale tracking for your head and hands (You should be able to move freely around your room). Amethyst is **only** for **lower body tracking**. Amethyst can only track your legs, waist, and elbows. It supports all VR headsets that work with SteamVR, and the Meta Quest series of headsets.
+
+### You need a large enough room (for Kinect)
+When using Kinect, you should stand at least 6 feet (2 meters) away from the sensor and have it at head height pointing down at you.
+You should be standing 9 feet (3 meters) away for the best tracking.
 ### <u>Shadow and Plutosphere (Cloud PCs in general) do not work.</u>
 <sub style="font-size:smaller">*Any attempt to jank OSC into working remotely is entirely your own responsibility. Please don't do it. We're also not giving support for that really old shadow client server thingie that one person made. It's literally so old might as well be a dinosaur. If we see you asking about Shadow, we will point to this exact spot.*</sub>
 <br><br>
