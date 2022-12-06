@@ -13,6 +13,10 @@
                     "url": "/en/comparison"
                 },
                 {
+                    "title": "Roadmap",
+                    "url": "/en/roadmap"
+                },
+                {
                     "title": "Getting a Kinect and adapter",
                     "url": "/en/buying-kinect"
                 },
@@ -31,6 +35,10 @@
             "children": [{
                     "title": "Installing Amethyst",
                     "url": "/en/app/installation"
+                },
+                {
+                    "title": "Getting started",
+                    "url": "/en/app/getting-started"
                 },
                 {
                     "title": "App Overview",
