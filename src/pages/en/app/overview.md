@@ -1,13 +1,13 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: App Overview
+title: App overview
 description: Detailed view of each page of the application
 setup: | 
   import CardNoIcon from '@components/CardNoIcon.astro'
   import TableOfContents from '@components/TableOfContents.astro'
   import Accordion from '@components/Accordion.astro'
 ---
-# App Overview
+# App overview
 This page will go over the various features and options in each tab of Amethyst.
 
 ### General

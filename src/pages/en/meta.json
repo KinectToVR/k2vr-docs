@@ -41,7 +41,7 @@
                     "url": "/en/app/getting-started"
                 },
                 {
-                    "title": "App Overview",
+                    "title": "App overview",
                     "url": "/en/app/overview"
                 },
                 {
@@ -53,7 +53,7 @@
                     "url": "/en/app/overrides"
                 },
                 {
-                    "title": "SteamVR Driver Troubleshooting",
+                    "title": "SteamVR driver troubleshooting",
                     "url": "/en/app/steamvr-driver-codes"
                 },
                 {
@@ -69,7 +69,7 @@
                 "url": "/en/360/setup"
             },
             {
-                "title": "Xbox 360 Kinect Troubleshooting",
+                "title": "Xbox 360 Kinect troubleshooting",
                 "url": "/en/360/troubleshooting"
             },
             {
@@ -101,7 +101,7 @@
                 "url": "/en/one/setup"
             },
             {
-                "title": "Xbox One Kinect Troubleshooting",
+                "title": "Xbox One Kinect troubleshooting",
                 "url": "/en/one/troubleshooting"
             }
         ]
@@ -121,7 +121,7 @@
                 "url": "/en/psmove/usage"
             },
             {
-                "title": "PlayStation Move Troubleshooting",
+                "title": "PlayStation Move troubleshooting",
                 "url": "/en/psmove/troubleshooting"
             }
         ]

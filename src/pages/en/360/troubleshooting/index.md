@@ -1,12 +1,12 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: Xbox 360 Kinect Troubleshooting
+title: Xbox 360 Kinect troubleshooting
 description: Pages on various Xbox 360 Kinect errors and how to fix them
 setup: | 
   import CardNoIcon from '@components/CardNoIcon.astro'
   import CardTip from '@components/CardTip.astro'
 ---
-# Xbox 360 Kinect Troubleshooting
+# Xbox 360 Kinect troubleshooting
 ![your mom](/shared/img/kinect360-troubleshooting.png)
 There can be many reasons why your Xbox 360 Kinect would stop working. Either a software or hardware problem, usually the Kinect for Windows SDK will have useful errors to guide you.
 

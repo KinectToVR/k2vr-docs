@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: Amethyst Docs Component Playground
+title: Amethyst docs component playground
 description: Why did you link to this?
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
@@ -11,6 +11,10 @@ setup: |
   import ComparisionCard from '@components/ComparisionCard.astro'
   import Accordion from '@components/Accordion.astro'
 ---
+
+# Amethyst docs component playground
+
+----
 
 # Full markdown support:
 

@@ -1,13 +1,13 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: Amethyst Roadmap
+title: Amethyst roadmap
 description: What are we working on or planning
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
   import CardWarning from '@components/CardWarning.astro'
   import LinkButton from '@components/LinkButton.astro'
 ---
-# Amethyst Roadmap
+# Amethyst roadmap
 
 <CardInfo title="What is this?">
 This page is about what we're working on and planning. This can change at any time without warning.
