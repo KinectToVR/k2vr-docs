@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: Setting up the Amethyst OSC Plugin for Quest
+title: Setting up the Amethyst OSC plugin for Quest
 description: Step-by-step instructions on setting up Amethyst and VRChat on Quest to use full-body tracking on OSC.
 setup: | 
   import CardNoIcon from '@components/CardNoIcon.astro'
@@ -11,7 +11,7 @@ setup: |
   import LinkButton from '@components/LinkButton.astro'
   import CardError from '@components/CardError.astro'
 ---
-# Setting up the Amethyst OSC Plugin for Quest
+# Setting up the Amethyst OSC plugin for Quest
 ### Before you go any further, please join our Discord at https://discord.gg/YBQCRDG
 
 <CardWarning title="This guide is relatively long">

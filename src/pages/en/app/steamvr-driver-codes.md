@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: SteamVR Driver Troubleshooting
+title: SteamVR driver troubleshooting
 description: How to fix the SteamVR driver not working
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
@@ -8,7 +8,7 @@ setup: |
   import LinkButton from '@components/LinkButton.astro'
   import VideoPlayer from '@components/VideoPlayer.astro'
 ---
-# SteamVR Driver Troubleshooting
+# SteamVR driver troubleshooting
 Well shucks, your Amethyst SteamVR driver isn't working, how do you go about fixing that?
 ### How to fix "EXCEPTION WHILE CHECKING (Code -10)"
 **This means the SteamVR driver is not loaded at all.** Either because it's disabled, and/or because it's not listed to SteamVR in any way.

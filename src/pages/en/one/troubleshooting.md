@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/DocsPage.astro'
-title: Xbox One Kinect Troubleshooting
+title: Xbox One Kinect troubleshooting
 description: How to fix common problems with Xbox One Kinect
 setup: | 
   import CardNoIcon from '@components/CardNoIcon.astro'
@@ -9,7 +9,7 @@ setup: |
   import Accordion from '@components/Accordion.astro'
   import LinkButton from '@components/LinkButton.astro'
 ---
-# Xbox One Kinect Troubleshooting
+# Xbox One Kinect troubleshooting
 Figuring out what is going wrong with the Xbox One Kinect isn't as easy as with 360, because **the SDK doesn't provide errors beside "a generic sensor is unavailable." You have to look for other signs** in USB devices, drivers, and such. Hopefully this page helps you fix your problem.  
 
 ## Hardware
