@@ -135,6 +135,12 @@ Download and run this
 - Press **Y** then **Enter**.
 - Press **Enter** again to finish and exit.
 
+<CardTip title="If the null druiver enabler fails">
+You can enable it manually by [following the instructions on this GitHub page.](https://github.com/username223/SteamVRNoHeadset) You're just editing two JSON files.
+
+We just believed it would be easier for people to run a small EXE. But it barely works because SteamVR is a royal pain. _Can't wait for native OSC._
+</CardTip>
+
 ![null driver tool](/en/img/null-driver-tool.png)
 
 After that's done, SteamVR should look like this ![steamvr null driver](/en/img/null-driver.png)
