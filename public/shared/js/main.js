@@ -1,3 +1,5 @@
+const DEBUG_MODE = false;
+
 function ComparisionControlClick (e) {
 
     // Early quit if we aren't holding any buttons
@@ -45,7 +47,15 @@ function createSearchResult( searchItem ) {
     a.href = `/${searchItem.item.path}`;
     element.appendChild( a );
 
-    element.appendChild( a );
+    if ( DEBUG_MODE === true ) {
+        console.log(searchItem);
+        const debugScore = document.createElement("span");
+        debugScore.innerText = searchItem.score;
+        debugScore.setAttribute("style", "opacity: 0.5;");
+        element.appendChild( debugScore );
+    }
+
+    // @TODO: More complex results
 
 	return element;
 }
@@ -97,7 +107,7 @@ function doSearch () {
 
     uniqueResultsArr.forEach( (item) => {
         // Ignore other locales
-        if ( item.item.path.startsWith( currentLocale )) {
+        if ( item.item.path.startsWith( currentLocale ) ) {
             const itemToAdd = createSearchResult( item );
             SearchRefs.searchResultsContainer.appendChild( itemToAdd );
         }
@@ -280,15 +290,19 @@ waitForGlobal( "Fuse", async function () {
 
     const options = {
         includeScore: true,
+        includeMatches: true,
+        isCaseSensitive: false,
+        // ignoreLocation: true,
         useExtendedSearch: true,
+        distance: 250,
         shouldSort: true,
-        ignoreLocation: true,
+        threshold: 0.6,
         keys: [{
             name: 'title',
-            weight: 0.3
+            weight: 0.2
         }, {
             name: 'plaintext',
-            weight: 0.6
+            weight: 0.7
         }, {
             name: 'path',
             weight: 0.1
