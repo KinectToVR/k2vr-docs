@@ -51,7 +51,7 @@ jobs:
 
       # Push to your pages repo
       - name: Push to pages repo
-        uses: JamesIves/github-pages-deploy-action@4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           folder: 'dist'
           branch: gh-pages
