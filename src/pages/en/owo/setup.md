@@ -35,32 +35,9 @@ owoTrack requires a compatible phone, and a stable WiFi connection. A stable WiF
 - Check if your phone has an **accelerometer** and a **gyroscope** by going to [GSMArena](https://www.gsmarena.com/) and checking if your phone has these sensors.
 - Download the [owoTrack](https://play.google.com/store/apps/details?id=org.ovrgyrotrackersync) app from Google Play.
 
-### iOS 13 or newer
+### iOS 12.1 or newer
 
-- Download and install [TestFlight](https://apps.apple.com/us/app/testflight/id899247664).
-- Download and install [owoTrack](https://testflight.apple.com/join/1DZAkuCX) via TestFlight.
-
-<CardInfo title="TestFlight Code">
-The TestFlight code for owoTrack is `1DZAkuCX`.
-</CardInfo>
-
-### iOS 12
-
-<CardWarning title="Jailbreak required">
-iOS devices running iOS 12 require a jailbreak to install apps which are not available via the App Store. We are not responsible for any damage you perform on your device, proceed at your own risk.
-</CardWarning>
-
-<Accordion title="iOS 12">
-
-- Jailbreak your phone. That is beyond the scope of this documentation.
-- Open Cydia.
-- Add `repo.hackyouriphone.org` to the list of sources in repo sources.
-- Install AppStore++.
-- Open the AppStore and search for TestFlight.
-- Press and hold "Get". Install **version 2.7.0**.
-- Download and install [owoTrack](https://testflight.apple.com/join/1DZAkuCX) via TestFlight from here.
-
-</Accordion>
+- Download and install [owoTrack](https://apps.apple.com/app/owotrack/id1563711037) through the App Store.
 
 ## Troubleshooting
 
