@@ -17,7 +17,7 @@ Well shucks, your Amethyst SteamVR driver isn't working, how do you go about fix
 <LinkButton href="amethyst://register">Enable the Amethyst SteamVR add-on</LinkButton>
 </p>
 
-<VideoPlayer src="/en/video/enable-amethyst-driver.mp4" poster="/en/video/enable-amethyst-driver.poster.png">
+<VideoPlayer src="/en/video/enable-amethyst-driver.mp4" poster="/en/video/enable-amethyst-driver.poster.png"/>
 
 If the driver is missing from that list, Click the **Re-register SteamVR driver entry** button.
 ![re-register steamvr driver button](/en/img/reregister-button.png)
