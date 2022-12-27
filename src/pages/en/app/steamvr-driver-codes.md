@@ -84,6 +84,10 @@ If you edit any of the paths, they always need two backslashes like this `\\` be
 
 **You're done! 🎉 Your Amethyst SteamVR driver should be working now.**
 
+### I did all of the above, but I keep on getting -10!
+
+If you're still encountering issues, you are likely using ALVR. When you use ALVR, by default it hides every other add-on from SteamVR. To fix that, you need to go to "Installation", then click "Register ALVR driver". Then finally click "Restart SteamVR" in the bottom-left.
+
 ### How to fix other errors (1, 12, 10, e.t.c.)
 First, you should try restarting your PC, restarts are always a good first step.
 
