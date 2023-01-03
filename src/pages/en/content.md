@@ -7,22 +7,13 @@ setup: |
   import CardTip from '@components/CardTip.astro'
 ---
 # Making content about Amethyst
-
-<CardWarning title="Too long, didn't read.">
-**Amethyst is still in the Technical Preview stage,** the installer, documentation, website, support bot commands, and everything else surrounding the app is still being made and things change constantly and can break at any time.<br>  
-<br>
-**Recommending Amethyst right now,** at least without making these things very clear, **is like suggesting someone install a leaked beta build of Windows** as their daily driver OS.  
-</CardWarning>
+Amethyst is a complex app. It's amde to be easy to use. But **there's a lot that users can screw up without the right information on hand.**
 
 ## Considerations when making videos
 
 **We understand the usefulness of video as a medium for conveying information.** It's perfect for those who prefer a visual approach to learning things, and it can allow you to explain complicated concepts more succinctly.
 
-**That being said, videos, due to their nature are often hard to update.** Especially on platforms like YouTube, where one might make a tutorial to help others, but also for their own gain in views, money or notoriety. So, video creators are often incentivized to leave their _evergreen content_ up instead of replacing the video, or unlisting it then making another one when the old video has gone out of fashion.
-
-<CardTip title="What is evergeen content?">
-The term refers to videos that go past the YouTube recommendation algorithm, and get a consistent amount of views for the lifetime of the video, instead of plateau-ing after a few weeks. These videos are sought out by creators because they're a guaranteed source of constant ad revenue on top of their other videos.
-</CardTip>
+**That being said, videos, due to their nature are often hard to update.** Especially on platforms like YouTube, where one might make a tutorial to help others, but also for their own gain in views, money or notoriety. So, video creators are often incentivized to leave their content up instead of replacing the video, or unlisting it then making another one when the old video has gone out of fashion.
 
 There are a few things you can follow and keep in mind to make tutorial videos the best they can be:
 
@@ -40,8 +31,8 @@ Finding a new shiny piece of tech can put rose-tinted glasses on you, and you'll
 
 ## What should you cover?
 
-### Amethyst is beta software
-**This app is still in active development**, the installation method, the supported configs, app layout, and everything else, is **subject to change.**
+### Amethyst is constantly being updated and worked on
+**The app is in active development**, while the feature-set is mostly set in stone by now. **Things can change drastically at any time.**
 
 Even after release, **future updates may bring large changes.**
 
@@ -63,12 +54,12 @@ While Kinect is awesome for it's price, **some people just want Vive Trackers**,
 **If you're unsure** about something you wish to put in a video, **don't hesitate to ask us on Discord.**
 
 ### Xbox 360 Kinect > Xbox One Kinect
-Newer is not always better, and it couldn't be more true than with the Xbox One Kinect. Between **incompatibility with lighthouse devices, even stricter and higher USB controller requirements and an unfixable hardware flaw that causes the foot rotation to jitter back and forth**, it's really not a good option for anyone compared to Xbox 360 Kinect.
+Newer is not always better, and it couldn't be more true than with the Xbox One Kinect. Between **incompatibility with lighthouse devices, even stricter and higher USB controller requirements and a hardware flaw that causes the foot rotation to jitter back and forth (There's a semi-fix in Amethyst for it)**, it's really not a good option for anyone compared to Xbox 360 Kinect.
 
 You can find more info [on this page](/en/one/common-issues) about the matter.
 
 ### Avoid Amazon when purchasing adapters
-Statistics from our Discord server show that **nearly every adapter that has been dead on arrival, or died later on, was purchased from Amazon.**
+Statistics from our Discord server show that **every adapter that has been dead on arrival, or died later on, was purchased from Amazon.**
 
 **With Kinect 360, third-party adapters are fine, as long as they're not from Amazon.**
 
@@ -100,16 +91,8 @@ These should be avoided. **You can see what host controllers you have in Device 
 ### Point users to the website, not GitHub or our Discord
 **The website is made to cover everything** the user may need to know about Amethyst and it's supported devices and apps. And it will point the user towards the installer download. **Avoid using direct GitHub links because then we need to put warnings on every corner**, to ensure users are always getting the latest info.
 
-<CardWarning title="Website in development">
-The main homepage and onboarding experience of k2vr.tech is being updated, it will go live once Amethyst goes out of Technical Preview.
-</CardWarning>
-
 ### Run the installer, follow the on-screen instructions
 The installer is built to be easy to use and understand. **You should not have to explain how it works to the user.**
-
-<CardWarning title="Installer in development">
-Amethyst Installer is currently in development, a preliminary version will be offered to users who wish to test it soon, and a more complete version will release alongside Amethyst when it goes out of Technical Preview.
-</CardWarning>
 
 ### Users WILL run into problems
 Assume that only 1 in 100 users will have a flawless setup experience. **It's very common for the Kinect SDK to randomly break for a multitude of reasons, or for other problems to happen.** There are a lot of moving parts to the Kinect full-body setup after all.

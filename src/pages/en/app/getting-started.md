@@ -19,13 +19,17 @@ When using Kinect, you should stand at least 6 feet (2 meters) away from the sen
 You should be standing 9 feet (3 meters) away for the best tracking.
 ### <u>Shadow and Plutosphere (Cloud PCs in general) do not work.</u>
 <sub style="font-size:smaller">*Any attempt to jank OSC into working remotely is entirely your own responsibility. Please don't do it. We're also not giving support for that really old shadow client server thingie that one person made. It's literally so old might as well be a dinosaur. If we see you asking about Shadow, we will point to this exact spot.*</sub>
-<br><br>
-<LinkButton href="/en/app/installation">How to install Amethyst</LinkButton>
+<br>
+
+##### SET UP AMETHYST FOR PC.
+<br>
+<LinkButton href="/en/app/installation">How to install Amethyst for PC</LinkButton>
 <br><br>
 
-Amethyst also **works with VRChat on Quest via OSC**:  
+Amethyst also **works with VRCHAT STANDALONE on Quest via OSC**:  
+##### THIS IS FOR *STANDALONE* QUEST VRCHAT, CLICK THE BUTTON ABOVE FOR PC!
 <br>
-<LinkButton href="/en/osc">How to setup Amethyst with OSC</LinkButton>
+<LinkButton href="/en/osc">How to setup Amethyst with OSC for Quest standalone</LinkButton>
 <br><br>
 
 Before anything else, **you must have a supported device to use with Amethyst.**  

@@ -36,9 +36,9 @@ When you talk about the app: Amethyst
 When you talk about the project: K2VR
 
 ## Who is that girl?
-That's Violet, the mascot for K2VR and Amethyst. Because Amethyst is a body tracking application, it made sense for us to have a mascot to help us create tracking demos in a way that's consistent with the rest of branding.
+That's Violet, she acts as the face of K2VR. Because Amethyst is a body tracking application, it made sense for us to have a consistent character to help us create tracking demos in a way that's consistent with the rest of branding.
 
-You can find her doing some sick tricks on the website's homepage, greeting you in the Amethyst installer and in the first-time setup wizard. She's also in the calibration window, to show you a direct visual guide on how to move about your room. And she's our Discord support chatbot.
+You can find her doing some sick tricks on the website's homepage, greeting you in the Amethyst installer and in the calibration window, to show you a direct visual guide on how to move about your room.
 
 ## Why maintain Kinect full-body? Isn't it a dead-end technology?
 I can see why one would think that, but the reality is that over the years, with different ideas, innovations and such, we've been able to push so much out of this aging hardware, and it gets a ton of existing silicon a new lease on life, and makes people happy.

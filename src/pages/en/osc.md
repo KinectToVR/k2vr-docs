@@ -75,6 +75,16 @@ This is what other devices in your house see the Quest as, and **you will need t
 
 <br><br>
 
+<CardInfo title="">
+
+### You must use VRChat Beta!
+A previous version of this guide mentioned the requirement for VRChat Beta on Quest. I removed this once OSC trackers was pushed to live.
+
+**VRChat removed OSC trackers from the live version soon after. They are only present on the Quest BETA.** They did so because that version was causing crashes for many users.
+
+Please use the beta version.
+</CardInfo>
+
 ## Part 2: Enabling OSC in VRChat
 
 - Launch VRChat on the Quest
