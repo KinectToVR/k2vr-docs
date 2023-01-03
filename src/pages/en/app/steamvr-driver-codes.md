@@ -17,7 +17,7 @@ Well shucks, your Amethyst SteamVR driver isn't working, how do you go about fix
 <LinkButton href="amethyst://register">Enable the Amethyst SteamVR add-on</LinkButton>
 </p>
 
-<VideoPlayer src="/en/video/enable-amethyst-driver.mp4" poster="/en/video/enable-amethyst-driver.poster.png">
+<VideoPlayer src="/en/video/enable-amethyst-driver.mp4" poster="/en/video/enable-amethyst-driver.poster.png"/>
 
 If the driver is missing from that list, Click the **Re-register SteamVR driver entry** button.
 ![re-register steamvr driver button](/en/img/reregister-button.png)
@@ -83,6 +83,10 @@ If you edit any of the paths, they always need two backslashes like this `\\` be
 - Follow the steps at the top of this page and **make sure the driver is enabled.**
 
 **You're done! 🎉 Your Amethyst SteamVR driver should be working now.**
+
+### I did all of the above, but I keep on getting -10!
+
+If you're still encountering issues, you are likely using ALVR. When you use ALVR, by default it hides every other add-on from SteamVR. To fix that, you need to go to "Installation", then click "Register ALVR driver". Then finally click "Restart SteamVR" in the bottom-left.
 
 ### How to fix other errors (1, 12, 10, e.t.c.)
 First, you should try restarting your PC, restarts are always a good first step.

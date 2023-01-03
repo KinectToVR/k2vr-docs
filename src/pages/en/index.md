@@ -1,6 +1,7 @@
 ---
 layout: '@layouts/DocsPage.astro'
 title: Amethyst Docs
+index: false
 setup: | 
   import CardTip from '@components/CardTip.astro'
   import CardNoIcon from '@components/CardNoIcon.astro'

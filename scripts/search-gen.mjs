@@ -59,6 +59,7 @@ export function run() {
     let files = getAllFiles(srcDir);
 
     let parsedFileCount = 0;
+    let skippedFiles = 0;
 
     files.forEach(currFile => {
         let fileContents = fs.readFileSync(currFile)+''; // trail to convert to string
@@ -92,6 +93,7 @@ export function run() {
         } else {
             // Invalid file ; skip
             console.log(`Skipping ${currFile} (unknown extension)!`);
+            skippedFiles++;
             return;
         }
 
@@ -142,7 +144,7 @@ export function run() {
             }
 
             // Once we've parsed all pages, proceed to save them
-            if (parsedFileCount === files.length) {
+            if (parsedFileCount === files.length - skippedFiles) {
                 writeToFile();
             }
         }));

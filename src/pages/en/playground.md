@@ -2,6 +2,7 @@
 layout: '@layouts/DocsPage.astro'
 title: Amethyst docs component playground
 description: Why did you link to this?
+index: false
 setup: | 
   import CardInfo from '@components/CardInfo.astro'
   import CardTip from '@components/CardTip.astro'
