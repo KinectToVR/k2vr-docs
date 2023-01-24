@@ -256,18 +256,18 @@
 		<h3 class="card-title">This guide is relatively long</h3>
 	</div>
 	<div class="card-content">
-		<p><strong>Every step on this page is important.</strong> Many of them will be made obselete when Amethyst gets native OSC support, but transitioning from the plugin to the native version will be very simple.</p>
+		<p><strong>Every step on this page is important.</strong> Many of them will be made obsolete when Amethyst gets native OSC support, but transitioning from the plugin to the native version will be very simple.</p>
 
 	</div>
 </div><blockquote>
 <p><strong>Hi everyone from the VRChat Developer Update!</strong> We’re hard at work on a semi-rewrite of Amethyst to simplify future development. Once that’s done, getting OSC out the door will be easier.</p>
-</blockquote><br><br><div class="heading-wrapper level-h2" id="3"><h2 id="preface">Preface</h2><a class="anchor-link" href="#preface"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>In late November 2022, <strong>VRChat released an Open Beta including a feature called OSC Trackers. What this feature allows, is for any application to send data over the network using OSC to VRChat, with information about the position and rotation for 1 to 8 trackers. And then allow the user to calibrate with them for full-body-tracking.</strong></p><p>Until now, VRChat only supported Vive trackers directly in SteamVR, and applications that emulated those, like Amethyst or SlimeVR.</p><p><strong>We have created a plugin for Amethyst to send the enabled trackers over OSC.</strong> Told you that whole modular and extensible thing would come in useful</p><div class="heading-wrapper level-h5" id="4"><h5 id="pre-requisites">Pre-requisites</h5><a class="anchor-link" href="#pre-requisites"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-error">
+</blockquote><br><br><div class="heading-wrapper level-h2" id="3"><h2 id="preface">Preface</h2><a class="anchor-link" href="#preface"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>In late November 2022, <strong>VRChat released an Open Beta including a feature called OSC Trackers. What this feature allows is for any application to send data over the network using OSC to VRChat, with information about the position and rotation for 1 to 8 trackers. And then allow the user to calibrate with them for full-body-tracking.</strong></p><p>Until now, VRChat only supported Vive trackers directly in SteamVR, and applications that emulated those, like Amethyst or SlimeVR.</p><p><strong>We have created a plugin for Amethyst to send the enabled trackers over OSC.</strong> Told you that whole modular and extensible thing would come in useful.</p><div class="heading-wrapper level-h5" id="4"><h5 id="pre-requisites">Pre-requisites</h5><a class="anchor-link" href="#pre-requisites"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-error">
 	<div class="heading-container">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
 		<h3 class="card-title">Webcam and PS4 Camera are not supported!</h3>
 	</div>
 	<div class="card-content">
-		<p><strong>Amethyst is for Kinect tracking</strong> mostly. <strong>We do not have support for 2D cameras.</strong> And most likely never will.</p>
+		<p><strong>Amethyst is for Kinect tracking</strong> mostly. <strong>We do not have support for 2D cameras.</strong> And most likely, never will.</p>
 
 	</div>
 </div><p><strong><em>As long as your computer runs an up-to-date version of Windows 10 or 11, and was built in the last decade</em>, you’re most likely good to go.</strong> We recommend taking a look at the USB Controllers section in Amethyst Installer, you should have at least one compatible controller to have a good experience.</p><p>As well, <strong>you need to have some kind of compatible hardware.</strong> Like Xbox 360 Kinect, Xbox One Kinect or a complete PlayStation Move + PS3 Eye setup in PSMoveServiceEx.</p><br><br><div class="heading-wrapper level-h2" id="5"><h2 id="part-1-wi-fi-is-not-internet">Part 1: Wi-Fi is not internet!</h2><a class="anchor-link" href="#part-1-wi-fi-is-not-internet"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-info">
@@ -289,7 +289,7 @@
 		<h3 class="card-title">If you get nothing on the Quest after connecting OSC trackers</h3>
 	</div>
 	<div class="card-content">
-		<p>This isn’t garanteed to work, but sometimes, you will have separate Wi-Fi networks for the 2.4GHz and 5GHz bands. And some routers will only show devices on the 2.4GHz network to devices connected with a cable. So, <strong>try connecting to the 2.4GHz Wi-Fi specifically if they are separate.</strong> Though 5GHz is preferable.</p>
+		<p>This isn’t guaranteed to work, but sometimes, you will have separate Wi-Fi networks for the 2.4GHz and 5GHz bands. And some routers will only show devices on the 2.4GHz network to devices connected with a cable. So, <strong>try connecting to the 2.4GHz Wi-Fi specifically if they are separate.</strong> Though 5GHz is preferable.</p>
 
 	</div>
 </div><ul>
@@ -304,7 +304,7 @@
 <li>Scroll further down until you see <strong>IP Address</strong></li>
 </ul><blockquote>
 <p>I would add more images but they come out blank. WHY FACEBOOK!?</p>
-</blockquote><p>This is what other devices in your house see the Quest as, and <strong>you will need to enter it in Amethyst, so keep note of it.</strong></p><br><br><div class="card card-info">
+</blockquote><p>This is what other devices in your house see the Quest as and <strong>you will need to enter it in Amethyst, so keep note of it.</strong></p><br><br><div class="card card-info">
 	<div class="heading-container">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
 		<h3 class="card-title"></h3>
@@ -316,10 +316,10 @@ Please use the beta version.
 	</div>
 </div><div class="heading-wrapper level-h2" id="7"><h2 id="part-2-enabling-osc-in-vrchat">Part 2: Enabling OSC in VRChat</h2><a class="anchor-link" href="#part-2-enabling-osc-in-vrchat"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><ul>
 <li>Launch VRChat on the Quest</li>
-<li>Open the <strong>Action Menu (The round one)</strong> by pressing and holding one of the Quick Menu buttons</li>
+<li>Open the <strong>Action Menu (the round one)</strong> by pressing and holding one of the Quick Menu buttons</li>
 <li>Go to ”<strong>Options</strong>”, then ”<strong>OSC</strong>”, and <strong>toggle on</strong> ”<strong>Enabled</strong>”
 <img src="/shared/img/osc-enable.png" alt="Enabling OSC"></li>
-</ul><p><strong>It’s easy to forget this step, and then spend 20 minutes why it’s not working. so make sure to do it now instead of later.</strong></p><div class="heading-wrapper level-h5" id="8"><h5 id="you-are-now-ready-to-receive-osc-tracker-data">You are now ready to receive OSC Tracker data!</h5><a class="anchor-link" href="#you-are-now-ready-to-receive-osc-tracker-data"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><br><br><div class="heading-wrapper level-h2" id="9"><h2 id="part-3-installing-amethyst-and-the-plugin">Part 3: Installing Amethyst and the plugin</h2><a class="anchor-link" href="#part-3-installing-amethyst-and-the-plugin"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Before installing Amethyst, you must have SteamVR installed.<br>
+</ul><p><strong>It’s easy to forget this step, and then spend 20 minutes wondering why it’s not working. so make sure to do it now instead of later.</strong></p><div class="heading-wrapper level-h5" id="8"><h5 id="you-are-now-ready-to-receive-osc-tracker-data">You are now ready to receive OSC Tracker data!</h5><a class="anchor-link" href="#you-are-now-ready-to-receive-osc-tracker-data"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><br><br><div class="heading-wrapper level-h2" id="9"><h2 id="part-3-installing-amethyst-and-the-plugin">Part 3: Installing Amethyst and the plugin</h2><a class="anchor-link" href="#part-3-installing-amethyst-and-the-plugin"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Before installing Amethyst, you must have SteamVR installed.<br>
 <strong>You do not need to connect a headset to SteamVR, but it must be present to install and run Amethyst.</strong> (This will not be the case once native OSC support is released)</p>
 Assuming you have Steam on your computer, you can install SteamVR using this button:
 <br><br><br><a href="steam://install/250280" class="button primary link">
@@ -429,7 +429,7 @@ And then click on <strong>Restart SteamVR.</strong><br>
 <img src="/en/img/force-preview.png" alt="Force Skeleton Preview on"></p>
 </li>
 <li>
-<p><strong>Make sure the Kinect can track you properly</strong>, if it can’t see your head, that’s okay.</p>
+<p><strong>Make sure the Kinect can track you properly</strong> If it can’t see your head, that’s okay.</p>
 </li>
 <li>
 <blockquote>
@@ -474,7 +474,7 @@ And then click on <strong>Restart SteamVR.</strong><br>
 <p>Change the <strong>Avatar Measurement</strong> to <strong>Height Scale</strong></p>
 </li>
 <li>
-<p>Once you’ve changed avatars, <strong>open the Quick Menu</strong> again, and <strong>click on Calibrate FBT</strong></p>
+<p>Once you’ve changed avatars, <strong>open the Quick Menu</strong> again and <strong>click on Calibrate FBT</strong></p>
 </li>
 <li>
 <p><strong>You will be in a T-Pose</strong>, with the trackers represented as spheres.</p>
@@ -494,7 +494,7 @@ And then click on <strong>Restart SteamVR.</strong><br>
 </blockquote>
 </li>
 <li>
-<p>Open the <strong>Quick Menu</strong>, yes again.</p>
+<p>Open the <strong>Quick Menu</strong> again.</p>
 </li>
 <li>
 <p>Click on <strong>Calibrate FBT</strong></p>
@@ -520,14 +520,14 @@ And then click on <strong>Restart SteamVR.</strong><br>
 <p>You can confirm the calibration by <strong>pressing both triggers together.</strong></p>
 </li>
 </ul><div class="heading-wrapper level-h5" id="14"><h5 id="enjoy-fbt-on-quest">Enjoy FBT on Quest!!!!</h5><a class="anchor-link" href="#enjoy-fbt-on-quest"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h2" id="15"><h2 id="part-4b-what-to-do-the-next-time-around">Part 4B: What to do the next time around</h2><a class="anchor-link" href="#part-4b-what-to-do-the-next-time-around"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><ul>
-<li><strong>Start SteamVR,</strong> and <strong>then Amethyst</strong></li>
+<li><strong>Start SteamVR</strong> and <strong>then Amethyst</strong></li>
 <li><strong>Make sure the Kinect can track you properly</strong></li>
 <li>Go to the <strong>Devices</strong> tab on the left of the app</li>
 <li>Click on <strong>Amethyst OSC</strong></li>
 <li>Change <strong>Device IP</strong> to <strong>the one you took note of</strong> earlier</li>
 <li>Click <strong>“Connect Trackers (OSC)”</strong></li>
 <li><strong>Launch VRChat BETA</strong> on your Quest</li>
-<li>Open the <strong>Quick Menu</strong> (The square one)</li>
+<li>Open the <strong>Quick Menu</strong> (the square one)</li>
 <li>Click on <strong>Calibrate FBT</strong></li>
 <li><strong>You will be in a T-Pose</strong>, with the trackers represented as spheres.</li>
 <li>Open the Quick Menu again</li>
@@ -552,11 +552,11 @@ And then click on <strong>Restart SteamVR.</strong><br>
 
 	</div>
 </div><ul>
-<li>You can bind into the avatar by <strong>pressing both triggers together.</strong></li>
+<li>You can bind into the avatar by <strong>pressing both triggers together</strong></li>
 </ul>
                 <hr class="page-footer-separator">
 <div class="page-footer">
-    <span class="last-edited">Last updated on 03/01/2023</span>
+    <span class="last-edited">Last updated on 24/01/2023</span>
     <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/osc.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
 </div>
             </article>
