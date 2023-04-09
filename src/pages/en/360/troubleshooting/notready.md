@@ -17,16 +17,35 @@ Let's go through this circus shall we?
 
 ### Uninstalling
 
-Go to Windows Settings, then apps and features.
-<LinkButton href="ms-settings:appsfeatures">Open Apps and Features</LinkButton>
+<Accordion title="Windows 10">
 
-In the **right-hand** search box, type "kinect" (without quotes).
+  Go to Windows Settings, then apps and features.
 
-**On Windows 10:**  
-Click each item, then click Uninstall. Follow the instructions.
+  <LinkButton href="ms-settings:appsfeatures">Open Apps and Features</LinkButton>
 
-**On Windows 11:**  
-Click on the three dots on the right edge of each item, then click Uninstall. Follow the instructions.
+  In the **right-hand** search box, type "kinect" (without quotes).
+
+  ![Windows 10 Settings page demonstrating how to uninstall Kinect drivers](/en/img/win10-settings-uninstall-kinect.png)
+
+  Click each item, then click Uninstall. Follow the instructions.
+
+</Accordion>
+
+<Accordion title="Windows 11">
+
+  Go to Windows Settings, then Apps, then Installed Apps.
+
+  <LinkButton href="ms-settings:appsfeatures">Open Apps and Features</LinkButton>
+
+  In the **right-hand** search box, type "kinect" (without quotes).
+
+  ![Windows 11 Settings page demonstrating how to uninstall Kinect drivers](/en/img/win11-settings-uninstall-kinect.png)
+
+  Click on the three dots on the right edge of each item, then click Uninstall.
+
+  Follow the instructions.
+
+</Accordion>
 
 ### Disabling Memory Integrity
 
@@ -39,6 +58,8 @@ Go to Device Security.
 Under **Core Isolation** click on Core Isolation Details.  
 Make sure that Memory Integrity is turned **off**.
 
+![Memory Integrity](/en/img/memory-integrity-win-defender.png)
+
 ### Reinstalling
 
-Once the SDK is completely removed, **re-install it using Amethyst installer.** Not on your own. We don't trust you. We don't trust Microsoft. And we've had enough of this shit.
+Once the SDK is completely removed, **re-install it using Amethyst installer, as it does a lot of things under the hood to make sure the drivers installed properly.** Not on your own. We don't trust you. We don't trust Microsoft.
