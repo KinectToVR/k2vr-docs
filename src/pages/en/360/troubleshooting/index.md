@@ -24,5 +24,5 @@ No, your Kinect isn't a fake. This happens because of a drop in the USB data tra
 </CardNoIcon>
 
 <CardNoIcon title="E_NUI_INSUFFICIENTBANDWIDTH" href="/en/360/troubleshooting/insufficientbandwidth">
-We don't know much about this error.
+This error is caused by multiple scenarios, and as such the name may be misleading.
 </CardNoIcon>
