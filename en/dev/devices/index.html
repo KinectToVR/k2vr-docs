@@ -8,23 +8,23 @@
         <meta name="darkreader" content="a2418bfce121417ab0a1b6634c3aa076">
         <meta name="darkreader-lock">
 
-        <!-- Generic  --><title>About the transition to Amethyst | Amethyst Docs Preview</title>
-<link rel="canonical" href="https://docs.k2vr.tech/en/amethyst-transition/">
-<meta name="description" content="Information about transitioning from K2EX to Amethyst">
+        <!-- Generic  --><title>Tracking Devices (Providers) | Amethyst Docs Preview</title>
+<link rel="canonical" href="https://docs.k2vr.tech/en/dev/devices/">
+<meta name="description" content="Tracking Devices (Providers)">
 <meta name="theme-color" content="#E33388">
 
 <!-- OpenGraph  -->
 <meta property="og:url" content="https://docs.k2vr.tech">
 <meta property="og:type" content="website">
-<meta property="og:title" content="About the transition to Amethyst | Amethyst Docs Preview">
-<meta property="og:description" content="Information about transitioning from K2EX to Amethyst">
+<meta property="og:title" content="Tracking Devices (Providers) | Amethyst Docs Preview">
+<meta property="og:description" content="Tracking Devices (Providers)">
 
 
 <!-- Twitter  -->
 <meta property="twitter:domain" content="docs.k2vr.tech">
 <meta property="twitter:url" content="https://docs.k2vr.tech">
-<meta name="twitter:title" content="About the transition to Amethyst | Amethyst Docs Preview">
-<meta name="twitter:description" content="Information about transitioning from K2EX to Amethyst">
+<meta name="twitter:title" content="Tracking Devices (Providers) | Amethyst Docs Preview">
+<meta name="twitter:description" content="Tracking Devices (Providers)">
 
 
 
@@ -256,7 +256,7 @@
 										Overview
 									</li>
 									
-								</a><a class="sidebar-section-link" href="/en/dev/devices">
+								</a><a class="sidebar-section-link sidebar-link-selected" href="/en/dev/devices">
 									<li class="sidebar-link-text">
 										Tracking Devices (Providers)
 									</li>
@@ -280,41 +280,151 @@
 <div class="sidebar-overlay">
 </div>
             <article class="content">
-                <div class="heading-wrapper level-h1" id="1"><h1 id="about-the-transition-to-amethyst">About the transition to Amethyst</h1><a class="anchor-link" href="#about-the-transition-to-amethyst"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h2" id="2"><h2 id="an-introduction">An introduction</h2><a class="anchor-link" href="#an-introduction"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>It’s been two years since we last updated K2EX.</strong> Since then, we’ve been working on a new app named Amethyst.</p><p><strong>Because it’s so old, and Amethyst fixes basically every issue with it, we want to get everyone transitioned over.</strong></p><details class="accordion">
-	<summary class="accordion-header">
-		Boring crap you don&#39;t care about
-		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
-	</summary>
-	<div class="accordion-content">
-		K2EX was built on the original codebase of KinectToVR. While we spent a long time fixing bugs, and improving it. 
-<strong>At their core, KinectToVR and K2EX, were built on a hardcoded shell, with a lot of dependencies on libraries we didn’t wish to continue using,</strong>
- like SFML and Boost.
-<br>
-
-
-<br>
-
-
-<strong>Amethyst is built with all the latest technologies, a fancy new user interface, and everything we’ve learned from the past.</strong>
- It’s made to be stable, reliable, and modular, both in code and for the user. You can extend its device support and functionality with your own plugins.
+                <div class="heading-wrapper level-h1" id="1"><h1 id="tracking-devices">Tracking Devices</h1><a class="anchor-link" href="#tracking-devices"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-info">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+		<h3 class="card-title">Preview content!</h3>
+	</div>
+	<div class="card-content">
+		<p>Both the plugin contract and Amethyst itself are still in the Technical Preview stage, and you may
+need to manually update your plugins to work with the latest version of Amethyst.
+We’ll try to keep the API backward-compatible as much as we can, though.</p>
 
 	</div>
-</details><div class="heading-wrapper level-h2" id="3"><h2 id="what-to-expect">What to expect</h2><a class="anchor-link" href="#what-to-expect"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><img src="/en/img/k2ex-ame.png" alt="comparison of K2EX and Amethyst">
-If you’ve used K2EX in the past, Amethyst should be a piece of cake for you. <strong>We took in the feedback of every K2EX user and took it into consideration</strong> when designing the user experience. <strong>If you’re a new user, we hope it can be just as simple</strong> with all the new onboarding and in-app instructions.</p><p><strong>Functionality-wise, Amethyst works similarly to K2EX.</strong> It does try to automate as many things as possible, and <strong>it tries hold your hand when possible.</strong></p><p>The biggest changes are in stability and features. Amethyst adds support for things like <strong>owoTrack, external tracker based flip, new orientation modes for Xbox One Kinect users. (Finally! 🥳) and the ability to spawn a lot more trackers than the 3 supported in K2EX.</strong></p><div class="heading-wrapper level-h2" id="4"><h2 id="join-the-discord-please">Join the Discord please!</h2><a class="anchor-link" href="#join-the-discord-please"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Amethyst may be near ready for release, but we would still prefer if you <strong>either join the Discord beforehand, or see it as the first resource to go to the second you run into a problem.</strong> We’ve already done a pretty strong job of pointing to the Discord in the installer and the app itself.</p><div class="heading-wrapper level-h4" id="5"><h4 id="for-help-and-bug-reports-our-discord-is-here-at">For help and bug reports, our Discord is here at:</h4><a class="anchor-link" href="#for-help-and-bug-reports-our-discord-is-here-at"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><a href="https://discord.gg/YBQCRDG" class="button primary link">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
-    
-K2VR Community Discord
+</div><div class="heading-wrapper level-h3" id="2"><h3 id="plugins-implementing-itrackingdevice">Plugins implementing <code>ITrackingDevice</code></h3><a class="anchor-link" href="#plugins-implementing-itrackingdevice"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>As you already know, to provide tracking data to Amethyst, you need to export a plugin implementing
+the <code>ITrackingDevice</code> interface, and exporting it with proper attached MEF metadata.</p><div class="heading-wrapper level-h3" id="3"><h3 id="feeding-amethyst-with-your-data">Feeding Amethyst with your data</h3><a class="anchor-link" href="#feeding-amethyst-with-your-data"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>The main principle of Amethyst device plugins</strong> is the <code>ObservableCollection</code> of <code>TrackedJoint</code> objects,
+named <code>TrackedJoints</code>, which is <strong>used to provide the tracking data to Amethyst</strong>. You need to populate
+this collection with the joints you want to track, and update their values as you receive them from
+the device you’re handling (on each <code>Update()</code> call, either by Amethyst or manually). Each <code>TrackedJoint</code>
+has a name and a role, <code>TrackedJointType</code>.</p><p>The <code>TrackedJointType</code> enum is used to define the role of the joint, and is used by Amethyst to
+auto-assign selected joints to their respectable trackers. <strong>All of the skeleton MS Kinect V2 provides
+is covered</strong>, and <strong>for joints you don’t know which role to assign, we have a special <code>JointManual</code> role</strong>.
+It will stop Amethyst from auto-assigning the joint to any suitable tracker, and show a picker instead.
+Only the <strong>devices providing a <code>JointHead</code> joint will be allowed to use the Automatic Calibration within Amethyst.</strong></p><p><code>TrackedJoint</code>s can provide physics for connected <em>Services</em> to run appropriate calculations on.
+To use it, you will need to set your device’s <code>IsPhysicsOverrideEnabled</code> to <code>true</code> and feed the joints with physics data.</p><div class="card card-info">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+		<h3 class="card-title">Joint auto-assignment</h3>
+	</div>
+	<div class="card-content">
+		<p>For each selected <em>Base</em> tracking device and currently selected <em>Service</em>, Amethyst will try to find such
+a joint in your exported device that satifies each supported tracker type in the service. If it doesn’t find
+a suitable joint, a manual picker will be shown in the Devices tab, under the <em>Base</em> tracking device section.
+You may mark all your joints as <code is:raw>Manual</code> and force the user to pick them manually, though. (Relieving, innit?)
+Also, <em>Overrides</em> don’t use this assignment system, and don’t really need it.</p>
 
-</a><br><div class="heading-wrapper level-h2" id="6"><h2 id="download">Download</h2><a class="anchor-link" href="#download"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><a href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe" class="button primary link">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
-    
-Download the latest version of Amethyst Installer now
+	</div>
+</div><div class="card card-warning">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+		<h3 class="card-title">Order your joints!</h3>
+	</div>
+	<div class="card-content">
+		<p>Note this only applies to joints with <code is:raw>JointManual</code> role, you should read this if you’re going to use the <code is:raw>JointManual</code> role.
+Amethyst uses relative joint indexing, taking their IDs from the <code is:raw>TrackedJoints</code> list. This means that
+each time you append joints to the list, you need to make sure they’re in the exact same order as previously.
+Otherwise, Amethyst may get confused and reset a particular tracker to the first joint, requiring a manual re-assignment.</p>
 
-</a><br>
+	</div>
+</div><div class="heading-wrapper level-h3" id="4"><h3 id="device-states">Device states</h3><a class="anchor-link" href="#device-states"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Each device plugin has various properties used to indicate its state, and provide more information about.
+<strong>The most important ones are <code>DeviceStatus</code></strong>, used to indicate the current state of the device (<code>0</code> for success)
+<strong>and <code>IsSkeletonTracked</code></strong>, used to indicate whether the device is currently tracking the user or not.</p><p>To enrich the experience, plugins are also to <strong>provide a stringized version of their statuses</strong>, under the
+<code>DeviceStatusString</code> property. This is used to display the status of the device, and <strong>must have the following format</strong>:</p><pre class="astro-code" style="background-color: #1c1b19; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #fce8c3">Not Defined\nE_NOT_DEFINED\nStatus message not defined!</span></span>
+<span class="line"><span style="color: #fce8c3">  header^  \n    code^    \n        message^</span></span></code></pre><p>To help your users <strong>understand the error better</strong>, or to <strong>provide handling</strong> for it, you can <strong>set <code>ErrorDocsUri</code> to a custom Uri</strong>.
+The link will be launched by Amethyst when the user clicks the ‘View Docs’ button in the status message.
+Note this is an Uri, so it supports custom protocols, for example <code>ms-settings:</code> or <code>host://something</code> and any valid Uri’s.
+Amethyst will use <code>LaunchUriAsync</code> to open your link, so <strong>make sure it’s valid and there exists a valid an app to handle it</strong>.</p><div class="heading-wrapper level-h3" id="5"><h3 id="device-properties">Device properties</h3><a class="anchor-link" href="#device-properties"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Other, helper properties are used to indicate both the state and the usage of a device. You can opt-out of
+automatic <code>Update()</code> calls or opt-in to flip support, assuming your device provides a proper head joint.</p><table>
+<thead>
+<tr>
+<th>Device property</th>
+<th>What is it used for?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IsInitialized</code></td>
+<td>Check if the device has been tried to be initialized by Amethyst (not if it’s working!) You probably want to set this to <code>true</code> on <code>Initialize()</code> and reset back to <code>false</code> on <code>Shutdown()</code></td>
+</tr>
+<tr>
+<td><code>IsSkeletonTracked</code></td>
+<td>Whether the device sees the user and tracks their body. To indicate a single joint isn’t being tracked properly, set its <code>TrackingState</code> accordingly.</td>
+</tr>
+<tr>
+<td><code>IsPositionFilterBlockingEnabled</code></td>
+<td>You can block pose filtering of trackers your device is used to feed data to within Amethyst. Suitable if you have your own filtering or use joint physics.</td>
+</tr>
+<tr>
+<td><code>IsPhysicsOverrideEnabled</code></td>
+<td>Used to indicate your device will provide joints which contain complex physics data, used by <em>Services</em> like OpenVR to run their advanced pose prediction on.</td>
+</tr>
+<tr>
+<td><code>IsSelfUpdateEnabled</code></td>
+<td>Set this to <code>true</code> if you want to stop Amethyst from calling <code>Update()</code> on your device, and update everything on your own instead.</td>
+</tr>
+<tr>
+<td><code>IsFlipSupported</code></td>
+<td>If your device can’t tell whether the user is facing it or not, and wish to support skeleton flip (mirrored tracking), please set this to <code>true</code>.</td>
+</tr>
+<tr>
+<td><code>IsAppOrientationSupported</code></td>
+<td>Enable additional feet orientation options by setting this property to <code>true</code>. You will need to provide foot tip, foot, and knee joints.</td>
+</tr>
+<tr>
+<td><code>IsSettingsDaemonSupported</code></td>
+<td>If you want to provide custom settings interface, displayed underneath the device, set this property to <code>true</code>. You’ll need to push a XAML <code>Page</code> to the <code>SettingsInterfaceRoot</code> object.</td>
+</tr>
+<tr>
+<td><code>SettingsInterfaceRoot</code></td>
+<td>Applicable only when <code>IsSettingsDaemonSupported</code> is enabled. Holds a XAML Page (<code>Microsoft.UI.Xaml.Controls.Page</code>) of your device settings. <a href="https://github.com/KinectToVR/plugin_KinectV1/blob/main/plugin_KinectV1/KinectV1.cs">Example here (<code>OnLoad()</code>)</a></td>
+</tr>
+<tr>
+<td><code>DeviceStatus</code></td>
+<td>Device status code, set to <code>0</code> to indicate success.</td>
+</tr>
+<tr>
+<td><code>DeviceStatusString</code></td>
+<td>Stringized status, must have format similar to <code>{Title}\n{Code}\n{Message}</code></td>
+</tr>
+<tr>
+<td><code>ErrorDocsUri</code></td>
+<td>The link to launch when ‘View Docs’ is clicked while the device is reporting a status error. Supports custom protocols, e.g. “host://link”</td>
+</tr>
+</tbody>
+</table><div class="heading-wrapper level-h3" id="6"><h3 id="device-methods">Device methods</h3><a class="anchor-link" href="#device-methods"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Device methods are used by Amethyst to control the device and call events on it.</p><table>
+<thead>
+<tr>
+<th>Device method</th>
+<th>What is it used for?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OnLoad</code></td>
+<td>Called when the plugin has just been loaded, and on each recompose. You probably want to update your settings interface here (if you provide any).</td>
+</tr>
+<tr>
+<td><code>Initialize</code></td>
+<td>Used to initialize/turn on the device plugin. May be called both automatically and manually, without any <code>Shutdown</code> calls prior to.</td>
+</tr>
+<tr>
+<td><code>Shutdown</code></td>
+<td>Used to shudown/turn off the device plugin, called on exit. May be called both automatically and manually, without any <code>Initialize</code> calls prior to.</td>
+</tr>
+<tr>
+<td><code>Update</code></td>
+<td>Called each internal update loop iteration, unless you opt-out by setting <code>IsSelfUpdateEnabled</code> to true.</td>
+</tr>
+<tr>
+<td><code>SignalJoint(int)</code></td>
+<td>Requests a signal of a device joint, from the <code>TrackedJoints</code> collection. Can be ignored if not supported.</td>
+</tr>
+</tbody>
+</table>
                 <hr class="page-footer-separator">
 <div class="page-footer">
-    <span class="last-edited">Last updated on 02/12/2022</span>
-    <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/amethyst-transition.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
+    <span class="last-edited">Last updated on 09/04/2023</span>
+    <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/dev/devices.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
 </div>
             </article>
             <footer>

@@ -36,7 +36,7 @@
         <script src="/shared/js/fuse.js"></script>
         <script src="/shared/js/mobile.js"></script>
         <script src="/shared/js/main.js"></script>
-    <link rel="stylesheet" href="/assets/asset.93fea226.css"></link>
+    <link rel="stylesheet" href="/assets/asset.af2ce408.css"></link>
 </head>
     <body>
         <header>
@@ -129,6 +129,11 @@
 								</a><a class="sidebar-section-link" href="/en/app/improve-tracking">
 									<li class="sidebar-link-text">
 										Improve tracking
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/osc">
+									<li class="sidebar-link-text">
+										OSC
 									</li>
 									
 								</a>
@@ -243,6 +248,31 @@
 									
 								</a>
 					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Developers</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/dev/overview">
+									<li class="sidebar-link-text">
+										Overview
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/devices">
+									<li class="sidebar-link-text">
+										Tracking Devices (Providers)
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/services">
+									<li class="sidebar-link-text">
+										Service Endpoints (Receivers)
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/host">
+									<li class="sidebar-link-text">
+										Host Import (Amethyst)
+									</li>
+									
+								</a>
+					</ul>
 			</li>
 </ul>
 	
@@ -271,20 +301,20 @@ ASMedia
 <li>Fresco Logic</li>
 <li>VIA</li>
 </ul><p>Bugs or mistakes in their implementation can cause the most random issues, often ending up in a NOTGENUINE error.</p><div class="heading-wrapper level-h2" id="3"><h2 id="going-about-fixing-it">Going about fixing it</h2><a class="anchor-link" href="#going-about-fixing-it"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>First, make sure to avoid using USB extensions of hubs, they can cause their own multitude of issues with signal degradation.</p><div class="heading-wrapper level-h3" id="4"><h3 id="going-in-blind">Going in blind</h3><a class="anchor-link" href="#going-in-blind"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>Try plugging the Kinect into a different USB port</strong>, and hope for the best. After changing ports, you’ll want to <strong>head to the Devices tab in Amethyst and click Refresh</strong> to ensure the device status is successful.</p><div class="heading-wrapper level-h3" id="5"><h3 id="using-usbtreeview">Using USBTreeView</h3><a class="anchor-link" href="#using-usbtreeview"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>There is a third-party tool created by <a href="https://www.uwe-sieber.de/english.html">Uwe Sieber</a> named <strong>USBTreeView. It shows your USB host controllers and each of the ports connected to them.</strong> (It often shows more ports than are actually present on the computer, that’s normal) <strong>and every device plugged into those ports.</strong></p><p><strong>You can download it here: <a href="https://k2vr.tech/UsbTreeView.exe">UsbTreeView.exe</a></strong></p><p><img src="/en/img/usbtreeview.png" alt="screenshot of usbtreeview"></p>
-USB host controllers are indicated with the card icon 
+USB host controllers are represented using the card icon: 
 <img src="/shared/img/utv-card.png"><p>Try connecting the Kinect so it appears on a different host controller. Then click Refresh in the Amethyst devices tab.</p><div class="card card-tip">
 	<div class="heading-container">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"></path></svg>
-		<h3 class="card-title">conflicting or bandwidth-heavy devices</h3>
+		<h3 class="card-title">Conflicting or bandwidth-heavy devices</h3>
 	</div>
 	<div class="card-content">
-		<p>Some devices like microphones, or “exotic” gaming peripherals can do weird things to USB controllers. And devices like hard drives and webcams demand a lot of bandwidth from a USB controller. You should try unplugging these if nothing else seems to work.</p>
+		<p>Some devices like microphones, or “exotic” gaming peripherals can do weird things to USB controllers. And devices like certain VR headsets (e.g. any Oculus/Meta headset, Windows Mixed Reality headsets), hard drives and webcams demand a lot of bandwidth from a USB controller. You should try unplugging these if nothing else seems to work.</p>
 
 	</div>
 </div>
                 <hr class="page-footer-separator">
 <div class="page-footer">
-    <span class="last-edited">Last updated on 16/09/2022</span>
+    <span class="last-edited">Last updated on 09/04/2023</span>
     <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/360/troubleshooting/notgenuine.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
 </div>
             </article>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+        <!-- Darkreader breaks our dark theme -->
+        <meta name="darkreader" content="a2418bfce121417ab0a1b6634c3aa076">
+        <meta name="darkreader-lock">
+
+        <!-- Generic  --><title>Overview | Amethyst Docs Preview</title>
+<link rel="canonical" href="https://docs.k2vr.tech/en/dev/overview/">
+<meta name="description" content="What's the Amethyst Plugins Contract, and how does it work?">
+<meta name="theme-color" content="#E33388">
+
+<!-- OpenGraph  -->
+<meta property="og:url" content="https://docs.k2vr.tech">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Overview | Amethyst Docs Preview">
+<meta property="og:description" content="What's the Amethyst Plugins Contract, and how does it work?">
+
+
+<!-- Twitter  -->
+<meta property="twitter:domain" content="docs.k2vr.tech">
+<meta property="twitter:url" content="https://docs.k2vr.tech">
+<meta name="twitter:title" content="Overview | Amethyst Docs Preview">
+<meta name="twitter:description" content="What's the Amethyst Plugins Contract, and how does it work?">
+
+
+
+        <link rel="icon" href="/shared/favicon.ico">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet"> 
+        <script src="/shared/js/fuse.js"></script>
+        <script src="/shared/js/mobile.js"></script>
+        <script src="/shared/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/asset.af2ce408.css"></link>
+</head>
+    <body>
+        <header>
+	<button class="mobile sidebar">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+	</button>
+	<h1 class="site-title"><a href="https://k2vr.tech"><svg width="215px" height="48px" class="logo" viewBox="0 0 2115 471.98" xmlns="http://www.w3.org/2000/svg">
+    <path d="m1275.77 4.08 171.62 467.9h114.47l171.62-467.9h-100.29L1505.3 375.7 1376.73 4.1h-100.96ZM1902.21 286.85 2005.91 470H2115l-112.46-190.57c35.47-9.43 62.18-26.6 80.14-51.51 17.96-24.92 26.93-52.87 26.93-83.84 0-26.94-6.39-51.3-19.19-73.06-12.79-21.78-27.33-39.15-52.92-51.95-25.59-12.8-61.14-15-97.5-15h-176.51v465.93h94.28V286.85h44.44Zm-814.35-3.57c-25.47 23.9-59.65 53.73-102.54 89.48l-23.63 16.75c-3.72 2.64-6.63 6-8.7 10.06a27.52 27.52 0 0 0-3.06 12.96l.54 59.42h331.09V394.2h-197.72c38.87-33.06 70.37-61.32 94.5-84.78 24.13-23.46 45.58-51.05 64.34-82.77 18.77-31.73 28.15-65.02 28.15-99.87-6.55-47.5-35.47-77.35-53.5-93.21C1199.29 17.7 1162.26 0 1111.32 0c-46.47 0-85.89 12.5-110.42 33.57-24.53 21.06-49.32 62.66-51.1 116.28h91.15c.44-25.91 6.7-35.63 18.76-50.6 12.07-14.97 29.27-22.45 51.61-22.45s38.87 6.48 49.6 19.43c10.72 12.96 17.42 20.61 17.42 43.4 0 25.02-9.83 43-26.81 68.92-16.98 25.92-38.2 50.83-63.67 74.73ZM643.9 263.51l170.23 208.44h118.63L734.38 236.03 927.4 4.13H814.13L643.9 213.91V4.13h-54.92c-11.56 0-21.43 4.1-29.61 12.27-8.18 8.18-12.26 18.04-12.26 29.6v384.07c0 11.57 4.08 21.44 12.26 29.61 8.18 8.18 18.05 12.27 29.61 12.27h54.92V263.5Zm1292.65-47.37h-78.78V78.1h78.78c25.59 0 44.67 5.94 57.24 17.84 12.57 11.9 18.86 28.62 18.86 50.17 0 22-6.29 39.17-18.86 51.51-12.57 12.35-31.65 18.52-57.24 18.52ZM41.17 3.98h385.66c11.37 0 21.07 4.02 29.11 12.06C463.98 24.08 468 33.78 468 45.15v385.66c0 11.37-4.02 21.07-12.06 29.12-8.04 8.03-17.74 12.05-29.11 12.05H41.17c-11.37 0-21.07-4.02-29.11-12.06C4.02 451.88 0 442.19 0 430.82V45.14c0-11.37 4.02-21.07 12.06-29.1C20.1 8 29.8 3.97 41.17 3.97Zm3.78 238.96a46.13 46.13 0 1 0 92.26 0 46.13 46.13 0 0 0-92.26 0Zm286.1 0a46.13 46.13 0 1 0 92.25 0 46.13 46.13 0 0 0-92.25 0Zm-123.3.21a46.13 46.13 0 1 0 92.25 0 46.13 46.13 0 0 0-92.26 0Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg></a></h1>
+	<div class="dock-right">
+		<select class="locale-picker"><option selected="true" value="en">English</option><option value="es">Español (Spanish)</option></select>
+		<label class="theme-toggle switch">
+			<input type="checkbox"><svg width="16px" height="16px" class="sun" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg"><path d="M124.4 22.79 104 0 83.86 22.5a83.6 83.6 0 0 1 19.68-2.34c7.2 0 14.2.91 20.86 2.63Zm22.28 9.38A83.8 83.8 0 0 1 175.8 61.9l1.74-31.44-30.86 1.7ZM32.12 60.49A83.8 83.8 0 0 1 60.5 32.12l-30.03-1.66 1.66 30.03Zm8.2 43.05a63.22 63.22 0 1 1 126.45 0 63.22 63.22 0 0 1-126.45 0Zm144-20.73a83.56 83.56 0 0 1 2.6 20.73c0 7.6-1 14.95-2.91 21.94L208 104l-23.67-21.2ZM22.8 124.4a83.54 83.54 0 0 1-2.63-20.87c0-6.78.8-13.37 2.33-19.68L0 104l22.79 20.4Zm152.97 20.85a83.8 83.8 0 0 1-30.5 30.5l32.28 1.78-1.78-32.28ZM61.9 175.8a83.8 83.8 0 0 1-29.73-29.13l-1.7 30.87 31.43-1.74Zm63.58 8.21a83.48 83.48 0 0 1-21.94 2.92c-7.16 0-14.1-.9-20.73-2.6L104 208l21.48-23.99Z" fill="currentColor" fill-rule="evenodd"></path></svg><svg width="16px" height="16px" class="moon" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h208v208H0V0Z" fill="none"></path><path d="M102.67 186A83.43 83.43 0 0 1 39 156.59c64.2-.6 116.05-52.82 116.05-117.15 0-.76-.01-1.51-.03-2.26A83.62 83.62 0 0 1 102.67 186h.01Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+		</label>
+		<button class="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></button>
+		<a class="link-external" href="https://discord.gg/YBQCRDG" target="_blank">Discord</a>
+		<a class="link-external" href="https://github.com/KinectToVR" target="_blank">GitHub</a>
+	</div>
+</header>
+        <div class="main-wrapper">
+            <div class="docs-sidebar collapse">
+	
+	<a class="sidebar-section-link" href="/en/">
+		<span class="sidebar-link-text">Amethyst Docs</span></a>
+
+	<ul>
+	<li class="sidebar-section-title">
+				<span class="sidebar-title-text">General</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/comparison">
+									<li class="sidebar-link-text">
+										How Amethyst compares to other options
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/roadmap">
+									<li class="sidebar-link-text">
+										Roadmap
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/buying-kinect">
+									<li class="sidebar-link-text">
+										Getting a Kinect and adapter
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/about">
+									<li class="sidebar-link-text">
+										About Amethyst and K2VR
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/content">
+									<li class="sidebar-link-text">
+										Making content about Amethyst
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Using Amethyst</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/app/installation">
+									<li class="sidebar-link-text">
+										Installing Amethyst
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/getting-started">
+									<li class="sidebar-link-text">
+										Getting started
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/overview">
+									<li class="sidebar-link-text">
+										App overview
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/calibration">
+									<li class="sidebar-link-text">
+										How to calibrate
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/overrides">
+									<li class="sidebar-link-text">
+										How to use overrides
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/steamvr-driver-codes">
+									<li class="sidebar-link-text">
+										SteamVR driver troubleshooting
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/app/improve-tracking">
+									<li class="sidebar-link-text">
+										Improve tracking
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/osc">
+									<li class="sidebar-link-text">
+										OSC
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Xbox 360 Kinect</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/360/setup">
+									<li class="sidebar-link-text">
+										Setting up your Xbox 360 Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting">
+									<li class="sidebar-link-text">
+										Xbox 360 Kinect troubleshooting
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/notpowered">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTPOWERED
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/notready">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTREADY
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/notgenuine">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_NOTGENUINE
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/360/troubleshooting/insufficientbandwidth">
+									<li class="sidebar-link-text">
+										How to fix E_NUI_INSUFFICIENTBANDWIDTH
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Xbox One Kinect</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/one/common-issues">
+									<li class="sidebar-link-text">
+										Common issues with Xbox One Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/one/setup">
+									<li class="sidebar-link-text">
+										Setting up your Xbox One Kinect
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/one/troubleshooting">
+									<li class="sidebar-link-text">
+										Xbox One Kinect troubleshooting
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">PlayStation Move</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/psmove/what-to-buy">
+									<li class="sidebar-link-text">
+										Prerequisites
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/setup">
+									<li class="sidebar-link-text">
+										Setting up PSMoveServiceEx
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/usage">
+									<li class="sidebar-link-text">
+										Using PS Move with Amethyst
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/psmove/troubleshooting">
+									<li class="sidebar-link-text">
+										PlayStation Move troubleshooting
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">owoTrack</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/owo/about">
+									<li class="sidebar-link-text">
+										What is owoTrack
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/owo/setup">
+									<li class="sidebar-link-text">
+										How to configure and use owoTrack
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Augmented Hip</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/aughip/about">
+									<li class="sidebar-link-text">
+										What is Augmented Hip
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/aughip/setup">
+									<li class="sidebar-link-text">
+										How to use Augmented Hip
+									</li>
+									
+								</a>
+					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Developers</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link sidebar-link-selected" href="/en/dev/overview">
+									<li class="sidebar-link-text">
+										Overview
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/devices">
+									<li class="sidebar-link-text">
+										Tracking Devices (Providers)
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/services">
+									<li class="sidebar-link-text">
+										Service Endpoints (Receivers)
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/host">
+									<li class="sidebar-link-text">
+										Host Import (Amethyst)
+									</li>
+									
+								</a>
+					</ul>
+			</li>
+</ul>
+	
+</div>
+<div class="sidebar-overlay">
+</div>
+            <article class="content">
+                <div class="heading-wrapper level-h1" id="1"><h1 id="whats-the-amethyst-plugins-contract-and-how-does-it-actually-work">What’s the Amethyst Plugins Contract, and how does it actually work?</h1><a class="anchor-link" href="#whats-the-amethyst-plugins-contract-and-how-does-it-actually-work"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-info">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+		<h3 class="card-title">Preview content!</h3>
+	</div>
+	<div class="card-content">
+		<p>Both the plugin contract and Amethyst itself are still in the Technical Preview stage, and you may
+need to manually update your plugins to work with the latest version of Amethyst.
+We’ll try to keep the API backward-compatible as much as we can, though.</p>
+
+	</div>
+</div><div class="heading-wrapper level-h3" id="2"><h3 id="amethystnet-plugins">Amethyst.NET plugins</h3><a class="anchor-link" href="#amethystnet-plugins"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>Plugins are the base of how Amethyst works.</strong> They are used to feed the app with the body tracking data
+of your choice (<code>ITrackingDevice</code>) and then for receiving it (<code>IServiceEndpoint</code>), parsed and processed accordingly.
+<strong>Multiple plugins can be used to provide tracking data</strong> at a time (the <em>Base</em> device and optionally one or more <em>Override</em> devices),
+but <strong>only one actual tracking output is supported</strong> (the <em>Service</em>).</p><div class="card card-tip">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"></path></svg>
+		<h3 class="card-title">Multiple plugin exports</h3>
+	</div>
+	<div class="card-content">
+		<p><a href="https://learn.microsoft.com/en-us/dotnet/framework/mef/">MEF</a> provides support for exporting multiple
+plugins from one assembly, and Amethyst will load them &#x26; satisfy their (optional) imports on one-by-one
+basis. Though it is actually possible to use, we stronly encourage you to separate your plugins, each
+inside its own container assembly. This will help you keep a clean codebase, and minimize potential errors.</p>
+
+	</div>
+</div><div class="card card-info">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+		<h3 class="card-title">Exporting the plugin</h3>
+	</div>
+	<div class="card-content">
+		<p>Your plugin assembly (the .dll file) will need to be named like <code is:raw>plugin*</code> for Amethyst to find it.
+Multiple plugin assemblies can be put in one folder, and the folder name may be completely random.
+Please just remember to name the exported assembly file like <code is:raw>plugin*</code> to skip the unnecessary pain.</p>
+
+	</div>
+</div><div class="heading-wrapper level-h3" id="3"><h3 id="interfacing-with-amethyst">Interfacing with Amethyst</h3><a class="anchor-link" href="#interfacing-with-amethyst"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>By importing the <code>IAmethystHost</code> interface and using it, <strong>plugins can also request other data from their host</strong>,
+and invoke functions within Amethyst itself. You can acquire various runtime configuration variables, request
+a <strong>reload of your plugin’s interface and status</strong>, or even stop the update loop for a moment via a scoped lock.</p><div class="card card-warning">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+		<h3 class="card-title">Importing IAmethystHost</h3>
+	</div>
+	<div class="card-content">
+		<p>Though it may appear possible to import the <code is:raw>IAmethystHost</code> extension from any (even a non-exported class),
+the import will not be met in that case. That is because the host is exported for each plugin
+completely separately, and may only be imported from a valid, exported plugin. To use the host
+in child classes, you can either forward it, or set up events. <a href="https://github.com/KinectToVR/plugin_openvr">You can find an example here.</a></p>
+
+	</div>
+</div><div class="heading-wrapper level-h3" id="4"><h3 id="plugin-metadata">Plugin Metadata</h3><a class="anchor-link" href="#plugin-metadata"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>That said, you also have to decorate each of your plugins with <a href="https://learn.microsoft.com/en-us/dotnet/framework/mef/attributed-programming-model-overview-mef">Exported Metadata</a></strong>,
+which Amethyst will read and parse prior to loading your actual plugin assembly. <strong>You have to export a display
+name for your plugin</strong> (one for each exported <em>Device</em> or <em>Service</em>) <strong>and a serial for it</strong> (we’ll call it <code>Guid</code>).
+The exported metadata may also include a publisher name, and a website your plugin source (or documentation) resides.</p><p>Sample plugin metadata export:</p><pre class="astro-code" style="background-color: #1c1b19; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FCE8C3">[ExportMetadata(</span><span style="color: #FBB829">&quot;Name&quot;</span><span style="color: #FCE8C3">, </span><span style="color: #FBB829">&quot;SamplePlugin&quot;</span><span style="color: #FCE8C3">)]</span></span>
+<span class="line"><span style="color: #FCE8C3">[ExportMetadata(</span><span style="color: #FBB829">&quot;Guid&quot;</span><span style="color: #FCE8C3">, </span><span style="color: #FBB829">&quot;SCONTOSO-AME2-APII-DVCE-DVCESMPLUGIN&quot;</span><span style="color: #FCE8C3">)]</span></span>
+<span class="line"><span style="color: #FCE8C3">[ExportMetadata(</span><span style="color: #FBB829">&quot;Publisher&quot;</span><span style="color: #FCE8C3">, </span><span style="color: #FBB829">&quot;Contoso&quot;</span><span style="color: #FCE8C3">)]             </span><span style="color: #75715E">// Optional</span></span>
+<span class="line"><span style="color: #FCE8C3">[ExportMetadata(</span><span style="color: #FBB829">&quot;Website&quot;</span><span style="color: #FCE8C3">, </span><span style="color: #FBB829">&quot;https://contoso.com&quot;</span><span style="color: #FCE8C3">)]   </span><span style="color: #75715E">// Optional</span></span></code></pre><p>This sample <strong>metadata will attribute</strong> a plugin with <strong>displayed name <code>SamplePlugin</code></strong>, internally labeled by its <code>Guid</code>
+as <code>SCONTOSO-AME2-APII-DVCE-DVCESMPLDVCE</code>, by <code>Contoso</code> pointing to its site, <code>https://contoso.com</code>.
+<strong>Plugin <code>Guid</code>s must not repeat!</strong> If a plugin declares an already-exisitng <code>Guid</code>, <strong>it will be discarded
+upon initial loading and marked as invalid.</strong> (It will be shown as a <code>duplicate</code> in the Amethyst Plugin Manger)
+These decorations must be put on top of the <code>public class [Plugin] : [Interface]</code> class defintion.</p><div class="heading-wrapper level-h3" id="5"><h3 id="choosing-the-plugin-type">Choosing the plugin type</h3><a class="anchor-link" href="#choosing-the-plugin-type"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>Writing a plugin, you will need to pick the interface to be implemented.</strong> Your plugin will either feed the app with
+the body tracking data of your choice (<code>ITrackingDevice</code>) or be used for receiving it (<code>IServiceEndpoint</code>).
+Sample <code>TrackingDevice</code>s include Microsoft Kinect or PSMoveService, and a sample <code>ServiceEndpoint</code> is SteamVR.
+<strong>Plugins are separated</strong> via <a href="https://learn.microsoft.com/en-us/dotnet/api/system.runtime.loader.assemblyloadcontext?view=net-7.0">Assembly Load Contexts</a>
+and cannot use import other loaded already-loaded plugins, no matter how hard they would try to do so.</p><table>
+<thead>
+<tr>
+<th><code>ITrackingDevice</code></th>
+<th><code>IServiceEndpoint</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provides the trakcing data to Amethyst</td>
+<td>Receives parsed and processed data</td>
+</tr>
+<tr>
+<td>Multiple devices can be used at the same time for compound tracking</td>
+<td>Only one endpoint can receive data from Amethyst at a time (*see below)</td>
+</tr>
+</tbody>
+</table><div class="card card-tip">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"></path></svg>
+		<h3 class="card-title">Only one Service Endpoint</h3>
+	</div>
+	<div class="card-content">
+		<p>Though only one <code is:raw>IServiceEndpoint</code> can receive the tracking data at a time, you can request the plugin host (Amethyst)
+to send you RAW poses of its internal tracker objects. Do it so by calling <code is:raw>AppJointPoses</code> on your imported <code is:raw>IAmethystHost</code>.</p>
+
+	</div>
+</div><div class="heading-wrapper level-h3" id="6"><h3 id="choosing-the-language">Choosing the language</h3><a class="anchor-link" href="#choosing-the-language"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Plugins can be <strong>written in all Microsoft-Interface projectable languages</strong> but <strong>exported only from these of .NET (Core)</strong>.
+That means <strong>you can write your plugin in C++, F# or even Swift</strong>, and import it to your C# exported plugin.
+An example of such a plugin is the official <a href="https://github.com/KinectToVR/plugin_owoTrackVR">owoTrackVR Plugin</a>, written in C++/WinRT, then projected to C# and exported.</p><p>We strongly recommend using C# for all plugins, whenever possible (example: the official <a href="https://github.com/KinectToVR/plugin_KinectV2">Kinect V2 Plugin</a>).
+<strong>You can also combine languages</strong>, and an example of which is the <a href="https://github.com/KinectToVR/plugin_KinectV1">Kinect V1 Plugin</a>, which base is written in C++/CLI,
+then referenced from a C# plugin, which is then exported to Amethyst.</p><p>You can also export your plugin directly from any .NET (Core) language! (C#, C++/CLI, VB.NET, F#)
+Though, declaring custom plugin settings user interface is <strong>only available</strong> for C# and C++/WinRT-Projected plugins.
+Closing, a plugin using VB.NET is the official <a href="https://github.com/KinectToVR/plugin_PSMoveService">PSMoveService Plugin</a>.</p><p>For examples of <code>ServiceEndpoint</code>s, please check out our official <a href="https://github.com/KinectToVR/plugin_OpenVR">OpenVR/SteamVR</a> and <a href="https://github.com/KinectToVR/plugin_OSC">(VRChat) OSC</a> plugins!</p><div class="card card-info">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+		<h3 class="card-title">Unresolved dependencies</h3>
+	</div>
+	<div class="card-content">
+		<p>You can safely import everything you need to, please remember about trimming your plugin for it to be more lightweight though.<br>
+Additionally, we recommend making sure that your plugin is <strong>self-contained</strong> when publishing it, because no one knows what’s gonna be missing on the user’s machine!<br>
+If some dependency fails to resolve, your plugin will <strong>not be loaded</strong> by Amethyst and an appropriate log will be written to note that.</p>
+
+	</div>
+</div><div class="card card-tip">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"></path></svg>
+		<h3 class="card-title">Lazy loading</h3>
+	</div>
+	<div class="card-content">
+		<p>You may want to enable lazy loading to save your time and nerves, then an unresolved dependency will cause a composition error
+and add your plugin to the load-attempted plugin list, instead of making Amethyst silently reject even trying to load the plugin.</p>
+
+	</div>
+</div><details class="accordion">
+	<summary class="accordion-header">
+		Choosing the right configuration for your plugin
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
+	</summary>
+	<div class="accordion-content">
+		<p>Here are some possible language configurations for your plugin:</p>
+<ul>
+<li>
+<p>.NET Supported (Pure)</p>
+<ul>
+<li>[<strong>Recommended</strong>, Easy] <code is:raw>C#</code> => The easiest one to implement, maintain and deploy, quite scalable and fast. Generally recommended because of wide access to packages, extensions and docs. Also takes the least time to write plugins in, can use C/C++ stuff via C++/CLI (CLR) wrappers and P/Invoke or projected WinRT methods (MIDL/WinMD) if/when needed. Supports Amethyst Settings Interface via Windows App SDK and/or CsWinRT.</li>
+<li><code is:raw>C++/CLI</code> => <code is:raw>C# </code>but with sick syntax, can’t actually use native stuff (like STL and C libraries) Suitabke for devs who prefer manual management of stuff, C++ syntax, or plan on extending their Pure plugin with Mixed CLR mode (use dynanically-aligned C++ stuff inside their plugin / static is simply and strictly not supported!) Quite large compilation times and output, Mixed mode is kinda more recommended, Amethyst Settings Interface not supported.</li>
+<li><code is:raw>F#</code> => Only if you’re a <code is:raw>JS</code> developer looking for a familiar syntax, plugins involving data science handlers, or just somehow like it. Generally small user and usage base, although all .NET stuff is probably OK. Amethyst Settings Interface not supported.</li>
+<li><code is:raw>Visual Basic .NET</code> => Only if you like <code is:raw>VB</code> (<code is:raw>.NET</code>) or are already quite familiar with it, similarly to F#. Generally small user and usage base, although all .NET stuff is probably OK. Very simple to start with and develop in, though… that’s pretty much all of it. Amethyst Settings Interface not supported.</li>
+</ul>
+</li>
+<li>
+<p><code is:raw>CLR</code> Supported (Mixed)</p>
+<ul>
+<li>[Intermediate] <code is:raw>C++/CLI</code> => You can use both managed (<code is:raw>.NET</code>) and native (C++) types, great for devs who have some grasp over both C# &#x26; C++ and need to use both of them in their plugin. You can use most stuff from both language and runtime types, although with several limitations. This mode (Mixed CLR mode) may only use dynanically-aligned C++ stuff inside the plugin, static alignment is simply and strictly not supported in this case! Amethyst Settings Interface not supported.</li>
+</ul>
+</li>
+<li>
+<p>Projected (Pure + Native)</p>
+<ul>
+<li>[<strong>Recommended</strong>, Advanced] <code is:raw>WinRT</code> => You create a device handler shim in C# and call your handler methods using projection. This is the best approach for most larger already-existing plugins, you typically want to use C++/WinRT runtime library (cppwinrt) as your plugins implementation handler, though any WinRT-enabled language is OK. Uses a severe amount of resources upon compilation, generation &#x26; pre-deployment. Supports Amethyst Settings Interface via Windows App SDK and/or CsWinRT. (From the level of the <code is:raw>C#</code> shim handler!)
+</li>
+</ul>
+</li>
+</ul>
+
+	</div>
+</details>
+                <hr class="page-footer-separator">
+<div class="page-footer">
+    <span class="last-edited">Last updated on 09/04/2023</span>
+    <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/dev/overview.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
+</div>
+            </article>
+            <footer>
+	<div class="prominent">
+	Built with <svg style="vertical-align:bottom" height="1.5rem" width="1.5rem" viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="0" y1="0" x2="1" y2="1" id="a"><stop offset="0%" stop-color="#46BCFE"></stop><stop offset="40%" stop-color="#AA6AF1"></stop><stop offset="75%" stop-color="#D73BA4"></stop></linearGradient></defs><path d="M21.34.275A7.406 7.406 0 0 0 19.313 0c-.602 0-1.168.059-1.7.176a6.73 6.73 0 0 0-1.506.521c-.472.23-.925.512-1.359.844a12.06 12.06 0 0 0-1.271 1.13 12.06 12.06 0 0 0-1.272-1.13 7.726 7.726 0 0 0-1.36-.838A7.146 7.146 0 0 0 9.34.182 7.631 7.631 0 0 0 7.64 0a7.47 7.47 0 0 0-2.033.275 7.587 7.587 0 0 0-3.37 1.963 7.587 7.587 0 0 0-1.962 3.37A7.47 7.47 0 0 0 0 7.64c0 1.039.19 2.015.568 2.93a7.583 7.583 0 0 0 1.67 2.472l11.239 11.238 11.238-11.238a7.583 7.583 0 0 0 1.67-2.473c.379-.914.568-1.89.568-2.93 0-.702-.092-1.378-.275-2.027a7.776 7.776 0 0 0-.774-1.822 7.65 7.65 0 0 0-2.742-2.742A7.774 7.774 0 0 0 21.34.275Z" fill="url(#a)" fill-rule="evenodd"></path></svg> by K2VR Team
+	</div>
+	<ul class="socials">
+		<li class="social-link"><a href="https://discord.gg/YBQCRDG" target="_blank">Discord</a></li>
+		<li class="social-link"><a href="https://github.com/KinectToVR" target="_blank">GitHub</a></li>
+		<li class="social-link"><a href="https://twitter.com/k2vr_team" target="_blank">Twitter</a></li>
+		<li class="social-link"><a href="https://opencollective.com/k2vr" target="_blank">OpenCollective</a></li>
+	</ul>
+</footer>
+        </div>
+        <div class="search-container-root">
+    <div class="search-container">
+        <div class="search-wrapper">
+            <div class="search-input">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                <input class="search-input-textbox" aria-autocomplete="both" aria-labelledby="earch-label" id="search-input" autocomplete="off" autocorrect="off" autocapitalize="none" enterkeyhint="search" spellcheck="false" placeholder="Search docs" maxlength="64" type="search">
+                <button id="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </button>
+            </div>
+            <ul class="search-results-container">
+                <li class="search-result">
+                    <a class="search-result-link">Sus</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </body></html>

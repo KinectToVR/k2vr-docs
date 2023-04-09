@@ -8,23 +8,23 @@
         <meta name="darkreader" content="a2418bfce121417ab0a1b6634c3aa076">
         <meta name="darkreader-lock">
 
-        <!-- Generic  --><title>About the transition to Amethyst | Amethyst Docs Preview</title>
-<link rel="canonical" href="https://docs.k2vr.tech/en/amethyst-transition/">
-<meta name="description" content="Information about transitioning from K2EX to Amethyst">
+        <!-- Generic  --><title>Host Import (Amethyst) | Amethyst Docs Preview</title>
+<link rel="canonical" href="https://docs.k2vr.tech/en/dev/host/">
+<meta name="description" content="Host Import (Amethyst)">
 <meta name="theme-color" content="#E33388">
 
 <!-- OpenGraph  -->
 <meta property="og:url" content="https://docs.k2vr.tech">
 <meta property="og:type" content="website">
-<meta property="og:title" content="About the transition to Amethyst | Amethyst Docs Preview">
-<meta property="og:description" content="Information about transitioning from K2EX to Amethyst">
+<meta property="og:title" content="Host Import (Amethyst) | Amethyst Docs Preview">
+<meta property="og:description" content="Host Import (Amethyst)">
 
 
 <!-- Twitter  -->
 <meta property="twitter:domain" content="docs.k2vr.tech">
 <meta property="twitter:url" content="https://docs.k2vr.tech">
-<meta name="twitter:title" content="About the transition to Amethyst | Amethyst Docs Preview">
-<meta name="twitter:description" content="Information about transitioning from K2EX to Amethyst">
+<meta name="twitter:title" content="Host Import (Amethyst) | Amethyst Docs Preview">
+<meta name="twitter:description" content="Host Import (Amethyst)">
 
 
 
@@ -266,7 +266,7 @@
 										Service Endpoints (Receivers)
 									</li>
 									
-								</a><a class="sidebar-section-link" href="/en/dev/host">
+								</a><a class="sidebar-section-link sidebar-link-selected" href="/en/dev/host">
 									<li class="sidebar-link-text">
 										Host Import (Amethyst)
 									</li>
@@ -280,41 +280,141 @@
 <div class="sidebar-overlay">
 </div>
             <article class="content">
-                <div class="heading-wrapper level-h1" id="1"><h1 id="about-the-transition-to-amethyst">About the transition to Amethyst</h1><a class="anchor-link" href="#about-the-transition-to-amethyst"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h2" id="2"><h2 id="an-introduction">An introduction</h2><a class="anchor-link" href="#an-introduction"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><strong>It’s been two years since we last updated K2EX.</strong> Since then, we’ve been working on a new app named Amethyst.</p><p><strong>Because it’s so old, and Amethyst fixes basically every issue with it, we want to get everyone transitioned over.</strong></p><details class="accordion">
-	<summary class="accordion-header">
-		Boring crap you don&#39;t care about
-		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 48 48" fill="currentColor"><path d="M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z"></path></svg>
-	</summary>
-	<div class="accordion-content">
-		K2EX was built on the original codebase of KinectToVR. While we spent a long time fixing bugs, and improving it. 
-<strong>At their core, KinectToVR and K2EX, were built on a hardcoded shell, with a lot of dependencies on libraries we didn’t wish to continue using,</strong>
- like SFML and Boost.
-<br>
-
-
-<br>
-
-
-<strong>Amethyst is built with all the latest technologies, a fancy new user interface, and everything we’ve learned from the past.</strong>
- It’s made to be stable, reliable, and modular, both in code and for the user. You can extend its device support and functionality with your own plugins.
+                <div class="heading-wrapper level-h1" id="1"><h1 id="iamethysthost-import">IAmethystHost Import</h1><a class="anchor-link" href="#iamethysthost-import"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="card card-info">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+		<h3 class="card-title">Preview content!</h3>
+	</div>
+	<div class="card-content">
+		<p>Both the plugin contract and Amethyst itself are still in the Technical Preview stage, and you may
+need to manually update your plugins to work with the latest version of Amethyst.
+We’ll try to keep the API backward-compatible as much as we can, though.</p>
 
 	</div>
-</details><div class="heading-wrapper level-h2" id="3"><h2 id="what-to-expect">What to expect</h2><a class="anchor-link" href="#what-to-expect"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p><img src="/en/img/k2ex-ame.png" alt="comparison of K2EX and Amethyst">
-If you’ve used K2EX in the past, Amethyst should be a piece of cake for you. <strong>We took in the feedback of every K2EX user and took it into consideration</strong> when designing the user experience. <strong>If you’re a new user, we hope it can be just as simple</strong> with all the new onboarding and in-app instructions.</p><p><strong>Functionality-wise, Amethyst works similarly to K2EX.</strong> It does try to automate as many things as possible, and <strong>it tries hold your hand when possible.</strong></p><p>The biggest changes are in stability and features. Amethyst adds support for things like <strong>owoTrack, external tracker based flip, new orientation modes for Xbox One Kinect users. (Finally! 🥳) and the ability to spawn a lot more trackers than the 3 supported in K2EX.</strong></p><div class="heading-wrapper level-h2" id="4"><h2 id="join-the-discord-please">Join the Discord please!</h2><a class="anchor-link" href="#join-the-discord-please"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Amethyst may be near ready for release, but we would still prefer if you <strong>either join the Discord beforehand, or see it as the first resource to go to the second you run into a problem.</strong> We’ve already done a pretty strong job of pointing to the Discord in the installer and the app itself.</p><div class="heading-wrapper level-h4" id="5"><h4 id="for-help-and-bug-reports-our-discord-is-here-at">For help and bug reports, our Discord is here at:</h4><a class="anchor-link" href="#for-help-and-bug-reports-our-discord-is-here-at"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><a href="https://discord.gg/YBQCRDG" class="button primary link">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
-    
-K2VR Community Discord
+</div><div class="heading-wrapper level-h3" id="2"><h3 id="importing-iamethysthost">Importing <code>IAmethystHost</code></h3><a class="anchor-link" href="#importing-iamethysthost"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>By importing the <code>IAmethystHost</code> interface and using it, <strong>plugins can also request other data from their host</strong>,
+and invoke functions within Amethyst itself. You can acquire various runtime configuration variables, request
+a <strong>reload of your plugin’s interface and status</strong>, or even stop the update loop for a moment via a scoped lock.</p><div class="card card-warning">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+		<h3 class="card-title">Importing IAmethystHost</h3>
+	</div>
+	<div class="card-content">
+		<p>Though it may appear possible to import the <code is:raw>IAmethystHost</code> extension from any (even a non-exported class),
+the import will not be met in that case. That is because the host is exported for each plugin
+completely separately, and may only be imported from a valid, exported plugin. To use the host
+in child classes, you can either forward it, or set up events. <a href="https://github.com/KinectToVR/plugin_openvr">You can find an example here.</a></p>
 
-</a><br><div class="heading-wrapper level-h2" id="6"><h2 id="download">Download</h2><a class="anchor-link" href="#download"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><a href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe" class="button primary link">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
-    
-Download the latest version of Amethyst Installer now
+	</div>
+</div><p>Sample import declaration of the <code>IAmethystHost</code> interface:</p><pre class="astro-code" style="background-color: #1c1b19; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FCE8C3">[Export(</span><span style="color: #EF2F27">typeof</span><span style="color: #FCE8C3">(IServiceEndpoint))]</span></span>
+<span class="line"><span style="color: #FCE8C3">[ExportMetadata(</span><span style="color: #FBB829">&quot;Name&quot;</span><span style="color: #FCE8C3">, </span><span style="color: #FBB829">&quot;SampleService&quot;</span><span style="color: #FCE8C3">)]</span></span>
+<span class="line"><span style="color: #FCE8C3">[ExportMetadata(</span><span style="color: #FBB829">&quot;Guid&quot;</span><span style="color: #FCE8C3">, </span><span style="color: #FBB829">&quot;SCONTOSO-AME2-APII-SNDP-DVCESMPLSNDP&quot;</span><span style="color: #FCE8C3">)]</span></span>
+<span class="line"><span style="color: #EF2F27">public</span><span style="color: #FCE8C3"> </span><span style="color: #EF2F27">class</span><span style="color: #FCE8C3"> SampleService : IServiceEndpoint</span></span>
+<span class="line"><span style="color: #FCE8C3">{</span></span>
+<span class="line"><span style="color: #FCE8C3">    [Import(</span><span style="color: #EF2F27">typeof</span><span style="color: #FCE8C3">(IAmethystHost))] </span><span style="color: #EF2F27">private</span><span style="color: #FCE8C3"> IAmethystHost Host { </span><span style="color: #EF2F27">get</span><span style="color: #FCE8C3">; </span><span style="color: #EF2F27">set</span><span style="color: #FCE8C3">; }</span></span>
+<span class="line"><span style="color: #FCE8C3">    ...</span></span>
+<span class="line"><span style="color: #FCE8C3">}</span></span></code></pre><div class="heading-wrapper level-h3" id="3"><h3 id="host-properties">Host properties</h3><a class="anchor-link" href="#host-properties"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Other, helper properties are used to indicate both the state and the usage of a device. You can opt-out of
+automatic <code>Update()</code> calls or opt-in to flip support, assuming your device provides a proper head joint.</p><table>
+<thead>
+<tr>
+<th>Host property</th>
+<th>What is it used for?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AppJointPoses</code></td>
+<td>Helper to get all joints’ positions from the app, which are added in Amethyst. Note: if joint’s off, its trackingState will be <code>ITrackedJointState::State_NotTracked</code>. Note: [AppJointPoses] will always be returned raw and without tweaks/offsets if need the final ones, please consider writing an IServiceEndpoint.</td>
+</tr>
+<tr>
+<td><code>HmdOrientationYaw</code></td>
+<td>Get the raw HMD yaw from the current service endpoint. Note: or 0 if the current service doesn’t provide one.</td>
+</tr>
+<tr>
+<td><code>HmdPose</code></td>
+<td>Get the raw HMD pose from the current service endpoint or (zero, identity) if the service doesn’t provide one.</td>
+</tr>
+<tr>
+<td><code>LanguageCode</code></td>
+<td>Currently selected 2-letter language code in Amethyst, e.g. <code>en</code>, <code>de</code>, <code>ja</code></td>
+</tr>
+<tr>
+<td><code>DocsLanguageCode </code></td>
+<td>Currently selected 2-letter language code in Amethyst (web) Docs, e.g. <code>en</code>, <code>de</code>, <code>ja</code></td>
+</tr>
+<tr>
+<td><code>PluginSettings</code></td>
+<td>Get/Set a serialized object from/to the plugin settings. Access either via GetSetting (pass the desired Type, and optionally the fallback value for) or SetSetting. Types you save must either be serializable by <code>ToString()</code> or the Newtonsoft.Json (JSON.NET) serialization library.</td>
+</tr>
+<tr>
+<td><code>UpdateThreadLock</code></td>
+<td>Lock the main update loop while in scope with [lock (UpdateThreadLock) ] This will block AME from updating while locked, and also wait for when the lock is available => multiple plugins can never lock it at the same time!</td>
+</tr>
+</tbody>
+</table><div class="card card-warning">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+		<h3 class="card-title">HmdPose and HmdOrientationYaw</h3>
+	</div>
+	<div class="card-content">
+		<p>This is got from the selected <em>Service</em> providing the <code is:raw>HeadsetPose</code> property, as used by Amethyst to execute Automatic Calibration and additionally,
+by some devices to calculate their poses HMD-wise (or .Zero, .Identity if the selected <em>Service</em> returns null as for the requested VR HMD/Head pose).
+<code is:raw>HmdOrientationYaw</code> is a flat-projected yaw of the HMD’s orientation, and of course in Radians.</p>
 
-</a><br>
+	</div>
+</div><div class="heading-wrapper level-h3" id="4"><h3 id="host-methods">Host methods</h3><a class="anchor-link" href="#host-methods"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>Device methods are used by Amethyst to control the device and call events on it.</p><table>
+<thead>
+<tr>
+<th>Host method</th>
+<th>What is it used for?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GetHookJointPose(bool)</code></td>
+<td>Get the hook joint pose (typically Head, fallback to .First()) of the currently selected base tracking device (no overrides!) Mark [calibrated] as [true] to get the calibrated joint pose. Note: [AppJointPoses] will always be returned raw and w/o tweaks/offsets if need the final ones, please consider writing an IServiceEndpoint</td>
+</tr>
+<tr>
+<td><code>GetTransformJointPose(bool)</code></td>
+<td>Get the pose of the relative transform origin joint (typically Waist, fallback to <code>.First()</code>, then default) of the currently selected base device (no overrides!) Mark [calibrated] as [true] to get the calibrated pose. Note: [AppJointPoses] will always be returned raw and without tweaks/offsets if need the final ones, please consider writing an IServiceEndpoint</td>
+</tr>
+<tr>
+<td><code>IsTrackedJointValid(TrackedJointType)</code></td>
+<td>Check if the base tracking device provides a joint with the selected role. Note: this only applies to the tracking device set as base, not overrides.</td>
+</tr>
+<tr>
+<td><code>Log(string | object, LogSeverity)</code></td>
+<td>Log a message to Amethyst logs : handler, prepends your plugin’s <code>Guid</code> as a decoration</td>
+</tr>
+<tr>
+<td><code>PlayAppSound(SoundType)</code></td>
+<td>Play a sound from Amethyst’s resources</td>
+</tr>
+<tr>
+<td><code>RefreshStatusInterface</code></td>
+<td>Request a refresh of the status/name/etc. interface, rebuild joints and their settings. Use wisely, may temporarily slow down body tracking.</td>
+</tr>
+<tr>
+<td><code>RequestLocalizedString(string)</code></td>
+<td>Request a string from AME resources, empty for no match. Warning: The primarily searched resource is the device-provided one!</td>
+</tr>
+<tr>
+<td><code>SetLocalizationResourcesRoot(string)</code></td>
+<td>Request a folder to be set as device’s AME resources, you can access these resources with the lower function later (after onLoad) Warning: Resources are containerized and can’t be accessed in-between devices! Warning: The default root is “[plugin_folder_path]/resources/Strings”!</td>
+</tr>
+<tr>
+<td><code>DisplayToast(Tuple(string, string))</code></td>
+<td>Show a Windows Desktop toast notification</td>
+</tr>
+<tr>
+<td><code>RequestExit(string, bool)</code></td>
+<td>Request an application exit, non-fatal by default. Mark fatal as true to show the crash handler with your message</td>
+</tr>
+</tbody>
+</table>
                 <hr class="page-footer-separator">
 <div class="page-footer">
-    <span class="last-edited">Last updated on 02/12/2022</span>
-    <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/amethyst-transition.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
+    <span class="last-edited">Last updated on 09/04/2023</span>
+    <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/dev/host.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
 </div>
             </article>
             <footer>

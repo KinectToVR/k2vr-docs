@@ -36,7 +36,7 @@
         <script src="/shared/js/fuse.js"></script>
         <script src="/shared/js/mobile.js"></script>
         <script src="/shared/js/main.js"></script>
-    <link rel="stylesheet" href="/assets/asset.93fea226.css"></link>
+    <link rel="stylesheet" href="/assets/asset.af2ce408.css"></link>
 </head>
     <body>
         <header>
@@ -129,6 +129,11 @@
 								</a><a class="sidebar-section-link" href="/en/app/improve-tracking">
 									<li class="sidebar-link-text">
 										Improve tracking
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/osc">
+									<li class="sidebar-link-text">
+										OSC
 									</li>
 									
 								</a>
@@ -243,6 +248,31 @@
 									
 								</a>
 					</ul>
+			</li><li class="sidebar-section-title">
+				<span class="sidebar-title-text">Developers</span>
+				<ul class="sidebar-section-children">
+						<a class="sidebar-section-link" href="/en/dev/overview">
+									<li class="sidebar-link-text">
+										Overview
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/devices">
+									<li class="sidebar-link-text">
+										Tracking Devices (Providers)
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/services">
+									<li class="sidebar-link-text">
+										Service Endpoints (Receivers)
+									</li>
+									
+								</a><a class="sidebar-section-link" href="/en/dev/host">
+									<li class="sidebar-link-text">
+										Host Import (Amethyst)
+									</li>
+									
+								</a>
+					</ul>
 			</li>
 </ul>
 	
@@ -250,7 +280,8 @@
 <div class="sidebar-overlay">
 </div>
             <article class="content">
-                <div class="heading-wrapper level-h1" id="1"><h1 id="how-to-fix-e_nui_insufficientbandwidth">How to fix E_NUI_INSUFFICIENTBANDWIDTH</h1><a class="anchor-link" href="#how-to-fix-e_nui_insufficientbandwidth"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>This error happens in two situations, either, you really are lacking bandwidth, in which case the instructions on the <a href="/en/360/troubleshooting/notgenuine">NOTGENUINE page</a> should be helpful. Or the Kinect for Windows SDK has gotten confused because of something else, and is throwing this error.</p><p>First, check to see if the Kinect Management service is running.</p><ul>
+                <div class="heading-wrapper level-h1" id="1"><h1 id="how-to-fix-e_nui_insufficientbandwidth">How to fix E_NUI_INSUFFICIENTBANDWIDTH</h1><a class="anchor-link" href="#how-to-fix-e_nui_insufficientbandwidth"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>This error happens in two situations, either, the Kinect for Windows SDK can’t initialise the Kinect properly, or you are lacking USB bandwidth.</p><div class="heading-wrapper level-h2" id="2"><h2 id="checking-if-you-are-really-lacking-bandwidth">Checking if you are really lacking bandwidth</h2><a class="anchor-link" href="#checking-if-you-are-really-lacking-bandwidth"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>USB can only support up to a certain amount of bandwidth before it can’t handle all connected devices properly.
+The instructions on the <a href="/en/360/troubleshooting/notgenuine">E_NOT_GENUINE page</a> should be helpful.</p><div class="heading-wrapper level-h2" id="3"><h2 id="checking-if-the-kinect-for-windows-sdk-cant-initialise-properly">Checking if the Kinect for Windows SDK can’t initialise properly:</h2><a class="anchor-link" href="#checking-if-the-kinect-for-windows-sdk-cant-initialise-properly"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><div class="heading-wrapper level-h3" id="4"><h3 id="kinect-management-service">Kinect Management Service</h3><a class="anchor-link" href="#kinect-management-service"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>First, check to see if the Kinect Management service is running.</p><ul>
 <li>
 Press 
 <kbd><svg width="11px" height="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13">
@@ -266,10 +297,43 @@ X
 <li>Double-click on <strong>Services and applications</strong> then on <strong>Services</strong>.</li>
 <li>In the list, look for the “Kinect Management” service.</li>
 <li>Ensure that it is running in the “Status” column.</li>
-</ul><p>If it isn’t, click <strong>Start the service</strong> on the left of the list after clicking on the Kinect Management service.</p><p>After doing this, go back to Amethyst, head over to the Devices tab, then on Xbox 360 Kinect, click “Refresh” on the right.</p>
+</ul><p><img src="/en/img/services-kinect-management.png" alt="Services page showing the Kinect Management service selected"></p><p>If it isn’t, click <strong>Start the service</strong> on the left of the list after clicking on the Kinect Management service.</p><p>After doing this, go back to Amethyst, head over to the Devices tab, then on Xbox 360 Kinect, click “Refresh” on the right.</p><div class="heading-wrapper level-h3" id="5"><h3 id="camera-driver">Camera Driver</h3><a class="anchor-link" href="#camera-driver"><span class="anchor-icon" aria-hidden="true"><svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xlmns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" fill="currentcolor" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a></div><p>The driver required to access the Kinect’s camera hasn’t been updated in nearly a decade. This driver is automatically disabled on new systems running modern Windows (10 or 11) as a security feature. To allow Windows to load the driver, you must disable Memory Integrity, which can be done as follows:</p><a href="windowsdefender://coreisolation" class="button primary link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>
+    
+Go to Core Isolation on Windows Security
+
+</a><ul>
+<li>
+<p>Open Windows Security.</p>
+</li>
+<li>
+<p>Go to Device Security.</p>
+</li>
+<li>
+<p>Under <strong>Core Isolation</strong> click on Core Isolation Details.</p>
+<blockquote>
+<p>Make sure that Memory Integrity is turned <strong>off</strong>.</p>
+</blockquote>
+</li>
+</ul><p><img src="/en/img/memory-integrity-win-defender.png" alt="Memory Integrity"></p><div class="card card-help">
+	<div class="heading-container">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"></path></svg>
+		<h3 class="card-title">Can&#39;t you update the driver?</h3>
+	</div>
+	<div class="card-content">
+		<p>Updating the driver requires us to reimplement it, which is doable. However, modern Windows requires that <a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/code-signing-reqs">drivers are signed using a certificate</a> that would cost us around $300 every year at minimum. We don’t receive enough donations to be able to comfortably afford this.</p>
+<p>Additionally, the process of obtaining a signing certificate, which is required to be able to sign drivers, demands that we disclose our own personal information, which we also do not want to do.</p>
+If you want to help make this feasible, &#x3C;>
+<a href="{ SOCIALS.opencollective }" target="_blank">
+consider donating
+</a>
+&#x3C;/>!
+
+	</div>
+</div>
                 <hr class="page-footer-separator">
 <div class="page-footer">
-    <span class="last-edited">Last updated on 21/10/2022</span>
+    <span class="last-edited">Last updated on 09/04/2023</span>
     <a class="edit-on-github" href="https://github.com/KinectToVR/k2vr-docs/blob/master/src/pages/en/360/troubleshooting/insufficientbandwidth.md" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="currentColor"><path d="M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z"></path></svg>Edit on GitHub</a>
 </div>
             </article>
