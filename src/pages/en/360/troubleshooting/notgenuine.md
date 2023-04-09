@@ -42,10 +42,10 @@ There is a third-party tool created by [Uwe Sieber](https://www.uwe-sieber.de/en
 
 ![screenshot of usbtreeview](/en/img/usbtreeview.png)
 
-USB host controllers are indicated with the card icon <img src="/shared/img/utv-card.png">
+USB host controllers are represented using the card icon: <img src="/shared/img/utv-card.png">
 
 Try connecting the Kinect so it appears on a different host controller. Then click Refresh in the Amethyst devices tab.
 
-<CardTip title="conflicting or bandwidth-heavy devices">
-Some devices like microphones, or "exotic" gaming peripherals can do weird things to USB controllers. And devices like hard drives and webcams demand a lot of bandwidth from a USB controller. You should try unplugging these if nothing else seems to work.
+<CardTip title="Conflicting or bandwidth-heavy devices">
+Some devices like microphones, or "exotic" gaming peripherals can do weird things to USB controllers. And devices like certain VR headsets (e.g. any Oculus/Meta headset, Windows Mixed Reality headsets), hard drives and webcams demand a lot of bandwidth from a USB controller. You should try unplugging these if nothing else seems to work.
 </CardTip>
