@@ -62,7 +62,7 @@ You can check what USB host controllers you have by opening **Device Manager,** 
 ## The temperature sensor is a ticking time-bomb
 Inside the Xbox One Kinect is a temperature sensor to ensure that the Kinect acn shut down in the event that the fan fails, or the ventilation gets obstructed.
 
-**This temperature sensor uses analog components, and it tends to go bad on a lot of Xbox One Kinect sensors.** Once it does, the Kinect will** reboot in a loop until you [manually fix the issue](https://youtu.be/BoRK3jJVMLM)** by cutting the wires going to it inside the device.
+**This temperature sensor uses analog components, and it tends to go bad on a lot of Xbox One Kinect sensors.** Once it does, the Kinect will **reboot in a loop until you [manually fix the issue](https://youtu.be/BoRK3jJVMLM)** by cutting the wires going to it inside the device.
 
 ## Adapters are expensive and prone to breaking
 Unlike with Xbox 360 Kinect, **third-party adapters aren't a sure-fire win every time.** Many factors come into play to make a good Xbox One Kinect adapter. **The ameperage required is higher than Xbox 360 Kinect, the cables need to do USB 3.0, and the main box needs to have a signal repeater inside to ensure the USB 3.0 signal isn't degraded** as it goes through the entire length of the cable.
