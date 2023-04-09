@@ -207,4 +207,8 @@ video {
 	&:active {
 		background-color: var(--button-primary-click);
 	}
+
+	article & p {
+		line-height: 0;
+	}
 }
