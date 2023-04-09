@@ -25,7 +25,7 @@ owoTrack requires a compatible phone, and a stable WiFi connection. A stable WiF
 3. Open owoTrack on your mobile device, and enable auto-discovery.
 4. Point your phone forward like a remote.
 5. Calibrate forward.
-6. Place your phone upright, with the screen facing, and place it in your pants or however you're mounting your phone.
+6. Place your phone upright, with the screen facing towards you, and place it in your pants or however you're mounting your phone.
 7. Calibrate down.
 8. You're using owoTrack now!
 
