@@ -22,5 +22,5 @@ If it supports WearOS, yes! You can check if it supports WearOS by going [here](
 
 ### Can I use multiple phones?
 
-Amethyst only supports up to one owoTrack device currently. If you wish to use multiple devices for owoTrack simultaneously, we recommend using them [PSMoveServiceEx's virtual device manager](https://github.com/Timocop/PSMoveServiceEx-Virtual-Device-Manager).
+Amethyst only supports up to one owoTrack device currently. If you wish to use multiple devices for owoTrack simultaneously, we recommend using the [PSMoveServiceEx's virtual device manager](https://github.com/Timocop/PSMoveServiceEx-Virtual-Device-Manager).
 
