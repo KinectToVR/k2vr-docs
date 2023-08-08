@@ -72,9 +72,14 @@ This is what other devices in your house see the Quest as and **you will need to
 
 Install Amethyst using the button below:
 
-<LinkButton href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe">Download Latest Amethyst Installer Version</LinkButton>
+<br><br>
+<script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js">
+</script>
+<ms-store-badge	productid="9P7R8FGDDGDH" theme="auto"	language="en-US" animation="on">
+</ms-store-badge>
+<br><br>
 
-In the installer, select the OSC Trackers option.
+In the setup, select the OSC Trackers option.
 
 ## Part 4: Final setup
 You now have VRChat ready to accept OSC input, and Amethyst ready to send OSC to the Quest.

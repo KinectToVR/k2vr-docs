@@ -36,5 +36,10 @@ Amethyst may be near ready for release, but we would still prefer if you **eithe
 <br>
 
 ## Download
-<LinkButton href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe">Download the latest version of Amethyst Installer now</LinkButton>
+<br><br>
+<script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js">
+</script>
+<ms-store-badge	productid="9P7R8FGDDGDH" theme="auto"	language="en-US" animation="on">
+</ms-store-badge>
+<br><br>
 <br>

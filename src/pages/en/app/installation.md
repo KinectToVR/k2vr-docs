@@ -11,16 +11,15 @@ setup: |
 ---
 # Installation
 
-Here's the download for the latest version of Amethyst Installer.
+Just open the Microsoft Store and install it like any other app. 
+On the first launch, you will be guided through the setup to install all of the dependencies needed to run the app. 
+**Important!** Amethyst will ask you to restart as Administrator **only the first time** you start it.  
 <br><br>
-<LinkButton href="https://github.com/KinectToVR/Amethyst-Installer-Releases/releases/latest/download/Amethyst-Installer.exe">Download Latest Amethyst Installer Version</LinkButton>
+<script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js">
+</script>
+<ms-store-badge	productid="9P7R8FGDDGDH" theme="auto"	language="en-US" animation="on">
+</ms-store-badge>
 <br><br>
-
-If you get a Windows Smartscreen pop-up, simply click on **More info** then **Run anyway**.
-![smartscreen warning window](/en/img/smartscreen.png)
-<!-- This screen shows up because the installer is not signed. Code signing certificates cost money and we can't afford that. [Unless you donate :)](https://opencollective.com/k2vr) then we can. -->
-This appears because the application does not have a certificate. We've yet to get one for financial and privacy reasons.  
-_(Also, getting a certificate wouldn't garantee the immediate disappearance of this pop-up. Thanks Microsoft.)_
 
 ### How to fix SteamVR or VRPathReg Not Found error
 This error happens usually because of a broken `openvrpaths.vrpath` file, or because you have a Windows user account without administrator permissions.
