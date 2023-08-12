@@ -33,7 +33,7 @@ Kinect for Xbox 360 and Kinect for Windows V1 requires the Kinect for Windows SD
 
 |Package                    |Description    |
 |---------------------------|---------------|
-|[Kinect for Windows Runtime v1.8](https://www.innersloth.com/games/among-us/)|Includes skeleton tracking and libraries, **but only supports Kinect for Windows.**|
+|[Kinect for Windows Runtime v1.8](https://download.microsoft.com/download/E/C/5/EC50686B-82F4-4DBF-A922-980183B214E6/KinectRuntime-v1.8-Setup.exe)|Includes skeleton tracking and libraries, **but only supports Kinect for Windows (and NOT Xbox Kinect)!**|
 |[Kinect for Windows SDK v1.8](https://download.microsoft.com/download/E/1/D/E1DEC243-0389-4A23-87BF-F47DE869FC1A/KinectSDK-v1.8-Setup.exe) (Download this one)|Includes everything the runtime does, **adds support for Xbox Kinect.** And headers for development.|
 |[Kinect for Windows Developer Toolkit v1.8.0](https://download.microsoft.com/download/D/0/6/D061A21C-3AF3-4571-8560-4010E96F0BC8/KinectDeveloperToolkit-v1.8.0-Setup.exe)|This one is optional. A bunch of developer samples, including Kinect Explorer, which lets you see the Kinect's camera feed to better place it. **It requires the SDK to be installed first.**|
 
