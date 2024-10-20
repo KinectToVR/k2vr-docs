@@ -23,6 +23,11 @@ This page will help you understand how to localize (translate text resource file
 
 Each "module" is a folder with JSON localization files, containing some keys and values.  
 
+<CardTip title="Staying up to date">
+It's possible that some new resources will be added to the app or plugins in the future. In such cases, preview app builds may be helpful,
+as Store versions are updated much less frequently. To install a preview build, visit the [AppCenter distribution website](https://install.appcenter.ms/orgs/k2vr/apps/amethyst/distribution_groups/blob).
+</CardWarning>
+
 ### Preparations
 To get started, press Win+R and run `amethyst-app:localize`.  
 The folder you will be presented with contains some subfolders:
