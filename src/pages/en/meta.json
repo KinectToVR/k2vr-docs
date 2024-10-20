@@ -179,6 +179,10 @@
 				{
 					"title": "Host Import (Amethyst)",
 					"url": "/en/dev/host"
+				},
+				{
+					"title": "Localizing Amethyst",
+					"url": "/en/dev/localization"
 				}
 			]
 		}
