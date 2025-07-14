@@ -9,7 +9,11 @@ setup: |
 ---
 # Setting up Augmented Hip
 
-<CardWarning title="Doesn't work with ALVR">
+<CardWarning title="Important notice for VRChat users">
+Aughip is effectively **redundant** for VRChat since its new IK can easily infer where your hip is even without a hip tracker (and it does a nice job, probably better than Aughip). This might even apply for other games too.\n\nUse Aughip only if the FBT IK *really* needs it or if you *really* need a hip tracker.
+</CardWarning>
+
+<CardError title="Doesn't work with ALVR">
 Augmented Hip has been reported to break on setups where ALVR is used. Since I (Hekky) do not own an Meta Quest, I can't fix this. Of course, you can change this [by donating to us on OpenCollective](https://opencollective.com/k2vr).
 </CardWarning>
 
