@@ -6,6 +6,11 @@ setup: |
   import Accordion from '@components/Accordion.astro'
   import VideoPlayer from '@components/VideoPlayer.astro'
 ---
+
+<CardWarning title="Important notice for VRChat users">
+Aughip is effectively **redundant** for VRChat since its new IK can easily infer where your hip is even without a hip tracker (and it does a nice job, probably better than Aughip). This might even apply for other games too.\n\nUse Aughip only if the FBT IK *really* needs it or if you *really* need a hip tracker.
+</CardWarning>
+
 # What is Augmented Hip
 
 Augmented Hip is a virtual hip tracking solution, which works entirely through software. It uses the position of your feet and VR headset to estimate the position and orientation of your hip tracker. It does not require any other devices to work, and can work with any trackers supported by SteamVR, including Kinect, Vive Trackers, and other solutions.
