@@ -1,5 +1,4 @@
 ---
-import { Markdown } from 'astro/components';
 import Chevron from '~/icons/expand_icon_24dp.astro';
 
 // REF: https://dots-studio.github.io/NeonUIGallery/src/#galleryAccordion
@@ -12,8 +11,6 @@ const { title } = Astro.props;
 		<Chevron />
 	</summary>
 	<div class="accordion-content">
-		<Markdown>
-			<slot/>
-		</Markdown>
+		<slot/>
 	</div>
 </details>

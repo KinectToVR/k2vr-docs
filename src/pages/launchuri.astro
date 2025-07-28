@@ -1,0 +1,300 @@
+---
+// This page handles /launchuri#URI to open external URIs
+// The URI is passed in the hash fragment and opened client-side
+import DocsPage from '@layouts/DocsPage.astro';
+import CardInfo from '@components/CardInfo.astro';
+import CardWarning from '@components/CardWarning.astro';
+import CardTip from '@components/CardTip.astro';
+import LinkButton from '@components/LinkButton.astro';
+
+// Define content properties for DocsPage
+const content = {
+    title: "URI Launcher",
+    description: "Launch external URIs and protocols",
+    locale: "en",
+    image: undefined
+};
+---
+
+<DocsPage 
+    title={content.title}
+    description={content.description}
+    locale={content.locale}
+    content={content}
+>
+    <h1>URI Launcher</h1>
+    
+    <div id="launcher-content">
+        <div id="loading-state">
+            <div class="spinner"></div>
+            <p id="status-message">Please wait while we prepare to launch your URI...</p>
+        </div>
+
+        <div id="uri-info" style="display: none;">
+            <CardInfo title="URI to Launch">
+                <code id="uri-display" style="word-break: break-all;"></code>
+            </CardInfo>
+        </div>
+
+        <div id="launch-controls" style="display: none;">
+            <p id="launch-status">URI launched! If nothing happened, you can try the manual options below:</p>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0;">
+                <a id="direct-launch" href="#" class="link-button">Try Again</a>
+                <a id="new-tab-launch" href="#" target="_blank" class="link-button">Open in New Tab</a>
+            </div>
+
+            <br>
+            <CardTip title="Having trouble?">
+                <p style="text-align: left;">
+                    <strong>If the URI doesn't open automatically, try the following:</strong>
+                </p>
+                <ul style="text-align: left;">
+                    <li>Make sure the appropriate application is installed</li>
+                    <li>Check your browser's popup blocker settings</li>
+                    <li>Try clicking the "Open in New Tab" button instead</li>
+                    <li>Copy the URI and paste it into the address bar</li>
+                </ul>
+            </CardTip>
+        </div>
+
+        <div id="error-state" style="display: none;">
+            <CardWarning title="Error Launching URI">
+                <p id="error-message"></p>
+                <p>Please check that the URI is valid and try again.</p>
+            </CardWarning>
+        </div>
+
+        <div id="no-uri-state" style="display: none;">
+            <CardInfo title="How to Use">
+                To use this launcher, add your URI after the # symbol in the URL. For example:
+                <br><br>
+                <code>/launchuri#https://example.com</code>
+                <br><br>
+                <code>/launchuri#steam://rungameid/12345</code>
+                <br><br>
+                <code>/launchuri#discord://</code>
+            </CardInfo>
+        </div>
+    </div>
+
+    <style>
+        .spinner {
+            border: 3px solid var(--sl-color-gray-4);
+            border-top: 3px solid var(--sl-color-accent);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #launcher-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #loading-state {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #launch-controls {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        code {
+            background: var(--sl-color-gray-6);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-family: var(--sl-font-mono);
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--sl-color-accent);
+            color: var(--sl-color-white);
+            text-decoration: none;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            border: 1px solid var(--sl-color-accent);
+        }
+
+        .link-button:hover {
+            background: var(--sl-color-accent-high);
+            border-color: var(--sl-color-accent-high);
+        }
+
+        .link-button:focus {
+            outline: 2px solid var(--sl-color-accent);
+            outline-offset: 2px;
+        }
+    </style>
+
+    <script>
+        function getURIFromHash(): string | null {
+            const hash = window.location.hash;
+            if (!hash || hash.length <= 1) {
+                return null;
+            }
+            return decodeURIComponent(hash.substring(1));
+        }
+
+        function isValidURI(uri: string): boolean {
+            try {
+                new URL(uri);
+                return true;
+            } catch {
+                // Check for protocol URIs (like steam://, discord://, etc.)
+                return /^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(uri);
+            }
+        }
+
+        function showState(stateName: string): void {
+            const states = ['loading-state', 'uri-info', 'launch-controls', 'error-state', 'no-uri-state'];
+            states.forEach(state => {
+                const element = document.getElementById(state);
+                if (element) {
+                    element.style.display = state === stateName ? 'block' : 'none';
+                }
+            });
+        }
+
+        function showError(message: string): void {
+            const errorMessage = document.getElementById('error-message');
+            if (errorMessage) {
+                errorMessage.textContent = message;
+            }
+            showState('error-state');
+        }
+
+        function updateStatusMessage(message: string): void {
+            const statusEl = document.getElementById('status-message');
+            if (statusEl) {
+                statusEl.textContent = message;
+            }
+        }
+
+        function updateLaunchStatus(message: string): void {
+            const launchStatus = document.getElementById('launch-status');
+            if (launchStatus) {
+                launchStatus.textContent = message;
+            }
+        }
+
+        function setupLaunchButtons(uri: string): void {
+            const directLaunch = document.getElementById('direct-launch') as HTMLAnchorElement;
+            const newTabLaunch = document.getElementById('new-tab-launch') as HTMLAnchorElement;
+
+            if (directLaunch) {
+                directLaunch.href = uri;
+                directLaunch.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Use window.location for direct navigation - less likely to be blocked
+                    try {
+                        window.location.href = uri;
+                    } catch (error) {
+                        console.error('Direct launch failed:', error);
+                        showError('Failed to launch URI directly. Try the "Open in New Tab" option.');
+                    }
+                });
+            }
+
+            if (newTabLaunch) {
+                newTabLaunch.href = uri;
+                // Remove preventDefault for new tab launch so the href works as fallback
+                newTabLaunch.addEventListener('click', (e) => {
+                    // Don't prevent default - let the browser handle the href
+                    // This ensures the link works even if JavaScript fails
+                    try {
+                        // Also try window.open as a backup
+                        const newWindow = window.open(uri, '_blank', 'noopener,noreferrer');
+                        if (!newWindow) {
+                            // If window.open fails, the href will still work
+                            console.log('Window.open failed, falling back to href');
+                        } else {
+                            // If window.open succeeded, prevent the href from also opening
+                            e.preventDefault();
+                        }
+                    } catch (error) {
+                        console.error('New tab launch failed, falling back to href:', error);
+                        // Don't prevent default - let href handle it
+                    }
+                });
+            }
+        }
+
+        function initializeLauncher(): void {
+            const uri = getURIFromHash();
+            
+            if (!uri) {
+                showState('no-uri-state');
+                return;
+            }
+
+            // Show the URI
+            const uriDisplay = document.getElementById('uri-display');
+            if (uriDisplay) {
+                uriDisplay.textContent = uri;
+            }
+
+            if (!isValidURI(uri)) {
+                showError('Invalid URI format. Please provide a valid URI.');
+                return;
+            }
+
+            // Show URI info and update status
+            showState('uri-info');
+            updateStatusMessage('Attempting to launch URI...');
+
+            // Automatically attempt to launch the URI after a short delay
+            setTimeout(() => {
+                try {
+                    // First try direct navigation (works for most protocols)
+                    window.location.href = uri;
+                    
+                    updateStatusMessage('URI launched successfully!');
+                    updateLaunchStatus('URI launched! If nothing happened, you can try the manual options below:');
+                    setupLaunchButtons(uri);
+                    showState('launch-controls');
+                    
+                    // Keep URI info visible
+                    const uriInfo = document.getElementById('uri-info');
+                    if (uriInfo) {
+                        uriInfo.style.display = 'block';
+                    }
+                    
+                } catch (error) {
+                    console.error('Direct launch failed:', error);
+                    // If direct navigation fails, show manual options
+                    updateStatusMessage('Automatic launch failed. Please choose a manual option:');
+                    updateLaunchStatus('Automatic launch failed. Please choose a manual option:');
+                    setupLaunchButtons(uri);
+                    showState('launch-controls');
+                    
+                    // Keep URI info visible
+                    const uriInfo = document.getElementById('uri-info');
+                    if (uriInfo) {
+                        uriInfo.style.display = 'block';
+                    }
+                }
+            }, 500);
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', initializeLauncher);
+
+        // Handle hash changes
+        window.addEventListener('hashchange', () => {
+            location.reload();
+        });
+    </script>
+</DocsPage>

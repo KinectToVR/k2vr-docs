@@ -1,7 +1,7 @@
 ---
 import SocialEmbed from '@components/SocialEmbed.astro';
 import { SITE } from '~/constants.js';
-import { embed } from '~/pages/en/meta.json';
+import { embed } from '~/pages/en/_meta.json';
 ---
 <!DOCTYPE html>
 <html>
@@ -11,7 +11,7 @@ import { embed } from '~/pages/en/meta.json';
             color={ SITE.embedColor }
             description={ embed.description }
             image={ embed.image }
-            canonicalURL={ Astro.canonicalURL }
+            canonicalURL={ Astro.url }
         ></SocialEmbed>
 
 		<meta http-equiv="refresh" content="0;url=/en/" />

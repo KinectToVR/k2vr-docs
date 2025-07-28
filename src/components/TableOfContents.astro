@@ -1,19 +1,19 @@
 ---
-import { Markdown } from 'astro/components';
-// oh boy dont you love node
-import fs from 'node:fs/promises';
+// Import metadata directly
+import enMeta from '../pages/en/_meta.json';
+import esMeta from '../pages/es/_meta.json';
+
+const metaData = {
+  'en': enMeta,
+  'es': esMeta
+};
 
 // TODO: fetch locale? idk localisation is an r has fuk
 let { locale, ignoreItem } = Astro.props;
 
 locale = locale ?? "en";
 
-// this is stupidly fucking cursed
-const relativeToRoot = "../".repeat(import.meta.env.DEV === true ? 1 : 1) + (import.meta.env.DEV === true ? "" : "src/");
-
-const url = new URL(`${relativeToRoot}pages/${locale}/meta.json`, import.meta.url);
-const json = await fs.readFile(url, 'utf-8');
-const SidebarEntries = JSON.parse(json);
+const SidebarEntries = metaData[locale as keyof typeof metaData] || metaData['en'];
 ---
 <div class="table-of-contents">
 	<ul>
@@ -25,7 +25,7 @@ const SidebarEntries = JSON.parse(json);
 		}).map((item) => (
 			<>
 				<li class="table-of-contents-section-title">
-					<Markdown>## {item.title}</Markdown>
+					<h2>{item.title}</h2>
 					{
 						(<ul class="table-of-contents-section-children">
 							{item.children.map((itemA) => (
@@ -35,7 +35,6 @@ const SidebarEntries = JSON.parse(json);
 										<li class="table-of-contents-link-text">
 											{itemA.title}
 										</li>
-										{itemA.children}
 									</a>
 								</>
 							))}

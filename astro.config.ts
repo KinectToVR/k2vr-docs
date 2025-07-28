@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
 import react from '@astrojs/react';
 import sitemap from "@astrojs/sitemap";
+import mdx from '@astrojs/mdx';
 import { h } from 'hastscript';
 import rehypeSlugifyCounter from 'rehype-slugify-counter';
 
@@ -10,7 +11,7 @@ const AnchorLinkIcon = h('svg', {
   height: 16,
   version: 1.1,
   viewBox: '0 0 16 16',
-  xlmns: 'http://www.w3.org/2000/svg'
+  xmlns: 'http://www.w3.org/2000/svg'
 }, h('path', {
   fillRule: 'evenodd',
   fill: 'currentcolor',
@@ -19,13 +20,27 @@ const AnchorLinkIcon = h('svg', {
 
 export default defineConfig({
   site: 'https://docs.k2vr.tech',
-  integrations: [preact(), react(), sitemap()],
+  integrations: [preact(), react(), sitemap(), mdx()],
+  legacy: {
+    astroFlavoredMarkdown: true
+  },
+  experimental: {
+    contentCollectionCache: false
+  },
+  vite: {
+    resolve: {
+      alias: {
+        '~': '/src',
+        '@components': '/src/components',
+        '@layouts': '/src/layouts',
+        '@icons': '/src/icons'
+      }
+    }
+  },
   markdown: {
-    mode: 'mdx',
     syntaxHighlight: 'shiki',
+    remarkPlugins: ['remark-gfm', 'remark-smartypants'],
     rehypePlugins: [
-    // These are here because setting custom plugins disables the default plugins
-    'remark-smartypants', 'remark-gfm',
     // This generates a set of IDs and numeric counters for headers
     rehypeSlugifyCounter,
     // This adds said IDs to headings
@@ -42,7 +57,7 @@ export default defineConfig({
       }, AnchorLinkIcon)]
     }]],
     shikiConfig: {
-      theme: '../../../../../../src/srcery', // YES I KNOW THIS IS HACKY AS FUCK, IDC LOL
+      theme: 'dark-plus',
       wrap: true
     }
   }

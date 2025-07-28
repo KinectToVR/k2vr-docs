@@ -1,6 +1,4 @@
 ---
-import Debug from 'astro/components/Debug.astro';
-import { Markdown } from 'astro/components';
 import SocialEmbed from '@components/SocialEmbed.astro';
 import Sidebar from '@components/Sidebar/Sidebar.astro';
 import Header from '@components/Header.astro';
@@ -10,17 +8,17 @@ import PageFooter from '@components/PageFooter.astro';
 import { SITE } from '~/constants.js';
 import "~/css/main.scss";
 
+// Import metadata directly for each locale
+import enMeta from '../pages/en/_meta.json';
+import esMeta from '../pages/es/_meta.json';
 
-// node hell
-import fs from 'node:fs/promises';
-import fs2 from 'fs';
+const localeMetadata = {
+  'en': enMeta,
+  'es': esMeta
+};
 
-// this is stupidly fucking cursed
-const relativeToRoot = "../".repeat(1) + (import.meta.env.DEV === true ? "" : "src/");
 const currentPage = new URL(Astro.request.url).pathname;
-const currentFile = ([`${currentPage}.md`, `${currentPage}/index.md`].find(function(subpath) {
-    return fs2.existsSync(new URL(`${relativeToRoot}pages${subpath}`.replaceAll('//', '/'), import.meta.url));
-}) ?? "").replaceAll('//', '/');
+const currentFile = `${currentPage}.mdx`; // simplified for now
 const githubEditUrl = `${ SITE.gitRepo }/blob/${ SITE.gitBranch }/src/pages${currentFile}`;
 
 const { content } = Astro.props;
@@ -31,9 +29,7 @@ let locale = Astro.props.locale ?? content.locale;
 locale = locale ?? "en"
 title = (title.trim().length > 0 && (title.trim() != SITE.title)) ? `${title.trim()} | ${SITE.title}` : SITE.title;
 
-const url = new URL(`${relativeToRoot}pages/${locale}/meta.json`, import.meta.url);
-const json = await fs.readFile(url, 'utf-8');
-const LocalisedMetadata = JSON.parse(json);
+const LocalisedMetadata = localeMetadata[locale as keyof typeof localeMetadata] || localeMetadata['en'];
 
 title = title ?? LocalisedMetadata.embed.title; // Always false so technically redundant ; we'll see later
 image = image ?? LocalisedMetadata.embed.image;
@@ -54,7 +50,7 @@ description = description ?? LocalisedMetadata.embed.description;
             description={ description }
             image={ image }
             color={ SITE.embedColor }
-            canonicalURL={ Astro.canonicalURL }
+            canonicalURL={ Astro.url }
         ></SocialEmbed>
 
         <link rel="icon" href="/shared/favicon.ico">

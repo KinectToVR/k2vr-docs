@@ -8,29 +8,35 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/preact": "^0.0.2",
-    "@astrojs/react": "^0.1.0",
-    "@astrojs/sitemap": "^0.1.0",
-    "@babel/core": "^7.17.9",
-    "@types/react": "^17.0.43",
-    "astro": "^1.0.0-beta.12",
-    "hastscript": "^7.0.2",
-    "preact": "^10.7.1",
-    "prettier": "^2.6.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "rehype-autolink-headings": "^6.1.1",
+    "@astrojs/markdown-component": "^1.0.5",
+    "@astrojs/markdown-remark": "^6.3.3",
+    "@astrojs/mdx": "^3.1.5",
+    "@astrojs/preact": "^3.5.3",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.1.6",
+    "@babel/core": "^7.25.2",
+    "@types/node": "^22.5.0",
+    "@types/react": "^18.3.5",
+    "astro": "^4.15.4",
+    "hastscript": "^9.0.0",
+    "preact": "^10.23.2",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rehype-autolink-headings": "^7.1.0",
     "rehype-slugify-counter": "file:./rehype-slugify-counter",
-    "remark": "^14.0.2",
-    "sass": "^1.50.0",
-    "serialize-javascript": "^6.0.0",
-    "shiki": "^0.10.1",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-smartypants": "^3.0.2",
+    "sass": "^1.77.8",
+    "serialize-javascript": "^6.0.2",
+    "shiki": "^1.12.1",
     "shorthash": "^0.0.2",
-    "strip-markdown": "^5.0.0"
+    "strip-markdown": "^6.0.0"
   },
   "engines": {
-    "node": "^14.15.0 || >=16.0.0",
-    "pnpm": ">=6.0.0"
+    "node": "^18.17.1 || ^20.3.0 || >=21.0.0",
+    "pnpm": ">=8.0.0"
   },
-  "packageManager": "pnpm@6.32.3"
+  "packageManager": "pnpm@9.7.1"
 }

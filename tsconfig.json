@@ -1,0 +1,21 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "types": ["node"],
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "preserve",
+    "jsxImportSource": "preact",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@icons/*": ["src/icons/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "astro.config.ts"
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 import { SITE } from '~/constants.js'
-const currUrl = Astro.canonicalURL.pathname;
+const currUrl = Astro.url.pathname;
 const { items } = Astro.props;
 
 // This is very NOT clean
@@ -8,14 +8,14 @@ const { items } = Astro.props;
 
 ---
 <ul>
-	{items.map((item) => (
+	{items.map((item: { title: unknown; children: any[]; }) => (
 		<>
 			<li class="sidebar-section-title">
 				<span class="sidebar-title-text">{item.title}</span>
 				{
 					
 					(<ul class="sidebar-section-children">
-						{item.children.map((itemA) => (
+						{item.children.map((itemA: { url: string | URL | null | undefined; title: unknown; children: unknown; }) => (
 							<>
 								
 								<a class={
