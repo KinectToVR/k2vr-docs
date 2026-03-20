@@ -49,12 +49,13 @@ It’s also possible with cheap adapters that the signal is being degraded eithe
 <p>There are two primary causes of boot looping for an Xbox One Kinect: either Windows Audio Enhancements or insufficient USB bandwidth.</p>
 <p>For the first one, go into Windows Settings, then System &gt; Sound &gt; More Sound Settings &gt; Recording (top bar) &gt; Microphone Array “Xbox NUI Sensor” &gt; Properties &gt; Advanced (top bar) &gt; <strong>uncheck “Enable audio enhancements</strong>.</p>
 <p><em>The Kinect uses multiple microphones to have a rough idea of where you are. This option can screw up the Kinect drivers.</em></p>
-<p>For the second one, <strong>changing USB port where the Kinect is plugged in and unplugging everything else</strong> may solve the issue. Make sure you’ve plugged the Kinect adapter in a USB 3.0 port.</p>
+<p>For the second one, <strong>changing USB port where the Kinect is plugged in and unplugging everything else</strong> may solve the issue. Make sure you’ve plugged the Kinect adapter in a USB 3.0 port directly in your computer and NOT into an external USB hub.</p>
+<p><em>The Kinect needs almost full USB 3.0 bandwidth capacity provided by a single USB controller. Your PC may or may not have multiple capable USB controllers that control different USB ports.</em></p>
 <p>If you need further help with this, you can <a href="https://discord.gg/CzVCfv5s6Z">join our Discord</a>.</p>
 <h3 id="temperature-sensor">Temperature sensor</h3>
 <p>Inside the Kinect is a fan, and a temperature sensor attached to that fan. <strong>Because it’s an analog part, it can go bad over time</strong>, and report very high temperatures in error.</p>
 <p>You need to <strong>open the Kinect up</strong> with a <strong>Torx T2 screwdriver</strong>, then <strong>cut the yellow and blue wires</strong> and put some electrical tape to cover them up. <strong>This will disable the temperature sensor.</strong></p>
-<p><del>Here’s a <a href="https://youtu.be/BoRK3jJVMLM">video showing how to do it</a></del>
+<p><del>Here’s a <a href="https://youtu.be/BoRK3jJVMLM">video showing how to do it</a></del>\n
 The video is now private, but there are plenty of teardowns and possible alternative solutions on YouTube. You can check those!</p>
 <h3 id="foot-rotation">Foot rotation</h3>
 <p>The default rotation mode for Xbox One Kinect allows you to turn your feet freely. The problem is that <strong>in 99% of cases, your floor, and everything near it are invisible to the Kinect.</strong></p>
