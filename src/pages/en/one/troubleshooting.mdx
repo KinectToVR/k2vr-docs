@@ -67,12 +67,24 @@ Low framerates are usually caused by there being **other devices on the same USB
 
 Basically, **try unplugging everything USB near the Kinect.**
 
+### Boot looping
+There are two primary causes of boot looping for an Xbox One Kinect: either Windows Audio Enhancements or insufficient USB bandwidth.
+
+For the first one, go into Windows Settings, then System > Sound > More Sound Settings > Recording (top bar) > Microphone Array "Xbox NUI Sensor" > Properties > Advanced (top bar) > **uncheck "Enable audio enhancements**.
+
+*The Kinect uses multiple microphones to have a rough idea of where you are. This option can screw up the Kinect drivers.*
+
+For the second one, **changing USB port where the Kinect is plugged in and unplugging everything else** may solve the issue. Make sure you've plugged the Kinect adapter in a USB 3.0 port.
+
+If you need further help with this, you can [join our Discord](https://discord.gg/CzVCfv5s6Z).
+
 ### Temperature sensor
 Inside the Kinect is a fan, and a temperature sensor attached to that fan. **Because it's an analog part, it can go bad over time**, and report very high temperatures in error.
 
 You need to **open the Kinect up** with a **Torx T2 screwdriver**, then **cut the yellow and blue wires** and put some electrical tape to cover them up. **This will disable the temperature sensor.**
 
-Here's a [video showing how to do it](https://youtu.be/BoRK3jJVMLM)
+~~Here's a [video showing how to do it](https://youtu.be/BoRK3jJVMLM)~~
+The video is now private, but there are plenty of teardowns and possible alternative solutions on YouTube. You can check those!
 
 ### Foot rotation
 The default rotation mode for Xbox One Kinect allows you to turn your feet freely. The problem is that **in 99% of cases, your floor, and everything near it are invisible to the Kinect.**
