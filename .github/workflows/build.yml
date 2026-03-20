@@ -4,10 +4,8 @@ env:
   deployToRepo: gh-pages
 
 on:
-  # Triggers the workflow on push and pull request events but only for the master branch
   push:
     branches: [master]
-  # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
 
 jobs:
@@ -16,40 +14,37 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [23.x] 
+        node-version: [23.x]
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, fetching full history
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
-        
-      # Setup pnpm
+          fetch-depth: 0 # Fetches history for real dates
+
+      - name: Fix Git Safe Directory
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
-      # Setup Node.js environments
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'pnpm' # Speed up future builds
 
-      # Install dependencies with pnpm
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm install
 
-      # Generate the search index tree
       - name: Index pages
         run: pnpm run gensearch
 
-      # Regenerate the search index tree, build the project, and suppress Jekyll
       - name: Build
         run: |
           pnpm run build
           touch ./dist/.nojekyll
 
-      # Push to your pages repo
       - name: Push to pages repo
         uses: JamesIves/github-pages-deploy-action@v4
         with:
